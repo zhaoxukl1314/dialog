@@ -109,7 +109,7 @@ public class SettingDialogStack {
             }
 
             mMenuDialog.open(mDialogBackground);
-            mMenuDialog.setSensorOrientation(mOrientation);
+            mMenuDialog.show();
 
             mIsMenuDialogOpened = true;
         }
@@ -226,8 +226,6 @@ public class SettingDialogStack {
 
         @Override
         public boolean onKeyDown(int keyCode, KeyEvent event) {
-            // Allow a client to customize the handling of key events.
-            // @see {@link SettingDialogStack#setOnInterceptKeyListener}
             final boolean intercepted = mOnInterceptKeyListener.onKey(this, keyCode, event);
 
             if (!intercepted) {

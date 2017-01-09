@@ -19,27 +19,6 @@ class SettingLayoutCoordinatorFactory {
         }
     }
 
-    public static LayoutCoordinator createShortcutLayoutCoordinator(
-            SettingDialogBasic view,
-            LayoutCoordinateData data) {
-
-        return new ShortcutLayoutCoordinator(view, data.containerRect, data.anchorRect);
-    }
-
-    public static LayoutCoordinator createSecondLayerLayoutCoordinator(
-            SettingDialogBasic view,
-            LayoutCoordinateData data,
-            int menuDialogRowCount,
-            int numberOfTabs) {
-
-        return new SecondLayerLayoutCoordinator(
-                view,
-                data.containerRect,
-                data.anchorRect,
-                menuDialogRowCount,
-                numberOfTabs);
-    }
-
     public static LayoutCoordinator createMenuLayoutCoordinator(
             SettingTabDialogBasic dialog,
             LayoutCoordinateData data,
@@ -48,10 +27,4 @@ class SettingLayoutCoordinatorFactory {
         return new MenuLayoutCoordinator(dialog, data.containerRect, menuDialogRowCount);
     }
 
-    public static LayoutCoordinator createControlLayoutCoordinator(
-            SettingControlDialog dialog,
-            LayoutCoordinateData data) {
-
-        return new ControlLayoutCoordinator(dialog, data.containerRect, data.anchorRect);
-    }
 }

@@ -58,11 +58,11 @@ class MenuDialogRectCalculator {
         if (isPortrait(orientation)) {
             return new Point(
                     mBounds.left,
-                    mBounds.top + (mBounds.height() - computeWidth(orientation)) / 2);
+                    mBounds.top + (mBounds.height() - computeWidth()) / 2);
         } else {
             return new Point(
                     mBounds.left,
-                    mBounds.top + (mBounds.height() - computeHeight(orientation)) / 2);
+                    mBounds.top + (mBounds.height() - computeHeight()) / 2);
         }
     }
 
@@ -77,16 +77,17 @@ class MenuDialogRectCalculator {
         if (isPortrait(orientation)) {
             return new Point(
                     mBounds.left,
-                    mBounds.bottom - marginBottom - computeWidth(orientation));
+                    mBounds.bottom - marginBottom - computeWidth());
         } else {
             return new Point(
                     mBounds.left,
-                    mBounds.bottom - marginBottom - computeHeight(orientation));
+                    mBounds.bottom - marginBottom - computeHeight());
         }
     }
 
-    public int computeHeight(int orientation) {
-        int height = isPortrait(orientation) ? mBounds.width() : mBounds.height();
+    public int computeHeight() {
+//        int height = isPortrait(orientation) ? mBounds.width() : mBounds.height();
+        int height = mBounds.height();
         int numRows = getNumRows(height);
 
         if (mNumberOfTabs < 2) {
@@ -101,7 +102,7 @@ class MenuDialogRectCalculator {
         }
     }
 
-    public int computeWidth(int orientation) {
+    public int computeWidth() {
         return mWidth;
     }
 

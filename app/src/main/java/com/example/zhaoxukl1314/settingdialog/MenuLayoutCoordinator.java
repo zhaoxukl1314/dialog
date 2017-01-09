@@ -46,10 +46,10 @@ public class MenuLayoutCoordinator implements LayoutCoordinator {
     }
 
     @Override
-    public void coordinateSize(int orientation) {
+    public void coordinateSize() {
         mView.setNumColumns(1);
-        mView.getLayoutParams().width = mMenuDialogRectCalculator.computeWidth(orientation);
-        mView.getLayoutParams().height = mMenuDialogRectCalculator.computeHeight(orientation);
+        mView.getLayoutParams().width = mMenuDialogRectCalculator.computeWidth();
+        mView.getLayoutParams().height = mMenuDialogRectCalculator.computeHeight();
     }
 
     @Override

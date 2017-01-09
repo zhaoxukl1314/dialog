@@ -221,17 +221,10 @@ public class SettingDialogBasic extends SettingDialog {
      * @see com.sonyericsson.cameracommon.setting.dialog.SettingDialog
      */
     @Override
-    public void setSensorOrientation(int orientation) {
+    public void show() {
 
         requestLayout();
-        super.setSensorOrientation(orientation);
-
-        // When orientation is changed, a number of columns of GridView is changed.
-        // At that time, views of GridView are re-attached and a last re-attached view is focused.
-        // So the view speaks.
-        mGridView.performAccessibilityAction(
-                AccessibilityNodeInfo.ACTION_ACCESSIBILITY_FOCUS,
-                null);
+        super.show();
     }
 
     /**

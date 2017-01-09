@@ -6,7 +6,7 @@ import android.graphics.Rect;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 
-public interface SettingDialogInterface extends SettingDialogInterface2 {
+public interface SettingDialogInterface{
 
     /**
      * Open dialog
@@ -42,11 +42,7 @@ public interface SettingDialogInterface extends SettingDialogInterface2 {
      */
     void setAdapter(SettingAdapter adapter);
 
-    /**
-     * Set sensor orientation. SettingDialog is rotated according to the orientation.
-     * @param orientation Configuration.ORIENTATION_LANDSCAPE or Configuration.ORIENTATION_PORTRAIT
-     */
-    void setSensorOrientation(int orientation);
+    void show();
 
     /**
      * Set the layout coordinator to coordinate layout of this setting dialog.

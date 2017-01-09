@@ -20,7 +20,7 @@ public interface LayoutCoordinator {
      *
      * @param orientation Orientation
      */
-    void coordinateSize(int orientation);
+    void coordinateSize();
 
     /**
      * Get Coordinate view Rectangle.

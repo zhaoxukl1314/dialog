@@ -39,11 +39,9 @@ public abstract class SettingDialog extends RelativeLayout implements SettingDia
      * @see com.sonyericsson.cameracommon.setting.dialog.SettingDialogInterface
      */
     @Override
-    public void setSensorOrientation(int orientation) {
-        mOrientation = orientation;
-
+    public void show() {
         if (mLayoutCoordinator != null) {
-            mLayoutCoordinator.coordinateSize(orientation);
+            mLayoutCoordinator.coordinateSize();
         }
     }
 
