@@ -30,7 +30,7 @@ public class MenuLayoutCoordinator implements LayoutCoordinator {
      * setting tab body(setting items).
      */
     @Override
-    public void coordinatePosition(int orientation) {
+    public void coordinatePosition() {
         Rect targetRect = new Rect(
                 0,
                 0,
@@ -38,11 +38,10 @@ public class MenuLayoutCoordinator implements LayoutCoordinator {
                 mView.getLayoutParams().height);
 
         mDialogRect = LayoutCoordinateUtil.coodinatePosition(
-                orientation,
                 mView,
                 targetRect,
                 targetRect,
-                mMenuDialogRectCalculator.computePosition(orientation));
+                mMenuDialogRectCalculator.computePosition());
     }
 
     @Override

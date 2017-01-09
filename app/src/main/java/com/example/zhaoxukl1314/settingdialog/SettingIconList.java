@@ -58,7 +58,7 @@ public class SettingIconList extends SettingDialogItem {
 
     @Override
     public void setUiOrientation(int orientation) {
-        float angle = RotationUtil.getAngle(orientation);
+        float angle = 0;
         for (int i = 0; i < mHolder.mList.getChildCount(); i++) {
             mHolder.mList.getChildAt(i).setRotation(angle);
         }

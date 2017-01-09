@@ -22,8 +22,6 @@ public class SettingDialogStack {
     private final Context mContext;
     private final ViewGroup mDialogBackground;
 
-    private int mOrientation;
-
     private SettingTabDialogBasic mMenuDialog;
 
     private SettingLayoutCoordinatorFactory.LayoutCoordinateData mMenuDialogCoordinateData;
@@ -105,7 +103,7 @@ public class SettingDialogStack {
 
             // set animation
             if ((!mIsMenuDialogOpened) && (isAnimation)) {
-                mSettingAnimation.setOpenDialogAnimation(mDialogBackground, mOrientation);
+                mSettingAnimation.setOpenDialogAnimation(mDialogBackground);
             }
 
             mMenuDialog.open(mDialogBackground);
@@ -158,7 +156,7 @@ public class SettingDialogStack {
         if (mMenuDialog != null) {
             // set animation.
             if (isAnimation) {
-                mSettingAnimation.setCloseDialogAnimation(mMenuDialog, mOrientation);
+                mSettingAnimation.setCloseDialogAnimation(mMenuDialog);
             }
 
             mMenuDialog.close();
@@ -175,7 +173,7 @@ public class SettingDialogStack {
         if (container == null) {
             return null;
         }
-        return new SettingLayoutCoordinatorFactory.LayoutCoordinateData(container, null);
+        return new SettingLayoutCoordinatorFactory.LayoutCoordinateData(container);
     }
 
     private Rect getContainerRect() {

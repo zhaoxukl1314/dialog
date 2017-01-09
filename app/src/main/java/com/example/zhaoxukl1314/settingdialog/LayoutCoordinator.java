@@ -13,7 +13,7 @@ public interface LayoutCoordinator {
      *
      * @param orientation Orientation
      */
-    void coordinatePosition(int orientation);
+    void coordinatePosition();
 
     /**
      * Coordinate view size according to the orientation

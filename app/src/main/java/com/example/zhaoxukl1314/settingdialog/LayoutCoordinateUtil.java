@@ -64,7 +64,6 @@ class LayoutCoordinateUtil {
      *       Area of target view based on container view of target.
      */
     public static Rect coodinatePosition(
-            int orientation,
             View target,
             Rect targetRect,
             Rect rotationSourceArea,
@@ -83,26 +82,25 @@ class LayoutCoordinateUtil {
         // Rotate target view based on 'rotationSourceArea'
         target.setPivotX(-target.getLeft());
         target.setPivotY(-target.getTop());
-        target.setRotation(RotationUtil.getAngle(orientation));
 
-        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            // The dialog is rotated by -90 around the (0,0) and the left edge is aligned
-            // the top edge of screen. Therefore y must be moved +rotationSourceArea.width().
-            int offsetX = rotationDestPosition.x;
-            int offsetY = rotationDestPosition.y + rotationSourceArea.width();
-
-            // Should not set offset by setTranslation here. disappeared abnormally problem.
-            target.setTranslationX(0);
-            target.setTranslationY(0);
-            target.offsetLeftAndRight(offsetX);
-            target.offsetTopAndBottom(offsetY);
-
-            // Set absolute position of this dialog
-            Rect rect = new Rect(0, 0, targetRect.height(), targetRect.width());
-            rect.offset(offsetX, offsetY - rotationSourceArea.width());
-            return rect;
-
-        } else {
+//        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+//            // The dialog is rotated by -90 around the (0,0) and the left edge is aligned
+//            // the top edge of screen. Therefore y must be moved +rotationSourceArea.width().
+//            int offsetX = rotationDestPosition.x;
+//            int offsetY = rotationDestPosition.y + rotationSourceArea.width();
+//
+//            // Should not set offset by setTranslation here. disappeared abnormally problem.
+//            target.setTranslationX(0);
+//            target.setTranslationY(0);
+//            target.offsetLeftAndRight(offsetX);
+//            target.offsetTopAndBottom(offsetY);
+//
+//            // Set absolute position of this dialog
+//            Rect rect = new Rect(0, 0, targetRect.height(), targetRect.width());
+//            rect.offset(offsetX, offsetY - rotationSourceArea.width());
+//            return rect;
+//
+//        } else {
             int offsetX = rotationDestPosition.x;
             int offsetY = rotationDestPosition.y;
             target.setTranslationX(offsetX);
@@ -112,6 +110,6 @@ class LayoutCoordinateUtil {
             Rect rect = new Rect(0, 0, targetRect.width(), targetRect.height());
             rect.offset(target.getLeft() + offsetX, target.getTop() + offsetY);
             return rect;
-        }
+//        }
     }
 }

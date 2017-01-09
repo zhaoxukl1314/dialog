@@ -57,12 +57,6 @@ public interface SettingDialogInterface{
      */
     void setCloseAnimation(Animation animation);
 
-    /**
-     * Set a callback to be invoked when a setting dialog state is changed.
-     * @param listener setting dialog state listener
-     */
-    void setStateListener(SettingDialogStateListener listener);
-
     boolean getSelectedItemRect(Rect rect);
 
     boolean hitTest(int x, int y);

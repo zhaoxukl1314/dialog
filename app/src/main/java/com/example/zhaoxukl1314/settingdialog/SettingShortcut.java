@@ -137,18 +137,6 @@ public class SettingShortcut {
         return mItems.isShown();
     }
 
-    /**
-     * @see mHierarchyChangeListener initial orientation is changed by
-     *      OnHierarchyChangeListener because of ListView child adding timing.
-     * @param orientation
-     */
-    public void setSensorOrientation(int orientation) {
-        mRotation = RotationUtil.getAngle(orientation);
-        for (int i = 0; i < mItems.getChildCount(); i++) {
-            mItems.getChildAt(i).setRotation(RotationUtil.getAngle(orientation));
-        }
-    }
-
     public void clearSelected() {
         setSelected(null);
     }

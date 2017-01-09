@@ -49,7 +49,7 @@ public class SettingDialogAnimation {
      * @param orientation
      * @return animation
      */
-    public Animation setOpenDialogAnimation(View view, int orientation) {
+    public Animation setOpenDialogAnimation(View view) {
 
         AnimationSet animation = new AnimationSet(false);
         Animation alpha = AnimationUtils.loadAnimation(
@@ -58,11 +58,11 @@ public class SettingDialogAnimation {
         animation.addAnimation(alpha);
         animation.setDuration(animation.getDuration());
 
-        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            animation.addAnimation(getTranslateForDecelerate(mTranslateDistance, 0, 0, 0));
-        } else {
+//        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+//            animation.addAnimation(getTranslateForDecelerate(mTranslateDistance, 0, 0, 0));
+//        } else {
             animation.addAnimation(getTranslateForDecelerate(0, 0, mTranslateDistance, 0));
-        }
+//        }
         view.setAnimation(animation);
 
         return animation;
@@ -75,7 +75,7 @@ public class SettingDialogAnimation {
      * @param orientation
      * @return animation
      */
-    public Animation setCloseDialogAnimation(View view, int orientation) {
+    public Animation setCloseDialogAnimation(View view) {
 
         AnimationSet animation = new AnimationSet(false);
         Animation alpha = AnimationUtils.loadAnimation(
@@ -84,11 +84,11 @@ public class SettingDialogAnimation {
         animation.addAnimation(alpha);
         animation.setDuration(animation.getDuration());
 
-        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            animation.addAnimation(getTranslateForAccelerate(0, mTranslateDistance, 0, 0));
-        } else {
+//        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+//            animation.addAnimation(getTranslateForAccelerate(0, mTranslateDistance, 0, 0));
+//        } else {
             animation.addAnimation(getTranslateForAccelerate(0, 0, 0, mTranslateDistance));
-        }
+//        }
         view.setAnimation(animation);
 
         return animation;

@@ -46,24 +46,14 @@ class MenuDialogRectCalculator {
         mNumberOfTabs = numberOfTabs;
     }
 
-    public Point computePosition(int orientation) {
-       if (mIsTablet) {
-           return computePositionForTablet(orientation);
-       } else {
-           return computePositionForPhone(orientation);
-       }
+    public Point computePosition() {
+        return computePositionForPhone();
     }
 
-    private Point computePositionForPhone(int orientation) {
-        if (isPortrait(orientation)) {
-            return new Point(
-                    mBounds.left,
-                    mBounds.top + (mBounds.height() - computeWidth()) / 2);
-        } else {
+    private Point computePositionForPhone() {
             return new Point(
                     mBounds.left,
                     mBounds.top + (mBounds.height() - computeHeight()) / 2);
-        }
     }
 
     private Point computePositionForTablet(int orientation) {

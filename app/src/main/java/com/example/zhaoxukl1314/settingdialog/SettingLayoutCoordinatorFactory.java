@@ -11,11 +11,9 @@ class SettingLayoutCoordinatorFactory {
      */
     public static class LayoutCoordinateData {
         public final Rect containerRect;
-        public final Rect anchorRect;
 
-        public LayoutCoordinateData(Rect container, Rect anchor) {
+        public LayoutCoordinateData(Rect container) {
             this.containerRect = container;
-            this.anchorRect = anchor;
         }
     }
 

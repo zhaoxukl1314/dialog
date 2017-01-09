@@ -7,7 +7,6 @@ import android.database.DataSetObserver;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
-import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.GridView;
 
 public class SettingTabDialogBasic extends SettingDialog {
@@ -41,18 +40,6 @@ public class SettingTabDialogBasic extends SettingDialog {
 
     public void setTabs(SettingTabs.Tab ... tabs) {
         mTabs.setTabs(tabs);
-    }
-
-    public void setSelectedTab(SettingTabs.Tab tab) {
-        mTabs.setSelected(tab);
-    }
-
-    public SettingTabs.Tab getSelectedTab() {
-        return mTabs.getSelected();
-    }
-
-    public void setOnSelectedTabListener(SettingTabs.OnTabSelectedListener listener) {
-        mTabs.setOnSelectedListener(listener);
     }
 
     @Override
@@ -91,9 +78,6 @@ public class SettingTabDialogBasic extends SettingDialog {
         }
     }
 
-    /* (non-Javadoc)
-     * @see com.sonyericsson.cameracommon.setting.dialog.SettingDialog
-     */
     @Override
     public void show() {
         requestLayout();
