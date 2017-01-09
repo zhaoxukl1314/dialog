@@ -84,7 +84,6 @@ public class SettingDialogStack {
             return false;
         }
 
-        boolean alreadyOpened = isDialogOpened();
         boolean isAnimation = false;
 
         if (!mIsMenuDialogOpened) {
@@ -114,8 +113,6 @@ public class SettingDialogStack {
 
             mIsMenuDialogOpened = true;
         }
-
-        resetEnabledOfDialogs();
         mDialogBackground.requestFocus();
 
         return true;
@@ -128,7 +125,6 @@ public class SettingDialogStack {
         if (!handled) {
             handled = closeMenuDialog(true);
         }
-        resetEnabledOfDialogs();
 
         if (handled) {
             if (!isDialogOpened()) {
@@ -149,37 +145,11 @@ public class SettingDialogStack {
 
         boolean handled = false;
         handled |= closeMenuDialog(withAnimation);
-        resetEnabledOfDialogs();
 
         if (handled) {
             // notify onCloseSettingDialog event if all dialogs are closed.
             if (!isDialogOpened()) {
                 mDialogBackground.clearFocus();
-            }
-        }
-    }
-
-    private SettingDialogInterface getCurrentDialog() {
-
-        for (SettingDialogInterface dialog : getDialogList()) {
-            if (dialog != null) {
-                return dialog;
-            }
-        }
-        return null;
-    }
-
-    private void resetEnabledOfDialogs() {
-
-        final SettingDialogInterface[] dialogs = {
-                mMenuDialog
-        };
-
-        SettingDialogInterface current = getCurrentDialog();
-
-        for (SettingDialogInterface dialog : dialogs) {
-            if (dialog != null) {
-                dialog.setEnabled(dialog == current);
             }
         }
     }
@@ -198,19 +168,6 @@ public class SettingDialogStack {
             return true;
         }
         return false;
-    }
-
-
-    /**
-     * This dialogs are sorted in z-order.
-     * index:0 front
-     * ...
-     * index:n
-     */
-    private SettingDialogInterface[] getDialogList() {
-        return new SettingDialogInterface[] {
-                mMenuDialog
-        };
     }
 
     private SettingLayoutCoordinatorFactory.LayoutCoordinateData generateMenuDialogLayoutCoordinateData() {
@@ -250,16 +207,13 @@ public class SettingDialogStack {
 
         @Override
         public boolean onTouchEvent(MotionEvent event) {
-
-            SettingDialogInterface current = getCurrentDialog();
-
-            if (current != null) {
+            if (mMenuDialog != null) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         return true;
 
                     case MotionEvent.ACTION_UP:
-                        if (!current.hitTest(
+                        if (!mMenuDialog.hitTest(
                                 (int) event.getRawX(), (int) event.getRawY())) {
                             closeDialogs(true);
                         }
