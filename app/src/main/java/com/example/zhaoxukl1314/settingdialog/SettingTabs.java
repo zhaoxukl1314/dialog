@@ -19,23 +19,15 @@ public class SettingTabs extends LinearLayout {
     private OnTabSelectedListener mListener;
 
     public enum Tab {
-        Photo(
-                R.drawable.setting_tab_photo,
-                R.string.cam_strings_accessibility_photo_setting_txt),
-        Video(
-                R.drawable.setting_tab_video,
-                R.string.cam_strings_accessibility_video_setting_txt),
-        Common(
-                R.drawable.setting_tab_common,
-                R.string.cam_strings_accessibility_other_settings_txt);
+        Photo(R.drawable.setting_tab_photo),
+        Video(R.drawable.setting_tab_video),
+        Common(R.drawable.setting_tab_common);
 
-        Tab(int iconId, int descriptionId) {
+        Tab(int iconId) {
             this.iconId = iconId;
-            this.descriptionId = descriptionId;
         }
 
         private final int iconId;
-        private final int descriptionId;
 
         public int getIconId() {
             if (this.equals(Common)) {
@@ -147,7 +139,6 @@ public class SettingTabs extends LinearLayout {
         public void set(Tab tab) {
             mTab = tab;
             mFrame.setVisibility(View.VISIBLE);
-            mFrame.setContentDescription(getContext().getString(mTab.descriptionId));
             mIcon.setImageResource(mTab.getIconId());
         }
 

@@ -124,10 +124,6 @@ public class SettingTabDialogBasic extends SettingDialog {
         }
     };
 
-    public SettingAdapter getAdapter() {
-        return mAdapter;
-    }
-
     public int numberOfTabs() {
         return mNumberOfTabs;
     }
