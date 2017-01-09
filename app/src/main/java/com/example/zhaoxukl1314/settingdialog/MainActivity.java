@@ -11,7 +11,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
     private SettingDialogStack mSettingDialogStack;
-    private TimeShiftSettingDialogListener mSettingDialogListener = new TimeShiftSettingDialogListener();
     private SettingDialogItemFactory mDialogItemFactory;
     private SettingChangeExecutor mSettingChangeExecutor;
 
@@ -37,8 +36,6 @@ public class MainActivity extends Activity {
         mDialogItemFactory = new SettingDialogItemFactory();
         mSettingDialogStack = new SettingDialogStack(
                 this,
-                mSettingDialogListener,
-                (FrameLayout) this.findViewById(R.id.viewer_right_container),
                 (RelativeLayout) this.findViewById(R.id.viewer_interaction_view_container));
 
     }
@@ -47,8 +44,6 @@ public class MainActivity extends Activity {
         mSettingDialogStack.openMenuDialog(
                 generateItemAdapter(),
                 TABS,
-                null,
-                null,
                 3);
     }
 
@@ -74,20 +69,5 @@ public class MainActivity extends Activity {
                 .SECOND_LAYER_DIALOG_SINGLE_ITEM_PARAMS
                 .getItemHeight(this));
         return adapter;
-    }
-
-    private static class TimeShiftSettingDialogListener implements SettingDialogListener {
-        @Override
-        public void onOpenSettingDialog(
-                SettingDialogStack sender,
-                boolean isAlreadyOpened,
-                boolean isAnimation) {
-            //NOP.
-        }
-
-        @Override
-        public void onCloseSettingDialog(SettingDialogStack sender, boolean isAllClosed) {
-            //NOP.
-        }
     }
 }

@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 
-import java.util.HashMap;
-import java.util.Stack;
 
 /**
  * This class provides the function to manage a location of dialog and stacking.
@@ -26,8 +24,6 @@ public class SettingDialogStack {
 
     private int mOrientation;
 
-    private final SettingDialogListener mSettingDialogListener;
-
     private SettingTabDialogBasic mMenuDialog;
 
     private SettingLayoutCoordinatorFactory.LayoutCoordinateData mMenuDialogCoordinateData;
@@ -36,45 +32,19 @@ public class SettingDialogStack {
 
     private boolean mIsMenuDialogOpened;
 
-    // mTargetAreaList is sorted by z-order that a first is must behind dialog.
-    private Stack<Rect> mTargetAreaList = new Stack<Rect>();
-
-    private int mShortcutDialotTitleId;
-
     private OnKeyListener mOnInterceptKeyListener;
 
-    private final HashMap<SettingDialogInterface, Object> mDialogTags;
-
-    private int mMenuDialogRowCount = 0;
-
-    public SettingDialogStack(
-            Context context,
-            SettingDialogListener settingDialogListener,
-            ViewGroup shortcutContainer,
-            ViewGroup dialogContainer) {
-        this(context,
-                settingDialogListener,
-                shortcutContainer,
-                dialogContainer,
-                null);
-    }
-
     /**
-     * @param settingShortcutItems Sometimes SettingShortcut constructor in this function
+     * settingShortcutItems Sometimes SettingShortcut constructor in this function
      * takes 100ms. This is bad for the performance. If prevent this, create ListView object
      * in advance and set it as this parameter "settingShortcutItems".
      */
     public SettingDialogStack(
             Context context,
-            SettingDialogListener settingDialogListener,
-            ViewGroup shortcutContainer,
-            ViewGroup dialogContainer,
-            ListView settingShortcutItems) {
+            ViewGroup dialogContainer) {
         mContext = context;
 
         setOnInterceptKeyListener(null);
-
-        mSettingDialogListener = settingDialogListener;
         mDialogBackground = new Background(mContext);
         dialogContainer.addView(mDialogBackground);
         mDialogBackground.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -88,8 +58,6 @@ public class SettingDialogStack {
         mIsMenuDialogOpened = false;
 
         mSettingAnimation = new SettingDialogAnimation(context);
-
-        mDialogTags = new HashMap<SettingDialogInterface, Object>();
     }
 
     public boolean isDialogOpened() {
@@ -107,23 +75,10 @@ public class SettingDialogStack {
         }
     }
 
-    public boolean openMenuDialog(SettingAdapter adapter, boolean requestUpdate) {
-        //TODO:
-        return openMenuDialog(
-                adapter,
-                new SettingTabs.Tab[] {},
-                null,
-                null,
-                0);
-    }
-
     public boolean openMenuDialog(
             SettingAdapter adapter,
             SettingTabs.Tab[] tabs,
-            SettingTabs.OnTabSelectedListener onSelectedTabListener,
-            Object tag,
             int menuDialogRowCount) {
-        mMenuDialogRowCount = menuDialogRowCount;
 
         if (mMenuDialog != null) {
             return false;
@@ -148,7 +103,6 @@ public class SettingDialogStack {
                     tabs.length);
             mMenuDialog.setTabs(tabs);
             mMenuDialog.setAdapter(adapter);
-            mMenuDialog.setOnSelectedTabListener(onSelectedTabListener);
 
             // set animation
             if ((!mIsMenuDialogOpened) && (isAnimation)) {
@@ -157,15 +111,12 @@ public class SettingDialogStack {
 
             mMenuDialog.open(mDialogBackground);
             mMenuDialog.setSensorOrientation(mOrientation);
-            mDialogTags.put(mMenuDialog, tag);
 
             mIsMenuDialogOpened = true;
         }
 
         resetEnabledOfDialogs();
         mDialogBackground.requestFocus();
-
-        mSettingDialogListener.onOpenSettingDialog(this, alreadyOpened, isAnimation);
 
         return true;
     }
@@ -182,10 +133,7 @@ public class SettingDialogStack {
         if (handled) {
             if (!isDialogOpened()) {
                 mDialogBackground.clearFocus();
-                mSettingDialogListener.onCloseSettingDialog(this, true);
             } else {
-                // notify onCloseSettingDialog event if all dialogs are not closed.
-                mSettingDialogListener.onCloseSettingDialog(this, false);
             }
         }
 
@@ -207,16 +155,6 @@ public class SettingDialogStack {
             // notify onCloseSettingDialog event if all dialogs are closed.
             if (!isDialogOpened()) {
                 mDialogBackground.clearFocus();
-                mSettingDialogListener.onCloseSettingDialog(this, true);
-            }
-        }
-    }
-
-    public void setUiOrientation(int orientation) {
-        mOrientation = orientation;
-        for (SettingDialogInterface dialog : getDialogList()) {
-            if (dialog != null) {
-                dialog.setSensorOrientation(mOrientation);
             }
         }
     }
@@ -248,7 +186,6 @@ public class SettingDialogStack {
 
     private boolean closeMenuDialog(boolean isAnimation) {
         if (mMenuDialog != null) {
-            mDialogTags.remove(mMenuDialog);
             // set animation.
             if (isAnimation) {
                 mSettingAnimation.setCloseDialogAnimation(mMenuDialog, mOrientation);
@@ -257,8 +194,6 @@ public class SettingDialogStack {
             mMenuDialog.close();
             mMenuDialog = null;
             mIsMenuDialogOpened = false;
-
-            removeLastRectList();
 
             return true;
         }
@@ -283,13 +218,7 @@ public class SettingDialogStack {
         if (container == null) {
             return null;
         }
-
-        Rect shortcutIcon = new Rect();
-//        if (mShortcutTray.getSelectedItemIconVisibleRect(shortcutIcon)) {
-//            return new SettingLayoutCoordinatorFactory.LayoutCoordinateData(container, shortcutIcon);
-//        } else {
-            return new SettingLayoutCoordinatorFactory.LayoutCoordinateData(container, null);
-//        }
+        return new SettingLayoutCoordinatorFactory.LayoutCoordinateData(container, null);
     }
 
     private Rect getContainerRect() {
@@ -377,31 +306,6 @@ public class SettingDialogStack {
 
             return false;
         }
-    }
-
-    /**
-     * Remove the most recently rectangle value.
-     */
-    private void removeLastRectList() {
-        if (!mTargetAreaList.empty()) {
-            mTargetAreaList.pop();
-        }
-    }
-
-    public void updateMenuDialog(SettingAdapter commonKeyAdapter) {
-        SettingAdapter adapter = mMenuDialog.getAdapter();
-        adapter.clear();
-
-        SettingItem item = null;
-
-        // update adapter of grid view.
-        for (int i = 0; i < commonKeyAdapter.getCount(); i++) {
-            item = commonKeyAdapter.getItem(i);
-            adapter.add(item);
-        }
-
-        // update menu dialog.
-        adapter.notifyDataSetChanged();
     }
 
     private static final OnKeyListener DUMMY_ON_INTERCEPT_KEY_LISTENER = new OnKeyListener() {
