@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2013 Sony Mobile Communications Inc.                *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- body, it is always visible. -->
+
+    <FrameLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_dialog_item_height"
+        android:background="@drawable/setting_item_selector"
+        android:paddingLeft="@dimen/left_edge_padding"
+        android:paddingRight="@dimen/right_edge_padding"
+        android:paddingBottom="0dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:orientation="vertical" >
+
+            <!-- category -->
+
+            <TextView
+                android:id="@+id/category"
+                style="@style/TextAppearance.SomcCamera.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:maxWidth="@dimen/setting_item_text_width"
+                android:paddingBottom="@dimen/left_mid_padding"
+                tools:ignore="SelectableText" />
+
+            <!-- item title -->
+
+            <TextView
+                android:id="@+id/value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:maxWidth="@dimen/setting_item_text_width"
+                android:paddingTop="0dp"
+                style="@style/TextAppearance.SomcCamera.Medium"
+                tools:ignore="SelectableText" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- divider, it is visible if this item is not last item. -->
+
+    <RelativeLayout
+        android:id="@+id/setting_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@drawable/cam_dialog_separator_icn"
+        android:paddingLeft="@dimen/divider_side_padding"
+        android:paddingRight="@dimen/divider_side_padding"
+        android:visibility="visible" />
+
+</LinearLayout>

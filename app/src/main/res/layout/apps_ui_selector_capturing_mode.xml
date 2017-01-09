@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2015 Sony Mobile Communications Inc.                *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<com.sonyericsson.cameracommon.appsui.view.capturing.CapturingModeSelectorView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/apps_grid_side_margin"
+    android:paddingLeft="@dimen/apps_grid_container_top_margin"
+    android:paddingBottom="@dimen/apps_grid_side_margin"
+    android:visibility="gone"
+    android:layoutDirection="ltr" >
+
+    <FrameLayout
+        android:id="@+id/apps_ui_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="locale" >
+
+        <GridView
+            android:id="@+id/apps_ui_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/apps_grid_top_margin"
+            android:clipToPadding="false"
+            android:layoutDirection="ltr" >
+        </GridView>
+
+        <!--
+          The following 10dp is set in evidence the SCROLL_BAR_SIZE in ViewConfiguration.
+        -->
+        <com.sonyericsson.cameracommon.appsui.view.capturing.CapturingModeGridScroller
+            android:id="@+id/apps_ui_content_scroller"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:layout_gravity="end"
+            android:layoutDirection="locale" >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <View
+                    android:id="@+id/apps_ui_content_taller"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+        </com.sonyericsson.cameracommon.appsui.view.capturing.CapturingModeGridScroller>
+    </FrameLayout>
+
+</com.sonyericsson.cameracommon.appsui.view.capturing.CapturingModeSelectorView>

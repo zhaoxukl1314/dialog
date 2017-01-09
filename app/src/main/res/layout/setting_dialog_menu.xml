@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2012 Sony Mobile Communications Inc.                *
+ * Copyright (C) 2013 Sony Mobile Communications Inc.                *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<com.example.zhaoxukl1314.settingdialog.SettingTabDialogBasic
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cam_shortcut_dialog_background_icn">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/shortcut_dialog_padding"
+        android:orientation="vertical">
+
+        <com.example.zhaoxukl1314.settingdialog.SettingTabs
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_group_tab_height"
+            android:orientation="horizontal">
+            <FrameLayout
+                android:id="@+id/tab_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:background="@drawable/setting_tab_background_left">
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:duplicateParentState="true"
+                    android:scaleType="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/tab_middle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:background="@drawable/setting_tab_background_middle">
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:duplicateParentState="true"
+                    android:scaleType="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/tab_right"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:background="@drawable/setting_tab_background_right">
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:duplicateParentState="true"
+                    android:scaleType="center" />
+            </FrameLayout>
+        </com.example.zhaoxukl1314.settingdialog.SettingTabs>
+
+        <GridView
+            android:id="@+id/setting_gridview"
+            android:numColumns="1"
+            android:layout_gravity="right"
+            android:columnWidth="0dp"
+            android:stretchMode="columnWidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="false"
+            android:focusableInTouchMode="true"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarFadeDuration="@integer/setting_fadeduration"
+            android:scrollbarDefaultDelayBeforeFade="@integer/setting_defaultdelaybeforefade"
+            android:listSelector="@android:color/transparent">
+        </GridView>
+
+    </LinearLayout>
+
+</com.example.zhaoxukl1314.settingdialog.SettingTabDialogBasic>

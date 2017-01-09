@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2012 Sony Mobile Communications AB.                 *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<com.sonyericsson.cameracommon.setting.dialog.SettingControlDialog
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/control_dialog_left_padding"
+    android:paddingRight="@dimen/control_dialog_right_padding"
+    android:paddingTop="@dimen/control_dialog_top_padding"
+    android:paddingBottom="@dimen/control_dialog_bottom_padding"
+    android:layoutDirection="ltr">
+
+    <!--
+        This layout has no background image. SettingControlDialog
+        draws the image of background according to current orientation.
+     -->
+
+    <LinearLayout
+        android:id="@+id/dialog_items"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr" />
+
+</com.sonyericsson.cameracommon.setting.dialog.SettingControlDialog>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+* Copyright (C) 2012 Sony Mobile Communications AB.
+* All rights, including trade secret rights, reserved.
+*
+* @file rotatable_toast_styles.xml
+*
+* @author Akira Mitsuuchi (Akira.X.Mitsuuchi@sonymobile.com)
+-->
+
+<resources>
+    <!-- RotatableToast styles Definitions -->
+    <dimen name="rotatable_toast_max_width_for_land">328dp</dimen>
+    <dimen name="rotatable_toast_max_width_for_port">240dp</dimen>
+    <dimen name="rotatable_toast_text_padding">8dp</dimen>
+    <dimen name="rotatable_toast_text_size">14sp</dimen>
+</resources>

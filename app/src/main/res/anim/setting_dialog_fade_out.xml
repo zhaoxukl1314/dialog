@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2013 Sony Mobile Communications AB.
+ * All rights, including trade secret rights, reserved.
+ *
+ * @file setting_dialog_fade_out.xml
+ *
+ * @author Kentaro Kawahara (Kentarou.X.Kawahara@sonymobile.com)
+-->
+
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="100"
+    android:fromAlpha="1.0"
+    android:toAlpha="0.0"
+    android:interpolator="@android:anim/linear_interpolator" />

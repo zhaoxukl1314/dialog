@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ *  ____                      _____      _                           *
+ * / ___|  ___  _ __  _   _  | ____|_ __(_) ___ ___ ___  ___  _ __   *
+ * \___ \ / _ \| '_ \| | | | |  _| | '__| |/ __/ __/ __|/ _ \| '_ \  *
+ *  ___) | (_) | | | | |_| | | |___| |  | | (__\__ \__ \ (_) | | | | *
+ * |____/ \___/|_| |_|\__, | |_____|_|  |_|\___|___/___/\___/|_| |_| *
+ *                    |___/                                          *
+ *                                                                   *
+ *********************************************************************
+ * Copyright 2011 Sony Ericsson Mobile Communications Japan, Inc.    *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<!-- Fade-out AlphaAnimation for recognized scene notification -->
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+       android:fromAlpha="1.0"
+       android:toAlpha="0.0"
+       android:startOffset="@attr/scene_fade_out_delay"
+       android:duration="@attr/scene_fade_out_duration"
+       android:fillAfter="true" />

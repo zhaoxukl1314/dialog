@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright 2011 (C) Sony Mobile Communications Inc.                *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<resources>
+  <integer name="focus_indicator_animation_focusin_duration">70</integer>
+  <integer name="focus_indicator_animation_fadeout_duration">70</integer>
+  <item name="focus_indicator_animation_mag_single" format="float" type="attr">1.0</item>
+  <item name="focus_indicator_animation_mag_touch" format="float" type="attr">1.2</item>
+  <item name="focus_indicator_animation_mag_object" format="float" type="attr">1.3</item>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2012 Sony Mobile Communications AB.                 *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<resources>
+    <bool name="is_tablet">true</bool>
+    <bool name="is_ten_inch">false</bool>
+</resources>
+

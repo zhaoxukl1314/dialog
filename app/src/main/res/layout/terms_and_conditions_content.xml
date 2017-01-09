@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2013 Sony Mobile Communications Inc.                *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/disclaimer_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/customized_dialog_space">
+        <TextView
+            android:id="@+id/data_charge_text"
+            android:text="@string/cam_strings_term_of_use_data_charge_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/customized_dialog_font_size"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/customized_dialog_space">
+        <TextView
+            android:id="@+id/data_collection_text"
+            android:text="@string/cam_strings_term_of_use_data_collection_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/customized_dialog_font_size"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/customized_dialog_space">
+        <TextView
+            android:id="@+id/consent_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/customized_dialog_font_size"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/customized_dialog_space">
+        <TextView
+            android:id="@+id/footer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/customized_dialog_font_size"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

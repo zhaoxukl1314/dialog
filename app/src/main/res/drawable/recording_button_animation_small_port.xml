@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2013 Sony Mobile Communications AB.                 *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:drawable="@drawable/capture_button_videorec2_small_portrait" android:duration="500" />
+  <item android:drawable="@drawable/capture_button_videorec_small_portrait" android:duration="500" />
+</animation-list>

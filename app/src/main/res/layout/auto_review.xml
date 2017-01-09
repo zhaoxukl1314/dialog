@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright (C) 2013 Sony Mobile Communications AB.
+   All rights, including trade secret rights, reserved.
+-->
+<com.sonyericsson.cameracommon.review.AutoReviewWindow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/auto_review_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:visibility="invisible"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/auto_review_picture_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+    />
+
+    <com.sonyericsson.cameracommon.review.PlayButton
+        android:id="@+id/auto_review_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/cam_video_preview_play_icn" />
+
+    <LinearLayout
+        android:id="@+id/auto_review_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="4"
+        android:paddingRight="@dimen/auto_review_right_margin"
+        android:layout_gravity="right">
+
+        <FrameLayout
+            android:id="@+id/auto_review_view_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <com.sonyericsson.cameracommon.review.ViewButton
+                android:id="@+id/auto_review_view"
+                android:layout_width="@dimen/auto_review_icon_width"
+                android:layout_height="@dimen/auto_review_icon_height"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/cam_photo_preview_album_icn"
+                android:background="@drawable/setting_shortcut_selector"
+                android:contentDescription="@string/cam_strings_accessibility_viewer_txt" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <com.sonyericsson.cameracommon.review.DeleteButton
+                android:id="@+id/auto_review_delete"
+                android:layout_width="@dimen/auto_review_icon_width"
+                android:layout_height="@dimen/auto_review_icon_height"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/cam_photo_preview_delete_icn"
+                android:background="@drawable/setting_shortcut_selector"
+                android:contentDescription="@string/cam_strings_file_delete_confirm_title_txt" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <com.sonyericsson.cameracommon.review.EditButton
+                android:id="@+id/auto_review_edit"
+                android:layout_width="@dimen/auto_review_icon_width"
+                android:layout_height="@dimen/auto_review_icon_height"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:background="@drawable/setting_shortcut_selector"
+                android:contentDescription="@string/cam_strings_preview_edit_txt" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <com.sonyericsson.cameracommon.review.ShareButton
+                android:id="@+id/auto_review_share"
+                android:layout_width="@dimen/auto_review_icon_width"
+                android:layout_height="@dimen/auto_review_icon_height"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/cam_photo_preview_share_icn"
+                android:background="@drawable/setting_shortcut_selector"
+                android:contentDescription="@string/cam_strings_file_share_title_txt" />
+        </FrameLayout>
+    </LinearLayout>
+</com.sonyericsson.cameracommon.review.AutoReviewWindow>

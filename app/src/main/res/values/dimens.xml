@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright (C) 2011 Sony Mobile Communications Inc.
+   All rights, including trade secret rights, reserved.
+-->
+
+<resources>
+<!-- hud_icons value  -->
+  <!-- View finder dialog -->
+  <item name="scene_fade_out_delay" format="integer" type="attr">2000</item>
+  <item name="scene_fade_out_duration" format="integer" type="attr">1000</item>
+
+  <!-- Recognized Indicators -->
+  <dimen name="scene_indicator_margin_right">12dp</dimen>
+  <dimen name="viewfinder_dialog_notifications_height">20dp</dimen>
+  <dimen name="viewfinder_dialog_notifications_width">236dp</dimen>
+  <dimen name="viewfinder_dialog_notifications_margin_left">12dp</dimen>
+  <dimen name="viewfinder_dialog_notifications_margin_right">7dp</dimen>
+  <dimen name="viewfinder_dialog_scene_icon_size">20dp</dimen>
+  <dimen name="viewfinder_dialog_scene_text_margin">3dp</dimen>
+  <dimen name="viewfinder_dialog_scene_text_max_width">240dp</dimen>
+
+  <!-- Notification Indicators -->
+  <dimen name="indicators_on_viewfinder_margin">36dp</dimen>
+
+  <dimen name="viewfinder_dialog_settings_icon_margin_bottom">6dp</dimen>
+  <dimen name="viewfinder_dialog_settings_icon_margin_right">8dp</dimen>
+  <dimen name="viewfinder_dialog_settings_icon_margin">4dp</dimen>
+
+  <!-- Touch capture/focus area -->
+  <dimen name="touch_area_margin">14dp</dimen>
+
+  <!-- Customized dialogs -->
+  <dimen name="customized_dialog_font_size_small">14sp</dimen>
+  <dimen name="customized_dialog_font_size">18sp</dimen>
+  <dimen name="customized_dialog_space">10dp</dimen>
+  <dimen name="customized_dialog_divider_height">1dp</dimen>
+
+  <dimen name="viewfinder_grid_line_width">0.67dp</dimen>
+
+  <!--  Scenes/Conditions dimen -->
+  <dimen name="scene_indicator_text_width">18dp</dimen>
+  <dimen name="scene_indicator_text_bottom_padding">8dp</dimen>
+  <dimen name="scene_indicator_left_margin">20dp</dimen>
+  <dimen name="scene_indicator_bottom_margin">12dp</dimen>
+
+  <!-- Apps UI -->
+  <dimen name="swipe_threshold">60dp</dimen>
+
+  <!-- Camera Switch Animation -->
+  <dimen name="camera_switch_swipe_threshold">120dp</dimen>
+  <dimen name="dragging_start_radius">24dp</dimen>
+  <dimen name="dragging_end_radius">150dp</dimen>
+
+  <!-- Runtime Permission -->
+  <dimen name="alert_dialog_padding">24dp</dimen>
+  <dimen name="alert_dialog_body_padding_bottom">8dp</dimen>
+  <dimen name="alert_dialog_title_margin_bottom">20dp</dimen>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2013 Sony Mobile Communications AB.
+    All rights, including trade secret rights, reserved.
+-->
+
+<resources>
+  <dimen name="smile_gauge_width">40dp</dimen>
+  <dimen name="smile_gauge_height">116dp</dimen>
+  <dimen name="smile_gauge_padding_left">9dp</dimen>
+  <dimen name="smile_gauge_frame_width">32dp</dimen>
+  <dimen name="smile_gauge_frame_height">116dp</dimen>
+  <dimen name="smile_gauge_threshold_width">30dp</dimen>
+  <dimen name="smile_gauge_threshold_height">21dp</dimen>
+  <dimen name="smile_gauge_threshold_margin_right">9dp</dimen>
+  <dimen name="smile_gauge_indicator_width">12dp</dimen>
+  <dimen name="smile_gauge_indicator_height">1dp</dimen>
+  <dimen name="smile_gauge_blank_width">14.7dp</dimen>
+  <dimen name="smile_gauge_blank_height">0dp</dimen>
+  <dimen name="smile_gauge_frame_padding_left">1px</dimen>
+  <dimen name="smile_gauge_frame_padding_bottom">10dp</dimen>
+  <dimen name="smile_gauge_score_high">26dp</dimen>
+  <dimen name="smile_gauge_score_middle">42dp</dimen>
+  <dimen name="smile_gauge_score_low">58dp</dimen>
+  <dimen name="smile_gauge_position_limit_top">7dp</dimen>
+  <dimen name="smile_gauge_position_limit_left">67dp</dimen>
+  <dimen name="smile_gauge_position_limit_right">67dp</dimen>
+  <dimen name="smile_gauge_position_limit_bottom">7dp</dimen>
+</resources>

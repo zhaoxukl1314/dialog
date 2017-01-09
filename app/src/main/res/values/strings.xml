@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/********************************************************************
+*                                                                   *
+* Copyright (c) 2011 Sony Mobile Communications Inc.                *
+* All rights, including trade secret rights, reserved.              *
+*                                                                   *
+********************************************************************/
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">SettingDialog</string>
+<!-- Option to be displayed as the title of the camera application icon in Application Tray. -->
+<string name="cam_strings_application_name_txt" xliff:restype="x-GENERIC/LIST/TITLE/ICON">Camera</string>
+<!-- One of the Camera Capturing modes displayed on the Camera selection list. By setting to this mode, the user can start the camera with the mode.  -->
+<string name="cam_strings_shortcut_video_camera_txt" xliff:restype="x-GENERIC/LIST/TITLE/ICON">Video camera</string>
+<!-- Text for Scene type "Landscape" which is shown on viewfinder. This text is displayed depending on the recognised scene by Auto scene recognition. -->
+<string name="cam_strings_scenes_auto_recog_landscape_txt" xliff:restype="x-CAMERA/VIEWFINDER/SCENE">Landscape</string>
+<!-- Text for Scene type "Backlight" which is shown on viewfinder. This text is displayed depending on the recognised scene by Auto scene recognition. -->
+<string name="cam_strings_scenes_auto_recog_backlight_txt" xliff:restype="x-CAMERA/VIEWFINDER/SCENE">Backlight</string>
+<!-- Text for Scene type "Night scenet" which is shown on viewfinder. This text is displayed depending on the recognised scene by Auto scene recognition. -->
+<string name="cam_strings_scenes_auto_recog_twilight_txt" xliff:restype="x-CAMERA/VIEWFINDER/SCENE">Night scene</string>
+<!-- Text for Scene type "Document" which is shown on viewfinder. This text is displayed depending on the recognised scene by Auto scene recognition. -->
+<string name="cam_strings_scenes_auto_recog_text_txt" xliff:restype="x-CAMERA/VIEWFINDER/SCENE">Document</string>
+<!-- Option value for settings. -->
+<string name="cam_strings_settings_on_txt" xliff:restype="x-CAMERA/CORE/LIST/2ND/1ROW/1ICON">On</string>
+<!-- Option value for settings. -->
+<string name="cam_strings_settings_off_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Off</string>
+<!-- Option value for settings. -->
+<string name="cam_strings_settings_auto_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Auto</string>
+<!-- Option for Scenes to be displayed in settings menu. The user can choose specific photography situations. -->
+<string name="cam_strings_scenes_txt" xliff:restype="x-CAMERA/MENU/DIALOG/2ROWS">Scenes</string>
+<!-- Option value for Scenes in Settings menu. When this scene is selected, the camera is configured for taking photos of landscapes, i.e. outdoors situations and long distances. -->
+<string name="cam_strings_scenes_landscape_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Landscape</string>
+<!-- Option value for Scenes in Settings menu. When this scene is selected, the camera is configured for taking videos of night situations. -->
+<string name="cam_strings_scenes_nightmode_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Night</string>
+<!-- Option value for Scenes in Settings menu. When this scene is selected, the camera is configured for taking photos of night situations. -->
+<string name="cam_strings_scenes_nightscene_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Night scene</string>
+<!-- Option value for Scenes in Settings menu. When this scene is selected, the camera is configured for taking photos of party situations. -->
+<string name="cam_strings_scenes_party_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Party</string>
+<!-- Option value for Scenes in Settings menu. When this scene is selected, the camera is configured for taking photos of (fast) moving objects with a minimum of motion blurring. -->
+<string name="cam_strings_scenes_sports_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Sports</string>
+<!-- Option value for Scenes in Settings menu. When this scene is selected, the camera is configured for taking photos in bright areas. It is useful for avoiding underexposure of the image. -->
+<string name="cam_strings_scenes_beachsnow_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Beach and snow</string>
+<!-- Option value for Scenes in Settings menu. When this scene is selected, the camera is configured for photographing documents, such as drawings and texts, on paper, whiteboards or similar. -->
+<string name="cam_strings_scenes_document_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/1ICON">Document</string>
+<!-- Option for picture resolution to be displayed in settings menu. -->
+<string name="cam_strings_resolution_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/1ICON">Resolution</string>
+<!-- Option for flash to be displayed in settings menu. -->
+<string name="cam_strings_flash_txt" xliff:restype="x-CAMERA/MENU/DIALOG/2ROWS">Flash</string>
+<!-- Option value for flash to force to turn the flash ON every time a photo is captured. -->
+<string name="cam_strings_flash_fill_flash_txt" xliff:restype="x-CAMERA/CORE/LIST/2ND/1ROW/1ICON">Fill flash</string>
+<!-- Option value for flash to prevent from having red-eyes. -->
+<string name="cam_strings_flash_red_eye_reduc_txt" xliff:restype="x-CAMERA/CORE/LIST/2ND/1ROW/1ICON">Red-eye reduction</string>
+<!-- Option to be displayed in settings menu. Setting menu where the user can turn on/off Self-timer. -->
+<string name="cam_strings_self_timer_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/1ICON">Self-timer</string>
+<!-- Option value for self-timer to set the timer for 2seconds. -->
+<string name="cam_strings_self_timer_2_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">2 sec.</string>
+<!-- Option value for self-timer to set the timer for 10seconds. -->
+<string name="cam_strings_self_timer_10_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">10 sec.</string>
+<!-- A camera setting option listed in the Camera settings menu. With this option, the camera automatically captures an image when detecting a smile. The user can also set the smile sensitivity for this option. -->
+<string name="cam_strings_smile_capture_txt" xliff:restype="x-CAMERA/MENU/DIALOG/2ROWS">Smile detection</string>
+<!-- One of three options for the smile shutter feature. When this value is selected, the camera automatically captures a big smile. -->
+<string name="cam_strings_smile_capture_big_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Big smile</string>
+<!-- One of three options for the smile shutter feature. When this value is selected, the camera automatically captures an average smile. -->
+<string name="cam_strings_smile_capture_normal_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Average smile</string>
+<!-- One of three options for the smile shutter feature. When this value is selected, the camera automatically captures a small smile. -->
+<string name="cam_strings_smile_capture_faint_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Small smile</string>
+<!-- Option for Focus mode to be displayed in settings menu. The user can select different focus options. -->
+<string name="cam_strings_focus_mode_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/NOICON">Focus mode</string>
+<!-- Option value for Focus mode. When selected, the camera will automatically measure the distance to the subject and set appropriate focus. -->
+<string name="cam_strings_focus_mode_single_af_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Single autofocus</string>
+<!-- Option value for Focus mode. When selected, the camera will automatically measure the distance to the at most five subjects and set appropriate focus. -->
+<string name="cam_strings_focus_mode_multi_af_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Multi autofocus</string>
+<!-- Option value for Focus mode. This option sets the focus distance to infinite which in effect disables the Autofocus. Everything in the image will appear equally sharp. Normally used when photographing landscapes and distant objects. -->
+<string name="cam_strings_focus_mode_infinity_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Infinity</string>
+<!-- Option value for Focus mode. In this mode, human faces in the viewfinder are detected and tracked. This mode allows the camera to automatically set the focus of a face when taking photos. -->
+<string name="cam_strings_focus_mode_face_detection_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Face detection</string>
+<!-- Option value for Focus mode. This mode enables the user to focus an object on camera viewfinder by touching the object. -->
+<string name="cam_strings_focus_mode_touch_focus_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Touch focus</string>
+<!-- Option value for Focus mode. Used when taking extreme close-up photos, which the normal Autofocus does not handle. -->
+<string name="cam_strings_focus_mode_macro_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Macro</string>
+<!-- Option to be displayed in settings. This mode enables the user to adjust Exposure value on camera viewfinder. -->
+<string name="cam_strings_exposure_level_txt" xliff:restype="x-CAMERA/MENU/DIALOG/2ROWS">Exposure value</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, -2.0. -->
+<string name="cam_strings_exposure_level_m20_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV -2.0</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, -1.7. -->
+<string name="cam_strings_exposure_level_m17_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV -1.7</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, -1.3. -->
+<string name="cam_strings_exposure_level_m13_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV -1.3</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, -1.0. -->
+<string name="cam_strings_exposure_level_m10_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV -1.0</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, -0.7. -->
+<string name="cam_strings_exposure_level_m07_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV -0.7</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, -0.3. -->
+<string name="cam_strings_exposure_level_m03_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV -0.3</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, +-0.0. \u00B1 means a symbol called +-. -->
+<string name="cam_strings_exposure_level_pm0_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV \u00B10.0</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, +0.3. -->
+<string name="cam_strings_exposure_level_p03_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV +0.3</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, +0.7. -->
+<string name="cam_strings_exposure_level_p07_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV +0.7</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, +1.0. -->
+<string name="cam_strings_exposure_level_p10_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV +1.0</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, +1.3. -->
+<string name="cam_strings_exposure_level_p13_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV +1.3</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, +1.7. -->
+<string name="cam_strings_exposure_level_p17_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV +1.7</string>
+<!-- Option to display an abbreviated form of Exposure value and Exposure value of a fixed value, +2.0. -->
+<string name="cam_strings_exposure_level_p20_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/CURRENT">EV +2.0</string>
+<!-- Option for White balance to be displayed in settings menu. The camera adjusts the color temperature of the picture. -->
+<string name="cam_strings_white_balance_txt" xliff:restype="x-CAMERA/MENU/DIALOG/2ROWS">White balance</string>
+<!-- Option value for White balanace. When this value is selected, the camera automatically adjusts the color temperature of the picture. -->
+<string name="cam_strings_white_balance_auto_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/RIGHT">Auto</string>
+<!-- Option value for White balanace. When this value is selected, the camera adjusts the color temperature of the picture to incandescent light conditions. -->
+<string name="cam_strings_white_balance_incandescent_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/RIGHT">Incandescent</string>
+<!-- Option value for White balanace. When this value is selected, the camera adjusts the color temperature of the picture to fluorescent light conditions. -->
+<string name="cam_strings_white_balance_fluorescent_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/RIGHT">Fluorescent</string>
+<!-- Option value for White balanace. When this value is selected, the camera adjusts the color temperature of the picture to daylight conditions. -->
+<string name="cam_strings_white_balance_day_light_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/RIGHT">Daylight</string>
+<!-- Option value for White balanace. When this value is selected, the camera adjusts the color temperature of the picture to cloudy light conditions. -->
+<string name="cam_strings_white_balance_cloudy_txt" xliff:restype="x-CAMERA/SETTING/EV/WB/RIGHT">Cloudy</string>
+<!-- Option for Photometry to be displayed in settings menu. The user can adjust an exposure position. -->
+<string name="cam_strings_photometry_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/NOICON">Metering</string>
+<!-- Option value for Photometry. -->
+<string name="cam_strings_photometry_center_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Center</string>
+<!-- Option value for Photometry. -->
+<string name="cam_strings_photometry_average_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Average</string>
+<!-- Option value for Photometry. -->
+<string name="cam_strings_photometry_spot_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Spot</string>
+<!-- Option for image stabilizer to be displayed in settings menu. The image stabilizer is a function that reduce blurriness in a picture caused by unsteady handling of the camera when a shot is taken. -->
+<string name="cam_strings_image_stabilizer_txt" xliff:restype="x-CAMERA/MENU/DIALOG/2ROWS">Image stabilizer</string>
+<!-- Option for Geo-tag to be displayed in settings menu. This feature is to turn ON/OFF GPS information added to taken photo or video.. -->
+<string name="cam_strings_geotagging_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/MIDDLE/1ROW/NOICON">Save location</string>
+<!-- An option to select where to save taken photos/videos. It is displayed in the Settings menu. The user can select a place to save the data of taken photos/videos. -->
+<string name="cam_strings_save_destination_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/NOICON">Data storage</string>
+<!-- An option value for where to save taken photos/videos. By selecting this value, the user can save his/her photos/videos into the internal mass storage in the mobile phone. -->
+<string name="cam_strings_save_destination_ims_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Internal storage</string>
+<!-- An option value for where to save taken photos/videos. By selecting this value, the user can save his/her photos/videos into the memory card inserted in the mobile phone. -->
+<string name="cam_strings_save_destination_sd_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">SD card</string>
+<!-- An option to start the camera easier and quicker than normal. It is displayed in the camera settings menu. With this option, the user can activate the camera quickly from the phone sleep mode or from the unlocked screen. -->
+<string name="cam_strings_fast_capturing_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/NOICON">Quick launch</string>
+<!-- Option value for a video size. This option stores videos in full HD (HD 1080p) size. -->
+<string name="cam_strings_video_size_full_hd_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Full HD</string>
+<!-- Informs the user that camera device is not available. -->
+<string name="cam_strings_error_device_not_available_txt" xliff:restype="x-UNLIMITED">The camera may be in use by another application. Please close the other application and try again.</string>
+<!-- Informs the user that there is an unknown error. -->
+<string name="cam_strings_error_fatal_txt" xliff:restype="x-UNLIMITED">Unknown error.</string>
+<!-- Informs the user that the memory card or internal mass storage is full. -->
+<string name="cam_strings_error_memory_full_txt" xliff:restype="x-UNLIMITED">Memory full. Delete some files from SD card.</string>
+<!-- Informs the user that the memory card or internal mass storage is unavailable. -->
+<string name="cam_strings_error_memory_unavailable_txt" xliff:restype="x-UNLIMITED">SD card unavailable</string>
+<!-- This text is displayed when user launch camera application during voice call. -->
+<string name="cam_strings_error_message_during_voice_call_txt" xliff:restype="x-UNLIMITED">Camera unavailable during a call</string>
+<!-- Informs the user that saving the photo/video has been failed. -->
+<string name="cam_strings_store_fail_txt" xliff:restype="x-CAMERA/TOAST/2ROWS/V">Could not save</string>
+<!-- Informs the user that a taken photo fails to be saved because the memory card or internal mass storage is full. -->
+<string name="cam_strings_memory_full_save_failed_txt" xliff:restype="x-UNLIMITED">Could not save. Memory full.</string>
+<!-- Informs the user that the selected file is to be deleted. -->
+<string name="cam_strings_file_delete_confirm_txt" xliff:restype="x-UNLIMITED">Delete this file?</string>
+<!-- The title of dialog to select the application to share the selected file. -->
+<string name="cam_strings_file_share_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">Share</string>
+<!-- Informs users that either wireless networks or GPS needs to be enabled in order to use geotagging and asks the users to jump to the settings now to enable wireless networks or GPS satellites. --><string name="cam_strings_advanced_setting_geo_tag_both_off_txt" xliff:restype="x-UNLIMITED">To save locations, you have to enable GPS and/or wireless networks. Enable now?</string>
+<!-- Option to hide the popup dialog if it is not necessary for the user. -->
+<string name="cam_strings_do_not_show_again_txt" xliff:restype="x-UNLIMITED">Do not show again</string>
+<!-- This message is a guide that shall be displayed during capturing a photo. This guidance tells the user which direction he/she should pan the camera to capture a photo. -->
+<string name="cam_3d_strings_shooting_guide_left_to_right_txt" xliff:restype="x-CAMERA/3D/SHOOTING/GUIDE/H">Pan from left to right</string>
+<!-- This message is a guide that shall be displayed during capturing a photo. This guidance tells the user which direction he/she should pan the camera to capture a photo. -->
+<string name="cam_3d_strings_shooting_guide_right_to_left_txt" xliff:restype="x-CAMERA/3D/SHOOTING/GUIDE/H">Pan from right to left</string>
+<!-- This message is a guide that shall be displayed during capturing a photo. This guidance tells the user which direction he/she should pan the camera to capture a photo. -->
+<string name="cam_3d_strings_shooting_guide_down_to_up_txt" xliff:restype="x-CAMERA/3D/SHOOTING/GUIDE/H">Pan from down to up</string>
+<!-- This message is a guide that shall be displayed during capturing a photo. This guidance tells the user which direction he/she should pan the camera to capture a photo. -->
+<string name="cam_3d_strings_shooting_guide_up_to_down_txt" xliff:restype="x-CAMERA/3D/SHOOTING/GUIDE/H">Pan from up to down</string>
+<!-- Option value for Shooting direction. "Right" indicates the shooting direction. User shall select this option when he/she wants to shoot the photo from left to right. -->
+<string name="cam_3d_strings_setting_shooting_direction_right_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Right</string>
+<!-- Option value for Shooting direction. "Left" indicates the shooting direction. User shall select this option when he/she wants to shoot the photo from right to left. -->
+<string name="cam_3d_strings_setting_shooting_direction_left_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Left</string>
+<!-- Option value for Shooting direction. "Up" indicates the shooting direction. User shall select this option when he/she wants to shoot the photo from down to up. -->
+<string name="cam_3d_strings_setting_shooting_direction_up_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Up</string>
+<!-- Option value for Shooting direction. "Down" indicates the shooting direction. User shall select this option when he/she wants to shoot the photo from up to down. -->
+<string name="cam_3d_strings_setting_shooting_direction_down_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Down</string>
+<!-- This error message is displayed when the user panned the camera too quickly and failed shooting. This error message informs the user to pan the camera more slowly. -->
+<string name="cam_3d_strings_error_too_quick_txt" xliff:restype="x-UNLIMITED">Could not take picture. Please pan more slowly.</string>
+<!-- This error message is displayed when the user panned the camera too slowly and failed shooting. This error message informs the user to pan the camera more quickly. -->
+<string name="cam_3d_strings_error_too_slow_txt" xliff:restype="x-UNLIMITED">Could not take picture. Please pan faster.</string>
+<!-- This error message is displayed when the user panned the camera to the incorrect direction and failed shooting. This error message informs the user to pan the camera to the correct direction. -->
+<string name="cam_3d_strings_error_direction_txt" xliff:restype="x-UNLIMITED">Could not take picture. Please pan in the correct direction.</string>
+<!-- This error message is displayed when the user panned the camera too quickly and could not complete the shooting. This toast informs the user to pan the camera more slowly. -->
+<string name="cam_3d_strings_creating_but_too_quick_txt" xliff:restype="x-UNLIMITED">Could not complete the capturing. Please pan more slowly.</string>
+<!-- This error message is displayed when the user panned the camera too slowly and could not complete the shooting. This toast informs the user to pan the camera more quickly. -->
+<string name="cam_3d_strings_creating_but_too_slow_txt" xliff:restype="x-UNLIMITED">Could not complete the capturing. Please pan faster.</string>
+<!-- This error message is displayed when the user panned the camera to the incorrect direction and could not complete the shooting. This toast informs the user to pan the camera to the correct direction. -->
+<string name="cam_3d_strings_creating_but_incorrect_direction_txt" xliff:restype="x-UNLIMITED">Could not complete the capturing. Please pan in the correct direction.</string>
+<!-- When the panorama image is created, this text will be displayed on the dialog. -->
+<string name="cam_3d_strings_dialog_processing_txt" xliff:restype="x-UNLIMITED">Processing...</string>
+<!-- This message will be displayed when the capturing is finished on the way. This message informs the user to be created the half-baked image which includes the gray area. -->
+<string name="cam_3d_strings_dialog_processing_include_black_area_txt" xliff:restype="x-UNLIMITED">Processing...\nThis image contains a gray area</string>
+<!-- When the Sweep Multi Angle capturing was  finished, this text will be displayed on the dialog. This message informs the user to create the images of two types. One is the 3D image to enjoy on the 3D TV, the other is Multi angle image. The user can confirm the imaeg for 3D TV at the 3D Sweep Panorama browser in the Gallery application. -->
+<string name="cam_3d_strings_dialog_multi_angle_processing_txt" xliff:restype="x-UNLIMITED">Creating the following files:\n- Multi Angle image\n- 3D image</string>
+<!-- This message will be displayed when the Sweep Multi Angle capturing is finished on the way. This message informs the user to be created the half-baked image which includes the gray area. This message also informs the user to create the images of two types. One is the 3D image to enjoy on the 3D TV, the other is Multi angle image. The user can confirm the imaeg for 3D TV at the 3D Sweep Panorama browser in the Gallery application. -->
+<string name="cam_3d_strings_dialog_multi_angle_processing_include_black_area_txt" xliff:restype="x-UNLIMITED">Creating the following files:\n- Multi Angle image\n- 3D image\nNote: These files contain a gray area.</string>
+<!-- This message is a guide that shall be displayed before capturing a photo. This guidance tells the user how to take a photo. This message is only displayed at the phone which has HW shutter key. -->
+<string name="cam_3d_strings_shooting_guide_press_key_txt" xliff:restype="x-CAMERA/3D/SHOOTING/GUIDE/2ROWS">Press the camera key and slowly pan the camera</string>
+<!-- Guidance to inform users that is is possible to change shooting direction. This text shall be displayed only in 2D sweep panorama mode in which shooting direction can be changed. -->
+<string name="cam_3d_strings_shooting_direction_guide_txt" xliff:restype="x-CAMERA/3D/SHOOTING/GUIDE/2ROWS">Change direction by tapping icon on the left</string>
+<!-- This message is a guide that shall be displayed before capturing a photo. This guidance tells the user how to take a photo. This message is only displayed at the phone which doesn't have HW shutter key. -->
+<string name="cam_3d_strings_shooting_guide_touch_cap_txt" xliff:restype="x-CAMERA/3D/SHOOTING/GUIDE/2ROWS">Tap the camera button and slowly pan the camera</string>
+<!-- When the user connect the phone with TV via HDMI cable, if the 3D camera application (3D Sweep Panorama, Sweep Multi Angle and Sweep Panorama) is launched, this text will be displayed in the OK dialog. -->
+<string name="cam_3d_strings_error_capturing_during_connecting_tv_txt" xliff:restype="x-UNLIMITED">Unplug the cable. You cannot take a photo in this mode with a cable connected.</string>
+<!-- Error title. This is an error title for memory-related error dialogs. -->
+<string name="cam_strings_error_memory_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE/ICON">Memory error</string>
+<!-- Error title. This is an error title for general error dialogs. -->
+<string name="cam_strings_error_dialog_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE/ICON">Error</string>
+<!-- Message title. This is a message title for the dialog displayed when the user set Geotagging On and when neither GPS nor wireless network is selected in "My Location".
+Message contents in the above dialog reads "To add geotags, you have to enable GPS and/or wireless networks. Enable now?" (string name: cam_strings_advanced_setting_geo_tag_both_off_txt) -->
+<string name="cam_strings_advanced_setting_geo_tag_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">Save location</string>
+<!-- Message title. This is a message title for the dialogs which are displayed when user select delete icon. Message contents in the dialogs read "Delete this file (photo)?" (string name:
+cam_strings_file_delete_confirm_txt) -->
+<string name="cam_strings_file_delete_confirm_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE/ICON">Delete</string>
+<!-- Error title. This string is the title for the dialog which is displayed when it is not possible to capture a 3D image as the direction or the speed user panned the camera was improper. -->
+<string name="cam_3d_strings_shooting_failure_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">Could not shoot</string>
+<!-- Message title. This string is the title which is displayed when the user connect the phone with TV via HDMI cable. This dialog will be displayed with an OK button. Message content in the dialog reads "Cannot use this mode with an HDMI cable connected. Please unplug the cable." (string name: cam_3d_strings_error_capturing_during_connecting_tv_txt) -->
+<string name="cam_3d_strings_error_capturing_during_connecting_tv_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE/ICON">Error</string>
+<!-- Message title. This is a message title for the dialogs which are displayed while a captured Multi Angle image is being saved. It is displayed with a progress bar. -->
+<string name="cam_3d_strings_dialog_processing_saving_image_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">Saving image</string>
+<!-- Message title. This dialogis displayed when user launch camera application during voice call. The message content reads "Camera unavailable during voice call" (string name: cam_strings_error_message_during_voice_call_txt) -->
+<string name="cam_strings_error_message_during_voice_call_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE/ICON">Call in progress</string>
+<!-- Option value for capturing mode. Please see terminology sheet from SONY for approved translations. -->
+<string name="cam_3d_strings_sweep_panorama_short_txt" xliff:restype="x-CAMERA/APPSLIST/APPNAMES/2ROWS">Sweep Panorama</string>
+<!-- Informs the user that the memory card or internal mass storage is damaged or incorrectly formatted. -->
+<string name="cam_strings_error_memory_ims_access_error_txt" xliff:restype="x-UNLIMITED">Memory error</string>
+<!-- Informs the user that the memory card or internal mass storage is full. -->
+<string name="cam_strings_error_memory_ims_full_txt" xliff:restype="x-UNLIMITED">Memory full. Delete some files from the memory or change the default data storage.</string>
+<!-- Informs the user that the memory card or internal mass storage is unavailable. -->
+<string name="cam_strings_error_memory_ims_unavailable_txt" xliff:restype="x-UNLIMITED">Memory unavailable</string>
+<!-- Option value for quick launch settings. By selecting this option, the camera application will be launched even when the camera is in sleep mode just by press-and-holding the HW camera key. -->
+<string name="cam_strings_fast_capturing_launch_only_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Launch only</string>
+<!-- Error message. This error toast message will be displayed when a user starts and closes 3D camera application a number of times continuously -->
+<string name="cam_3d_strings_error_application_busy_txt" xliff:restype="x-CAMERA/TOAST/2ROWS/V">Please wait for a few seconds to launch 3D camera</string>
+<!-- Please align with "cam_strings_resolution_txt". However, if the translated string does not fit in this GUI object, please newly translate this master text. -->
+<string name="cam_strings_resolution_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Resolution</string>
+<!-- Please align with "cam_strings_flash_txt". However, if the translated string does not fit in this GUI object, please newly translate this master text. -->
+<string name="cam_strings_flash_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Flash</string>
+<!-- Please align with "cam_strings_focus_mode_txt". However, if the translated string does not fit in this GUI object, please newly translate this master text. -->
+<string name="cam_strings_focus_mode_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Focus mode</string>
+<!-- Please align with "cam_strings_exposure_level_txt". However, if the translated string does not fit in this GUI object, please newly translate this master text. -->
+<string name="cam_strings_exposure_level_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Exposure value</string>
+<!-- Please align with "cam_strings_white_balance_txt". However, if the translated string does not fit in this GUI object, please newly translate this master text. -->
+<string name="cam_strings_white_balance_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">White balance</string>
+<!-- Please align with "cam_strings_photometry_txt". However, if the translated string does not fit in this GUI object, please newly translate this master text. -->
+<string name="cam_strings_photometry_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Metering</string>
+<!-- Please align with "cam_strings_image_stabilizer_txt". However, if the translated string does not fit in this GUI object, please newly translate this master text. -->
+<string name="cam_strings_image_stabilizer_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Image stabilizer</string>
+<!-- Please align with "cam_strings_geotagging_txt". However, if the translated string does not fit in this GUI object, please newly translate this master text. -->
+<string name="cam_strings_geotagging_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Save location</string>
+<!-- Please align with "cam_strings_save_destination_txt". However, if the translated string does not fit in this GUI object, please newly translate this master text. -->
+<string name="cam_strings_save_destination_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Data storage</string>
+<!-- Please align with "cam_strings_fast_capturing_txt" . However, if the translated string does not fit in this GUI object, please newly translate this master text. -->
+<string name="cam_strings_fast_capturing_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Quick launch</string>
+<!-- Please align with "cam_strings_microphone_txt". However, if the translated string does not fit in this GUI object, please newly translate this master text. -->
+<string name="cam_strings_microphone_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Microphone</string>
+<!-- Please align with "cam_3d_strings_setting_shooting_direction_txt". However, if the translated string does not fit in this GUI object, please newly translate this master text. -->
+<string name="cam_3d_strings_setting_shooting_direction_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Shooting direction</string>
+<!-- Text on the button confirming with the user whether or not he/she accepts the question -->
+<string name="cam_strings_ok_txt" xliff:restype="x-GENERIC/DIALOG/BUTTON/2BUTTONS">OK</string>
+<!-- Text on the button confirming with the user whether or not he/she accepts the question -->
+<string name="cam_strings_cancel_txt" xliff:restype="x-GENERIC/DIALOG/BUTTON/2BUTTONS">Cancel</string>
+<!-- Text in the toast message displayed when the user launches the camera in the mode for which the zooming function is available. This message appears the first three times only just to remind the user of the key for zooming. -->
+<string name="cam_strings_zoom_help_txt" xliff:restype="x-CAMERA/TOAST/2ROWS/V">Use volume key to zoom in/out</string>
+<!-- Text in the toast message displayed when the user tries to zoom in/out in the shooting mode for which the zooming function is not available. -->
+<string name="cam_strings_zoom_not_supported_txt" xliff:restype="x-CAMERA/TOAST/2ROWS/V">Zoom currently not available</string>
+<!-- This error message shall be displayed only on the devices with dual storage. This message shall be displayed when "Data storage" is set to "SD card" but SD card is not available (removed/not inserted) to inform the user that the data storage will be changed to the internal storage as SD car is not available -->
+<string name="cam_strings_error_storage_changing_to_internal_txt" xliff:restype="x-UNLIMITED">No SD card available. Changed default data storage to Internal storage.</string>
+<!-- One of effects that the user can apply to the image. Users can select various effects from Live-Art-Filter that is one of caputuring modes.   -->
+<string name="cam_strings_effect_miniature_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Miniature</string>
+<!-- One of effects that the user can apply to the image. Users can select various effects from Live-Art-Filter that is one of caputuring modes.   -->
+<string name="cam_strings_effect_vivid_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Vivid</string>
+<!-- One of effects that the user can apply to the image. Users can select various effects from Live-Art-Filter that is one of caputuring modes.   -->
+<string name="cam_strings_effect_fish_eye_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Fisheye</string>
+<!-- One of effects that the user can apply to the image. Users can select various effects from Live-Art-Filter that is one of caputuring modes.   -->
+<string name="cam_strings_effect_partical_color_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Partial color</string>
+<!-- One of effects that the user can apply to the image. Users can select various effects from Live-Art-Filter that is one of caputuring modes.   -->
+<string name="cam_strings_effect_harris_shutter_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Harris Shutter</string>
+<!-- One of effects that the user can apply to the image. Users can select various effects from Live-Art-Filter that is one of caputuring modes.   -->
+<string name="cam_strings_effect_pencil_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Pencil sketch</string>
+<!-- One of effects that the user can apply to the image. Users can select various effects from Live-Art-Filter that is one of caputuring modes.   -->
+<string name="cam_strings_effect_Kaleidoscope_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Kaleidoscope</string>
+<!-- One of effects that the user can apply to the image. Users can select various effects from Live-Art-Filter that is one of caputuring modes.   -->
+<string name="cam_strings_effect_nostalgia_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Nostalgic</string>
+<!-- Text to speech for the blind. The device reads this text when the user touches the button to toggle between video and still camera. The user has to double tap the screen to switch to still camera. -->
+<string name="cam_strings_accessibility_switch_to_photo_txt" xliff:restype="x-UNLIMITED">Double tap to switch to camera</string>
+<!-- Text to speech for the blind. The device reads this text when the user touches the button to toggle between video and still camera. The user has to double tap the screen to switch to video camera. -->
+<string name="cam_strings_accessibility_switch_to_video_txt" xliff:restype="x-UNLIMITED">Double tap to switch to video</string>
+<!-- Text to speech for the blind. The phone reads this text when the user touches the camera key. -->
+<string name="cam_strings_accessibility_shutter_button_txt" xliff:restype="x-UNLIMITED">Camera key</string>
+<!-- Text to speech for the blind. The phone reads this text when the user touches the record button in video camera mode. -->
+<string name="cam_strings_accessibility_recording_button_txt" xliff:restype="x-UNLIMITED">Record</string>
+<!-- Text to speech for the blind. The phone reads this text when the user touches the stop button in video camera mode. -->
+<string name="cam_strings_accessibility_recording_stop_button_txt" xliff:restype="x-UNLIMITED">Stop</string>
+<!-- Text to speech for the blind. The phone reads this text when the user touches a stack of recent photos. -->
+<string name="cam_strings_accessibility_recent_photo_txt" xliff:restype="x-UNLIMITED">A stack of recent photos</string>
+<!-- Text to speech for the blind. The phone reads this text when the ser touches the capturing mode icon on the screen. -->
+<string name="cam_strings_accessibility_capturing_mode_txt" xliff:restype="x-UNLIMITED">Capturing mode</string>
+<!-- Message that prompts the user to tap the portion of which he/she wants to keep the color before taking a photo with "Partial color" effect applied. The photo displayed is a color photo, not a black&white photo, which means the user taps the color he/she wants to keep, not add a color to a black&white photo. -->
+<string name="cam_strings_art_filter_guesture_guide_tap_txt" xliff:restype="x-CAMERA/VIEWFINDER/TIPSBALLOON/2ROWS">Tap the portion you want to color</string>
+<!-- Message that only appears when the photo with an effect applied is editable. (e.g. a photo taken with Miniature effect ) The current implementation allows the user to edit (enlarge, shrink, or rotate) blurry area using two fingers but there is a possibility that other editing operations will be added.  -->
+<string name="cam_strings_art_filter_guesture_guide_general_txt" xliff:restype="x-CAMERA/VIEWFINDER/TIPSBALLOON/2ROWS">Use your fingers to edit the displayed image</string>
+<!-- One of the menu items under the camera settings. The user can change the video resolution from this menu. -->
+<string name="cam_strings_video_resolution_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/1ICON">Video resolution</string>
+<!-- Make the translation result consistent with "cam_strings_video_resolution_txt". Only if the translated string exceeds the GUI object, re-translate it. -->
+<string name="cam_strings_video_resolution_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Video resolution</string>
+<!-- One of the menu items under the camera settings. The user can turn HDR on or off from this menu. -->
+<string name="cam_strings_hdr_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/MIDDLE/1ROW/1ICON">HDR</string>
+<!-- Title of the HDR setting dialog. -->
+<string name="cam_strings_hdr_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">HDR</string>
+<!-- Toast that appears when the camera app that the user tried to launch is not available at all due to high temperature.  -->
+<string name="cam_strings_error_high_temp_already_high_txt" xliff:restype="x-GENERIC/TOAST/TEXT">Your Xperia™ needs to cool down. Please wait.</string>
+<!-- Toast that appears on the current screen of the camera application when the camera app entered the shutdown process. -->
+<string name="cam_strings_error_high_temp_shutting_down_txt" xliff:restype="x-GENERIC/TOAST/TEXT">Camera will now turn off temporarily to cool down.</string>
+<!-- One of the two options whether the user wants to close the camera app or not. -->
+<string name="cam_strings_error_high_temp_shut_down_yes_txt" xliff:restype="x-CAMERA/TOAST/2ROWS/V">Yes</string>
+<!-- One of the two options whether the user wants to close the camera app or not. -->
+<string name="cam_strings_error_high_temp_shut_down_no_txt" xliff:restype="x-CAMERA/TOAST/2ROWS/V">No</string>
+<!-- Text to speech for the blind. The phone reads this text when the user touch the Menu key. -->
+<string name="cam_strings_accessibility_menu_txt" xliff:restype="x-UNLIMITED">Menu</string>
+<!-- Text to speech for the blind. The phone reads the selected item, followed by this text when the user touches the icon/shortcut which is not configurable.(e.g. Smile shutter, not configurable)  -->
+<string name="cam_strings_accessibility_not_configurable_txt" xliff:restype="x-UNLIMITED">Not configurable</string>
+<!-- Title. Please make this translation consistent with "cam_strings_capturing_mode_txt". Only if it exceeds the GUI object size, re-tranlate it. -->
+<string name="cam_strings_capturing_mode_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Capturing mode</string>
+<!-- This error message is used only for models with dual storage. Error message that appears the user tried to save data while internal memory, which is the default save location, is full. It also informs the user that the saved location has changed accordingly. -->
+<string name="cam_strings_error_internal_memory_full_txt" xliff:restype="x-UNLIMITED">Internal memory full. Changed default data storage to SD card.</string>
+<!-- Be sure to refer to Sony terminology excel sheet first.Only if your language is not listed, translate it. One of the options under capturing mode setting.This mode allows users to take photos in special atmosphere settings without having to adjust many settings. -->
+<string name="cam_strings_capturing_mode_superior_auto_cy_txt" xliff:restype="x-CAMERA/CAPTURING/DIALOG/RHINE/2ROWS/SHORT">Superior auto</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the options under Scene selection setting, which allows users to take photos in special atmosphere settings without having to adjust many settings. -->
+<string name="cam_strings_scenes_beach_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Beach</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the options under Scene selection setting, which allows users to take photos in special atmosphere settings without having to adjust many settings. -->
+<string name="cam_strings_scenes_snow_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Snow</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the options under Scene selection setting, which allows users to take photos in special atmosphere settings without having to adjust many settings. -->
+<string name="cam_strings_scenes_nightportrait_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/1ICON">Night portrait</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the options under Scene selection setting, which allows users to take photos in special atmosphere settings without having to adjust many settings.SoftSnap shoots subjects with soft backgrounds. -->
+<string name="cam_strings_scenes_soft_snap_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Soft snap</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the options under Scene selection setting, which allows users to take photos in special atmosphere settings without having to adjust many settings. -->
+<string name="cam_strings_scenes_backlight_hdr_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/1ICON">Backlight correction HDR</string>
+<!-- Be sure to make this translation consistent with “cam_strings_scene_selection_cy_txt”. Only when the translation exceeds the GUI object, re-translate it. Please refer to Sony terminology sheet.  -->
+<string name="cam_strings_scene_selection_title_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/1ICON">Scene selection</string>
+<!-- Be sure to make this translation consistent with “cam_strings_smile_shutter_cy_txt”. Only when the translation exceeds the GUI object, re-translate it. -->
+<string name="cam_strings_smile_shutter_title_cy_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Smile Shutter</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. One of the menu items under the camera settings. With this option, the camera automatically captures an image when detecting a smile. The user can also set the smile sensitivity. -->
+<string name="cam_strings_smile_shutter_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Smile Shutter</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. One of the options under the metering setting This option divides the image into multiple regions and measures each region to determine a well-balanced exposure. -->
+<string name="cam_strings_metering_multi_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Multi</string>
+<!-- One of the menu items in the settings.SteadyShot is Sony's image stabilzation technology that compensates for camera shake and helps prevent blur.  -->
+<string name="cam_strings_steadyshot_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/NOICON">SteadyShot™</string>
+<!-- One of the options under quick launch setting. This option launches the camera and captures a photo by pressing and holding the HW camera key even in sleep mode. -->
+<string name="cam_strings_fast_capturing_launch_and_capture_photo_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Launch and capture</string>
+<!-- One of the options under quick launch setting. This option launches the camera application and record a movie with longpress of HW key even in sleep mode. -->
+<string name="cam_strings_fast_capturing_launch_and_capture_video_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Launch and record video</string>
+<!-- One of the options under quick launch settings. This option launches the movie camera with longpress of the HW camera key even in sleep mode. -->
+<string name="cam_strings_fast_capturing_launch_only_video_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Launch only (video camera)</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the scene types appears on the viewfinder. These terms(different types of scene)have been used in Sony's cameras Cyber-shot, so you can check more details online.   -->
+<string name="cam_strings_scenes_auto_recog_twilight_portrait_cy_txt" xliff:restype="x-CAMERA/VIEWFINDER/SCENE">Night portrait</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the scene types appears on the viewfinder. These terms(different types of scene)have been used in Sony's cameras Cyber-shot, so you can check more details online.   -->
+<string name="cam_strings_scenes_auto_recog_backlight_portrait_cy_txt" xliff:restype="x-CAMERA/VIEWFINDER/SCENE">Backlight portrait</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the scene types appears on the viewfinder. These terms(different types of scene)have been used in Sony's cameras Cyber-shot, so you can check more details online.   -->
+<string name="cam_strings_scenes_auto_recog_low_light_cy_txt" xliff:restype="x-CAMERA/VIEWFINDER/SCENE">Low light</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the scene types appears on the viewfinder. Selecting this to soften the skin of people in a photo to enhance beauty(including remove wrinkles or spots). These terms(different types of scene)have been used in Sony's cameras Cyber-shot, so you can check more details online. -->
+<string name="cam_strings_scenes_soft_skin_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/1ICON">Soft skin</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the scene types appears on the viewfinder. Ideal for food photography.These terms(different types of scene)have been used in Sony's cameras Cyber-shot, so you can check more details online. -->
+<string name="cam_strings_scenes_gurumet_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/1ICON">Gourmet</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the scene types appears on the viewfinder. Ideal for taking pictures of pets, reducing blur or red eyes. These terms(different types of scene)have been used in Sony's cameras Cyber-shot, so you can check more details online. -->
+<string name="cam_strings_scenes_pet_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/1ICON">Pet</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. Users can turn this this on to make skin tones slightly softened to enhance beauty. These terms(different types of scene)have been used in Sony's cameras Cyber-shot, so you can check more details online. -->
+<string name="cam_strings_soft_skin_effect_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/MIDDLE/1ROW/NOICON">Soft skin effect</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the scene types appears on the viewfinder. Ideal for taking photos of babies. These terms(different types of scene)have been used in Sony's cameras Cyber-shot, so you can check more details online. -->
+<string name="cam_strings_scenes_auto_recog_infant_cy_txt" xliff:restype="x-CAMERA/VIEWFINDER/SCENE">Infant</string>
+<!-- Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the scene types appears on the viewfinder. Ideal for taking photos of people stand in the spotlight. These terms(different types of scene)have been used in Sony's cameras Cyber-shot, so you can check more details online. -->
+<string name="cam_strings_scenes_auto_recog_spotlight_cy_txt" xliff:restype="x-CAMERA/VIEWFINDER/SCENE">Spotlight</string>
+<!-- This string is exactly the same as "cam_strings_scenes_soft_snap_cy_txt" except Japanese. For Japanese, please see the terminology sheet. -->
+<string name="cam_strings_scenes_auto_recog_softsnap_cy_txt" xliff:restype="x-CAMERA/VIEWFINDER/SCENE">Soft snap</string>
+<!-- Text displayed with the icon. Tapping this icon displays the dialog where the user can adjust the burst speed. -->
+<string name="cam_strings_burst_shooting_txt" xliff:restype="x-CAMERA/MENU/DIALOG/2ROWS">Burst speed</string>
+<!-- Copy the translation of "cam_strings_soft_skin_effect_cy_txt". -->
+<string name="cam_strings_soft_skin_effect_title_cy_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Soft skin effect</string>
+<!-- One of the options under the Focus mode setting. Selecting this enables the camera to keep tracking and focusing on a specific object even if the object moves.  -->
+<string name="cam_strings_focus_mode_object_tracking_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/MIDDLE/1ROW/NOICON">Object tracking</string>
+<!-- Copy the translation of "cam_strings_accessibility_photo_video_switch_txt". -->
+<string name="cam_strings_camera_switching_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Camera switch</string>
+<!-- Error message used in many cases. Pops up when the user tried to take a photo/video to add/attach it to an application(different types of application assumed) -->
+<string name="cam_strings_error_mms_rec_size_limit_txt" xliff:restype="x-GENERIC/TOAST/TEXT">Cannot add more files. File size too large.</string>
+<!-- A new menu item under the camera settings. Turning on this menu allows the user to review the photo shortly after it was taken. -->
+<string name="cam_strings_preview_duration_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/NOICON">Preview</string>
+<!-- Title of the dialog for the menu "cam_strings_preview_duration_title_txt". Users can set the duration how long a photo should be displayed.  -->
+<string name="cam_strings_preview_duration_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Preview</string>
+<!-- One of the options under the Preview duration setting. -->
+<string name="cam_strings_preview_duration_3sec_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">3 seconds</string>
+<!-- One of the options under the Preview duration setting. -->
+<string name="cam_strings_preview_duration_5sec_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">5 seconds</string>
+<!-- One of the options under the Preview duration setting. -->
+<string name="cam_strings_preview_duration_unlimited_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Unlimited</string>
+<!-- Informative text that appears when the user selected to use front camera/video. This dialog is used for models that make it hard to find the front camera lens. -->
+<string name="cam_strings_front_cam_location_guide_txt" xliff:restype="x-CAMERA/TOUCH/CAPTURE/GUIDE/2ROWS/V">Camera lens located as shown in illustration</string>
+<!-- Copy the translation of "cam_strings_touch_capturing_txt". This label is used as a dialog title. -->
+<string name="cam_strings_touch_capturing_title_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/MIDDLE/1ROW/NOICON">Touch capture</string>
+<!-- One of the options available at Scene selection. Reduces motion blur. See Sony terminology list. -->
+<string name="cam_strings_scenes_anti_motion_blur_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/1ICON">Anti motion blur</string>
+<!-- One of the options available at Scene selection. Allows users to a shoot night scene without a tripod, which is usually required to shoot a night scene without blur. See Sony terminology list. -->
+<string name="cam_strings_scenes_handheld_twilight_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/1ICON">Hand-held twilight</string>
+<!-- One of the options available at Scene selection. This mode makes the camera more sensitive to light and creates better photos in areas where you can't use a flash. See Sony terminology list. -->
+<string name="cam_strings_scenes_high_sensitivity_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/1ICON">High sensitivity</string>
+<!-- One of the options available at Scene selection. Suitable for taking pictures of fireworks. See Sony terminology list. -->
+<string name="cam_strings_scenes_fireworks_cy_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/1ICON">Fireworks</string>
+<!-- One of the items under Video settings. Users can adjust HDR for video shooting. -->
+<string name="cam_strings_video_hdr_txt" xliff:restype="x-CAMERA/MENU/DIALOG/2ROWS">HDR video</string>
+<!-- Title of the dialog that appears when the user selected Video HDR in the settings. -->
+<string name="cam_strings_video_hdr_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">HDR video</string>
+<!-- Reuse the translation of the label "cam_strings_auto_upload_title_txt" by just removing the word in parentheses. -->
+<string name="cam_strings_auto_upload_all_title_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Auto upload</string>
+<!-- Reuse the translation of the label "cam_strings_auto_upload_title_txt" by just removing the word in parentheses. -->
+<string name="cam_strings_auto_upload_all_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/MIDDLE/1ROW/NOICON">Auto upload</string>
+<!-- One of the capturing modes.  -->
+<string name="cam_strings_capturing_mode_manual_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/TITLE/1ROW/NOICON">Manual</string>
+<!-- Menu item to edit a photo. -->
+<string name="cam_strings_preview_edit_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Edit</string>
+<!-- One of the options in the Flash setting dialog. Selecting this will keep the camera LED light (used for flash) on like a torch. Ideal for people shoot a video in dark places or people who don't like the flash reflection or wants to take photos by increasing ambient light. Please localize this word that suits your market. -->
+<string name="cam_strings_flash_torch_txt" xliff:restype="x-CAMERA/CORE/LIST/2ND/1ROW/1ICON">Flashlight</string>
+<!-- Text displayed in the top right corner of the capturing modes screen. Tap this to add more capturing modes. -->
+<string name="cam_strings_get_more_modes_txt" xliff:restype="x-CAMERA/CAPTURING/DIALOG/ADD/1ROW">Apps</string>
+<!-- Title of the setting dialog where the user can choose a save option for time shift mode. -->
+<string name="cam_strings_settings_save_photos_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Save</string>
+<!-- One of the options under the Save setting. Selecting this will only save the selected photo when shooting in time shift mode. -->
+<string name="cam_strings_settings_save_photos_one_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Selected photo</string>
+<!-- One of the options under the Save setting. Selecting this will save all photos each time when shooting in time shift mode. -->
+<string name="cam_strings_settings_save_photos_all_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">All photos</string>
+<!-- Error toast that appears when the user tried to use camera. This appears only when the device connects to Microsoft Exchange server, where an administrator remotely manages what features can be used on the device. -->
+<string name="cam_strings_use_of_camera_not_authorized_txt" xliff:restype="x-CAMERA/TOAST/2ROWS/V">Use of camera restricted for security reasons</string>
+<!-- One of the options available from the Camera tab. Selecting this will allow the user to shoot photos in burst mode by touching and holding the shutter button. -->
+<string name="cam_strings_long_press_burst_txt" xliff:restype="x-CAMERA/SETTING/LIST/1ROW/LARGE/V">Burst with longpress</string>
+<!-- One of the options under the burst setting. Selecting this will shoot regular photos continuously while holding down the shutter button. Another option here is high speed, so this is considered standard shooting speed or standard burst setting. -->
+<string name="cam_strings_long_press_burst_best_txt" xliff:restype="x-CAMERA/SETTING/LIST/1ROW/SMALL/V">Standard</string>
+<!-- One of the options under the burst setting. Selecting this will shoot photos continuously at high speed while holding down the shutter button. -->
+<string name="cam_strings_long_press_burst_high_txt" xliff:restype="x-CAMERA/SETTING/LIST/1ROW/SMALL/V">High speed</string>
+<!-- Titile of the ballon "cam_strings_balloon_tips_modeselector_txt" that prompt the user to try different capturing modes. -->
+<string name="cam_strings_balloon_tips_modeselector_title_txt" xliff:restype="x-CAMERA/VIEWFINDER/TIPSBALLOON/TITLE">Try different capturing modes</string>
+<!-- Text in the ballon that is connected to an icon in the viewfinder. This appears the first couple of times users start the camera, only if users never used other capturing modes. -->
+<string name="cam_strings_balloon_tips_modeselector_txt" xliff:restype="x-CAMERA/VIEWFINDER/BALLOON/1ROW">Tap this to select another mode</string>
+<!-- Text to speech for the blind. The device reads this text when the user touches the button to toggle between front and rear camera. The user has to double tap the screen to switch to front camera. -->
+<string name="cam_strings_accessibility_switch_to_front_txt" xliff:restype="x-UNLIMITED">Double tap to switch to front camera</string>
+<!-- Text to speech for the blind. The device reads this text when the user touches the button to toggle between front and rear camera. The user has to double tap the screen to switch to rear camera. -->
+<string name="cam_strings_accessibility_switch_to_main_txt" xliff:restype="x-UNLIMITED">Double-tap to switch to the main camera</string>
+<!-- Text to speech for the blind. The device reads this text when the user taps the icon for Video settings. -->
+<string name="cam_strings_accessibility_video_setting_txt" xliff:restype="x-UNLIMITED">Video settings</string>
+<!-- Text to speech for the blind. The device reads this text when the user taps the icon for Photo settings. -->
+<string name="cam_strings_accessibility_photo_setting_txt" xliff:restype="x-UNLIMITED">Camera settings</string>
+<!-- Text to speech for the blind. The device reads this text when the user taps the icon for other settings. -->
+<string name="cam_strings_accessibility_other_settings_txt" xliff:restype="x-UNLIMITED">Other settings</string>
+<!-- One of the menu items under Video settings. This function compensates for camera shake and helps prevent blur. -->
+<string name="cam_strings_video_stabilizer_txt" xliff:restype="x-CAMERA/SETTING/LIST/TITLE/V">Video stabilizer</string>
+<!-- One of the menu items under Video settings. With this option, the video camera automatically takes a photo when detecting a smile. The user can also set the smile sensitivity. -->
+<string name="cam_strings_video_smile_shutter_txt" xliff:restype="x-CAMERA/SETTING/LIST/1ROW/LARGE/V">Smile Shutter (video)</string>
+<!-- Title of the balloon "cam_strings_balloon_tips_timeshift_txt ". -->
+<string name="cam_strings_balloon_tips_timeshift_title_txt" xliff:restype="x-CAMERA/VIEWFINDER/TIPSBALLOON/TITLE">Select the best moment</string>
+<!-- Text in the balloon "cam_strings_balloon_tips_timeshift_txt " that appears after taking photos in time-shift mode. It explains what to do after a bunch of photos were taken. The thumbnails of images taken in time shift mode are displayed in an arc on the right side of the screen and users can move the thumbnails up or down with a finger. A selected photo fills the rest of the screen, which make it easier to see which one is currently selected among a stack of images. -->
+<string name="cam_strings_balloon_tips_timeshift_txt" xliff:restype="x-CAMERA/VIEWFINDER/TIPSBALLOON/2ROWS">Find the best shot by sliding the thumbnails up or down</string>
+<!-- Explanatory text about the capturing mode "Sweep Panorama". Xperia™ could be phone or tablet. -->
+<string name="cam_3d_strings_description_sweep_panorama_txt" xliff:restype="x-CAMERA/APPSLIST/DOWNLOADABLE/DESCRIPTIONS/2ROWS">Take a panoramic photo by sweeping your camera</string>
+<!-- One of the options under Resolution setting. QFHD stands for Quad Full High Definition. This is a standard and therefore do not translate unless your language has translation for this standard. -->
+<string name="cam_strings_video_size_4kuhd_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">4K (QFHD)</string>
+<!-- Title of the setting dialog. Make this consistent with "cam_strings_shortcut_timeshift_txt". -->
+<string name="cam_strings_capturing_mode_timeshift_txt" xliff:restype="x-CAMERA/APPSLIST/APPNAMES/2ROWS">Timeshift burst</string>
+<!-- Explanatory text under the capturing mode "Timeshift burst". -->
+<string name="cam_strings_description_timeshift_short_txt" xliff:restype="x-CAMERA/APPSLIST/DOWNLOADABLE/DESCRIPTIONS/2ROWS">Find the best photo from burst images taken before and after your shot</string>
+<!-- Informative toast that appears when users enable HDR. -->
+<string name="cam_strings_hdr_guide_txt" xliff:restype="x-CAMERA/TOAST/2ROWS/V">Because Still HDR captures and combines two images of the same scene, it is only suitable for still objects.</string>
+<!-- One of the items under Settings. Users can configure the volume key to be used as different controls besides volume control. -->
+<string name="cam_strings_volumekey_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/NOICON">Use Volume key as</string>
+<!-- One of the options under the setting "Use Volume key as " (cam_strings_volumekey_txt). -->
+<string name="cam_strings_volumekey_zoom_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Zoom</string>
+<!-- One of the options under the setting "Use Volume key as " (cam_strings_volumekey_txt). -->
+<string name="cam_strings_volumekey_shutter_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Shutter</string>
+<!-- One of the options under the setting "Use Volume key as " (cam_strings_volumekey_txt). -->
+<string name="cam_strings_volumekey_volume_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Volume</string>
+<!-- Text on the error dialog that appears when SD card has become full while shooting photos. -->
+<string name="cam_strings_change_full_storage_to_internal_txt" xliff:restype="x-UNLIMITED">SD card full. Default data storage changed to Internal storage.</string>
+<!-- Error dialog that appears when both SD card and internal storage have become full while shooting photos. -->
+<string name="cam_strings_error_internal_sd_full_txt" xliff:restype="x-UNLIMITED">Memory full. Delete some files from SD card or Internal storage.</string>
+<!-- Text on the confirmation dialog that appears when SD card has been inserted. -->
+<string name="cam_strings_change_storage_to_sd_txt" xliff:restype="x-UNLIMITED">SD card inserted. Change default data storage to SD card?</string>
+<!-- Text on the button to change the default save location. -->
+<string name="cam_strings_change_txt" xliff:restype="x-GENERIC/DIALOG/BUTTON/2BUTTONS">Change</string>
+<!-- Icon text that appears with time while recording is in progress. -->
+<string name="cam_strings_recording_txt" xliff:restype="x-CAMERA/REC">REC</string>
+<!-- Checkbox text that appears below the Sony Mobile Terms of Use. -->
+<string name="cam_strings_term_of_use_consent_txt" xliff:restype="x-GENERIC/LIST/SUBTITLE/CONTROL">I consent to the Sony Mobile &lt;a href=\"http://www.sonymobile.com/terms-of-use-applications\"&gt;Terms of Use&lt;/a&gt;.</string>
+<!-- Selection key to be used for accepting the legal disclaimer -->
+<string name="cam_strings_term_of_use_accept_txt" xliff:restype="x-GENERIC/DIALOG/BUTTON/2BUTTONS">Accept</string>
+<!-- Selection key to be used for declining the legal disclaimer -->
+<string name="cam_strings_term_of_use_decline_txt" xliff:restype="x-GENERIC/DIALOG/BUTTON/2BUTTONS">Decline</string>
+<!-- One of the capturing modes. Select this mode to apply effects to photos and videos. English and Japanese are specified by Global marketing group. -->
+<string name="cam_strings_capturing_mode_creative_effect_txt" xliff:restype="x-CAMERA/APPSLIST/APPNAMES/2ROWS">Creative effect</string>
+<!-- One of the capturing modes. Select this mode to shoot 4K video. Do not translate "4K" (requested by Global marketing group). -->
+<string name="cam_strings_capturing_mode_4k2k_txt" xliff:restype="x-CAMERA/APPSLIST/APPNAMES/2ROWS">4K video</string>
+<!-- One of the capturing modes. Selecting this mode will capture videos at 120 fps to enable slow motion video playback. The reason why the mode name includes "Timeshift" is because users select the start/end point of the video by shifting 120 frames back and forth. (This mode name is created by the Global marketing and English and Japanese are specified.) -->
+<string name="cam_strings_capturing_mode_high_frame_rate_txt" xliff:restype="x-CAMERA/APPSLIST/APPNAMES/2ROWS">Timeshift video</string>
+<!-- One of the capturing modes. Select this mode to shoot 4K video. Do not translate "4K" (requested by Global marketing group). -->
+<string name="cam_strings_change_save_destination_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE/ICON">4K video</string>
+<!-- Title of the terms popup dialog -->
+<string name="cam_strings_term_of_use_title_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/NOICON">Terms and Conditions</string>
+<!-- Disclaimer text about data charges for popup window -->
+<string name="cam_strings_term_of_use_data_charge_txt" xliff:restype="x-UNLIMITED">Your use of this service may be subject to mobile data charges depending on your data plan.</string>
+<!-- Disclaimer text about data collection for popup window -->
+<string name="cam_strings_term_of_use_data_collection_txt" xliff:restype="x-UNLIMITED">Sony Mobile will collect your hashed Android™ ID unique device identifier, location-based data and timestamp in order to provide you with appropriate results as part of the service and for service improvements.</string>
+<!-- Explanatory text under the capturing mode "Creative effect". English and Japanese specified by Global marketing. -->
+<string name="cam_strings_description_creative_effect_txt" xliff:restype="x-CAMERA/APPSLIST/DOWNLOADABLE/DESCRIPTIONS/2ROWS">Select effects for artistic photos and videos</string>
+<!-- Explanatory text under the capturing mode "4K video". English and Japanese specified by Global marketing. -->
+<string name="cam_strings_description_4k2k_txt" xliff:restype="x-CAMERA/APPSLIST/DOWNLOADABLE/DESCRIPTIONS/2ROWS">Record video in 4K ultra high definition</string>
+<!-- Explanatory text under the capturing mode "Timeshift video". English and Japanese specified by Global marketing. -->
+<string name="cam_strings_description_high_frame_rate_txt" xliff:restype="x-CAMERA/APPSLIST/DOWNLOADABLE/DESCRIPTIONS/2ROWS">Record high frame rate video and apply slow motion effects</string>
+<!-- One of the effect options. Selecting this will apply no effect. -->
+<string name="cam_strings_effect_no_effect_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Normal</string>
+<!-- One of the effect options. Selecting this will give old film look. -->
+<string name="cam_strings_effect_old_film_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Old Film</string>
+<!-- One of the effect options. Selecting this will add black and white or sepia effect. -->
+<string name="cam_strings_effect_color_filter_tint_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Tint</string>
+<!-- One of the effect options. Selecting this lets users adjust the hue and saturation of the image. -->
+<string name="cam_strings_effect_hue_saturation_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Hue-Saturation</string>
+<!-- One of the effect options. Selecting this lets users adjust the brightness and contrast of the image. -->
+<string name="cam_strings_effect_brightness_contrast_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Brightness-Contrast</string>
+<!-- One of the effect options. Selecting this will make the image look like a colored sketch. -->
+<string name="cam_strings_effect_color_pencil_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Color sketch</string>
+<!-- One of the effect options. Selecting this will make the image look like a comic picture. -->
+<string name="cam_strings_effect_comic_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Comic</string>
+<!-- One of the effect options. Selecting this will add mirror effect to photos, by duplicating and flipping a image horizontally. -->
+<string name="cam_strings_effect_mirror_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Mirror</string>
+<!-- One of the effect options. Selecting this will add mosaic effect to photos. -->
+<string name="cam_strings_effect_mosaic_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Mosaic</string>
+<!-- One of the effect options. Selecting this lets users take a photo with motion trail effect. -->
+<string name="cam_strings_effect_after_image_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Motion trail</string>
+<!-- One of the effect options. Selecting this add various types of icons to the path that a specific object moved. (e.g., add stars to the movement of your hand) -->
+<string name="cam_strings_effect_motion_effects_txt" xliff:restype="x-CAMERA/ART/FILTER/2ROWS/V">Motion effects</string>
+<!-- Text that appears below the Sony Mobile Terms of Use. -->
+<string name="cam_strings_term_of_use_txt" xliff:restype="x-GENERIC/LIST/SUBTITLE/CONTROL">&lt;a href=\"http://www.sonymobile.com/terms-of-use-applications\"&gt;Terms of Use&lt;/a&gt;</string>
+<!-- Text on the error dialog that appears when the user tried to add capturing modes by pressing [+Apps]. -->
+<string name="cam_strings_capturing_mode_network_error_txt" xliff:restype="x-UNLIMITED">Could not complete data download</string>
+<!-- Text on the dialog that appears when users tried to launch 4K video or Timeshift video as capturing mode with data storage setting set to SD card. This dialog basically prompts users to change save location to internal storage. -->
+<string name="cam_strings_video_explanatory_txt" xliff:restype="x-UNLIMITED">For stable video recording, we recommend you change data storage to Internal storage. Would you like to change now?\n\nIf you continue to use SD card as data storage, be sure to use a high-speed SD card (Class 10 or higher recommended).</string>
+<!-- Text on the dialog that only appears when users tried to change Data storage setting to SD card while in 4K video mode. -->
+<string name="cam_strings_video_explanatory_4k2k_setting_txt" xliff:restype="x-UNLIMITED">For stable 4K video recording, you must not change this setting unless you use a high-speed SD card (Class 10 or higher recommended). Change anyway?</string>
+<!-- Text on the dialog that only appears when users tried to change Data storage setting to SD card while in Timeshift video mode. -->
+<string name="cam_strings_video_explanatory_high_frame_rate_setting_txt" xliff:restype="x-UNLIMITED">For stable Timeshift video recording, you must not change this setting unless you use a high-speed SD card (Class 10 or higher recommended). Change anyway?</string>
+<!-- Title of the dialog(cam_strings_video_explanatory_high_frame_rate_setting_txt)  -->
+<string name="cam_strings_change_save_destination_high_frame_rate_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE/ICON">Timeshift video</string>
+<!-- One of the capturing modes. This mode allows users to take photos with background sound. (English specified by Marketing.) -->
+<string name="cam_strings_capturing_mode_soundphoto_txt" xliff:restype="x-CAMERA/APPSLIST/APPNAMES/2ROWS">Sound Photo</string>
+<!-- Informative text that appears on the right half of the screen after users start the capturing mode "Multi camera (TBD)" and users haven't added a device yet. Once added, the image through the viewfinder of a connected device will appear in the same area. -->
+<string name="cam_strings_multicam_touch_add_camera_desc_txt" xliff:restype="x-CAMERA/MULTICAM/ADDCAM/3ROWS">Tap to add a device. The image through its viewfinder will appear here.</string>
+<!-- Button option for the user to confirm an action. -->
+<string name="cam_strings_multicam_apply_txt" xliff:restype="x-CAMERA/MULTICAM/ACTIONBAR/SETTING/1ROW">Done</string>
+<!-- Text on the button to add other camera. -->
+<string name="cam_strings_multicam_add_device_txt" xliff:restype="x-CAMERA/MULTICAM/ACTIONBAR/SETTING/1ROW">Add device</string>
+<!-- Menu that appears below a device name in the device list. Users can add more by tapping the menu. -->
+<string name="cam_strings_multicam_add_more_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Add more</string>
+<!-- One of the items in Camera settings. Turning it off will mute shutter sound and touch tones. -->
+<string name="cam_strings_camera_sound_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/MIDDLE/1ROW/NOICON">Sound</string>
+<!-- Text on the feedback dialog after shooting a photo. Informs users of save location change. -->
+<string name="cam_strings_error_internal_memory_unavailable_txt" xliff:restype="x-UNLIMITED">Internal storage is corrupt or write protected. Data storage changed to SD card.</string>
+<!-- Tab text. Installed camera apps are listed in the tab. -->
+<string name="cam_strings_camera_apps_tab_txt" xliff:restype="x-CAMERA/CAPTURING/TAB">CAMERA APPS</string>
+<!-- Tab text. Downloadable apps are listed in the tab. -->
+<string name="cam_strings_downloadable_tab_txt" xliff:restype="x-CAMERA/CAPTURING/TAB">DOWNLOADABLE</string>
+<!-- Error message that appears when users try to add more than the maximum allowable number of devices. -->
+<string name="cam_strings_multicam_excess_connection_num_err_dialog_txt" xliff:restype="x-UNLIMITED">Max number of devices added.</string>
+<!-- One of the options in the Metering setting. Selecting this will measure the amount of light on face and determine the exposure so that the face will be neither too dark or too bright. -->
+<string name="cam_strings_photometry_face_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Face</string>
+<!-- Text on the button resetting the position of inset windows on the viewfinder as default. -->
+<string name="cam_strings_reset_txt" xliff:restype="x-CAMERA/VIEWFINDER/RESET">Reset</string>
+<!-- Error message that appears when the device could not connect to another device. -->
+<string name="cam_strings_multicam_connection_failure_dialog_txt" xliff:restype="x-UNLIMITED">Could not connect</string>
+<!-- One of the capturing modes. This mode lets you take a photo using the front and rear cameras at the same time. (So, you can take a photo of yourself with the subject.) -->
+<string name="cam_strings_capturing_mode_dualrec_txt" xliff:restype="x-CAMERA/APPSLIST/APPNAMES/2ROWS">Face in picture</string>
+<!-- One of the capturing modes. This mode lets users take a photo from multiple angles by connecting with other cameras or Xperia™ phones. When connected to other devices, the image through the viewfinder of each device will appear on the same screen. -->
+<string name="cam_strings_capturing_mode_multicam_txt" xliff:restype="x-CAMERA/APPSLIST/APPNAMES/2ROWS">Multi camera</string>
+<!-- Text for the dialog displayed when the camera is disconnected from other cameras or Xperia™ on Multi camera mode. -->
+<string name="cam_strings_multicam_error_disconnect_txt" xliff:restype="x-UNLIMITED">Disconnected</string>
+<!-- Xperia™ should not be translated. One of the device name used in the description of adding viewfinder from other cameras or Xperia™ on Multi camera mode. -->
+<string name="cam_strings_multicam_nfc_connect_xperia_txt" xliff:restype="x-CAMERA/MULTICAM/NFC/TITLE/SUB">Xperia™</string>
+<!-- Instructive text that prompts users to touch the Xperia™ to the device that users want to connect to using NFC. -->
+<string name="cam_strings_multicam_nfc_connect_title_txt" xliff:restype="x-CAMERA/MULTICAM/NFC/TITLE">Touch the devices together to connect</string>
+<!-- One of the compatible devices for this app. This device type supports Wi-Fi and NFC. English and Japanese are specified by EP. -->
+<string name="cam_strings_multicam_nfc_connect_wifi_camera_txt" xliff:restype="x-CAMERA/MULTICAM/NFC/TITLE/SUB">Sony\'s Wi-Fi/NFC camera</string>
+<!-- Text on the error dialog that appears when users try to connect the device with a camera while connected with another Xperia™. -->
+<string name="cam_strings_multicam_di_connection_err_dialog_txt" xliff:restype="x-UNLIMITED">Cannot connect with any Sony\'s Wi-Fi/NFC camera when your Xperia™ is connected with another Xperia™.</string>
+<!-- Text on the error dialog that appears when users try to connect the device with another Xperia™ while connected with a camera. -->
+<string name="cam_strings_multicam_xperia_connection_err_dialog_txt" xliff:restype="x-UNLIMITED">Cannot connect with any Xperia™ when your Xperia™ is connected with a Sony\'s Wi-Fi/NFC camera.</string>
+<!-- Text on the error dialog that appears when users try to connect more than one camera to the Xperia™. -->
+<string name="cam_strings_multicam_excess_di_connection_num_err_dialog_txt" xliff:restype="x-UNLIMITED">Only one Sony\'s Wi-Fi/NFC camera can be connected with your Xperia™ at a time.</string>
+<!-- Title on the note dialog that appears after starting a capturing mode that could consume a lot of power -->
+<string name="cam_strings_dialog_high_temp_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE/ICON">Note</string>
+<!-- Text on the note dialog that appears after starting a capturing mode that could consume a lot of power -->
+<string name="cam_strings_dialog_high_temp_txt" xliff:restype="x-UNLIMITED">If the device temperature rises, the app may close during use. Your recording will be saved automatically.</string>
+<!-- Text on the alert dialog that appears when the device temperature started to rise during use. -->
+<string name="cam_strings_error_high_temp_info_txt" xliff:restype="x-UNLIMITED">The device temperature is rising. If it continues to rise, the app will close automatically.</string>
+<!-- Explanatory text under the capturing mode "Sound shot". -->
+<string name="cam_strings_description_shoundphoto_txt" xliff:restype="x-CAMERA/APPSLIST/DOWNLOADABLE/DESCRIPTIONS/2ROWS">Take photos with background sound (birds chirping, etc.)</string>
+<!-- Explanatory text under the capturing mode "Face in". -->
+<string name="cam_strings_description_dualrec_txt" xliff:restype="x-CAMERA/APPSLIST/DOWNLOADABLE/DESCRIPTIONS/2ROWS">Put your face in photos and videos using the front &amp; main cameras</string>
+<!-- Explanatory text under the capturing mode "Multi camera". -->
+<string name="cam_strings_description_multicam_txt" xliff:restype="x-CAMERA/APPSLIST/DOWNLOADABLE/DESCRIPTIONS/2ROWS">Record the same scene from multiple angles on a single screen</string>
+<!-- Time taken that appears on a photo. This will be displayed like "10:15 AM" in English. Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_t_am_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/TIME">%1$tl:%2$tM AM</string>
+<!-- Time taken that appears on a photo. This will be displayed like "10:15 PM" in English. Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_t_pm_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/TIME">%1$tl:%2$tM PM</string>
+<!-- Date taken that appears on a photo. %1$td will be replaced with date and %2$tY will be replaced with year (e.g.,2014). Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_m_jan_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/DATE">January %1$td, %2$tY</string>
+<!-- Date taken that appears on a photo. %1$td will be replaced with date and %2$tY will be replaced with year (e.g.,2014). Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_m_feb_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/DATE">February %1$td, %2$tY</string>
+<!-- Date taken that appears on a photo. %1$td will be replaced with date and %2$tY will be replaced with year (e.g.,2014). Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_m_mar_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/DATE">March %1$td, %2$tY</string>
+<!-- Date taken that appears on a photo. %1$td will be replaced with date and %2$tY will be replaced with year (e.g.,2014). Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_m_apr_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/DATE">April %1$td, %2$tY</string>
+<!-- Date taken that appears on a photo. %1$td will be replaced with date and %2$tY will be replaced with year (e.g.,2014). Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_m_may_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/DATE">May %1$td, %2$tY</string>
+<!-- Date taken that appears on a photo. %1$td will be replaced with date and %2$tY will be replaced with year (e.g.,2014). Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_m_jun_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/DATE">June %1$td, %2$tY</string>
+<!-- Date taken that appears on a photo. %1$td will be replaced with date and %2$tY will be replaced with year (e.g.,2014). Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_m_jul_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/DATE">July %1$td, %2$tY</string>
+<!-- Date taken that appears on a photo. %1$td will be replaced with date and %2$tY will be replaced with year (e.g.,2014). Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_m_aug_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/DATE">August %1$td, %2$tY</string>
+<!-- Date taken that appears on a photo. %1$td will be replaced with date and %2$tY will be replaced with year (e.g.,2014). Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_m_sep_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/DATE">September %1$td, %2$tY</string>
+<!-- Date taken that appears on a photo. %1$td will be replaced with date and %2$tY will be replaced with year (e.g.,2014). Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_m_oct_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/DATE">October %1$td, %2$tY</string>
+<!-- Date taken that appears on a photo. %1$td will be replaced with date and %2$tY will be replaced with year (e.g.,2014). Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_m_nov_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/DATE">November %1$td, %2$tY</string>
+<!-- Date taken that appears on a photo. %1$td will be replaced with date and %2$tY will be replaced with year (e.g.,2014). Please refrain from translating and use the English text as it is unless translation is mandatory in your language/market. (Request from EP) -->
+<string name="cam_string_dualrec_m_dec_txt" xliff:restype="x-CAMERA/FACEIN/REPORT/DATE">December %1$td, %2$tY</string>
+<!-- Text to speech for the blind. The device reads this text when the user touched the button to open the photo with the specified image viewer application (Album, etc.) -->
+<string name="cam_strings_accessibility_viewer_txt" xliff:restype="x-UNLIMITED">Open with the image viewer</string>
+<!-- Text to speech for the blind. The device reads this text when the user touched the button to play the sound recorded by using Sound Photo. -->
+<string name="cam_strings_accessibility_soundphoto_play_txt" xliff:restype="x-UNLIMITED">Play the sound</string>
+<!-- One of the video stabilization options. -->
+<string name="cam_strings_standard_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Standard</string>
+<!-- Text on the error dialog that appears when users tried to connect devices. -->
+<string name="cam_strings_multicam_error_app_ver_old_txt" xliff:restype="x-UNLIMITED">App version doesn\'t match. Cannot connect. Your app needs to be updated.</string>
+<!-- Text to speech for the blind. The device reads this text when the user touched the Pause button of the movie recording So, "Pause" is a noun here. -->
+<string name="cam_strings_accessibility_pause_button_txt" xliff:restype="x-UNLIMITED">Pause</string>
+<!-- Text to speech for the blind. The device reads this text when the user touched the back button on the view finder. -->
+<string name="cam_strings_accessibility_back_txt" xliff:restype="x-UNLIMITED">Back</string>
+<string name="cam_strings_error_video_rec_txt" xliff:restype="x-UNLIMITED">Cannot record. Recording or a recording-related function may be in use by another application.</string>
+<!-- Text on the feedback dialog that appears when video recording failed. -->
+<string name="cam_strings_error_save_file_txt" xliff:restype="x-UNLIMITED">Recording in progress in another app. Couldn\'t record.</string>
+<!-- Text on the error dialog that appears when users try to take photos with a capturing mode that uses video recording functionality. -->
+<string name="cam_strings_error_capture_txt" xliff:restype="x-UNLIMITED">This mode is unavailable when recording is in progress in another app.</string>
+<!-- Text on the error dialog that appears when users try to start an app (capturing mode.) -->
+<string name="cam_strings_multicam_error_nfc_txt" xliff:restype="x-UNLIMITED">Cannot start with NFC locked.</string>
+<!-- Text on the error dialog that appears when users try to use a capturing mode. -->
+<string name="cam_strings_multicam_error_wifi_txt" xliff:restype="x-UNLIMITED">This mode is unavailable during Wi-Fi tethering.</string>
+<!-- Text on the dialog that appears upon launch of the capturing mode "Multi camera". This mode involves connecting to one or more external devices in order for users to take a photo from multi-angles. This message reminds users that what's on the screen will also appear on connected devices once they are connected. (A screen consists of the images through multiple viewfinders.) -->
+<string name="cam_strings_multicam_security_info_txt" xliff:restype="x-UNLIMITED">If the device that you connect with is also connected with other Xperia™ devices through this app, your Xperia™ will be also automatically connected to those devices and every image through the viewfinder will be shared between your Xperia™ and all the connected devices.</string>
+<!-- Text on the dialog displayed when the device you connect with is now also connected to another device to see the image through the viewfinder. -->
+<string name="cam_strings_multicam_add_camera_security_info_txt" xliff:restype="x-UNLIMITED">Another device is now connected.\nWould you like to share the image through the viewfinder with the device?</string>
+<!-- Text on the note dialog that appears after starting a capturing mode that could consume a lot of power -->
+<string name="cam_strings_dialog_high_temp_vzw_txt" xliff:restype="x-UNLIMITED">This camera mode uses a lot of your phone\'s resources and may cause your phone\'s temperature to rise. To prevent overheating, video recording may stop and the camera app may close. Your recording will be saved automatically.</string>
+<!-- Text on the alert dialog that appears when the device temperature started to rise during use. -->
+<string name="cam_strings_error_high_temp_info_vzw_txt" xliff:restype="x-UNLIMITED">Your camera will need to cool. If you are recording, we may need to automatically save your video and exit until the camera has cooled.</string>
+<!-- Toast that appears when the camera app is forcibly turned off due to high temperature. -->
+<string name="cam_strings_error_high_temp_shutting_down_vzw_txt" xliff:restype="x-GENERIC/TOAST/TEXT">Your camera needs to cool. Your recording will be saved and application exited until your device is properly cooled.</string>
+<!--Guide text to ask the user to point the camera at a face to be detected. This text appears when there is no face to be detected. Here "face" means a face which is a part of the body.-->
+<string name="cam_strings_facefusion_point_at_face_txt" xliff:restype="x-CAMERA/GUIDANCE/TEXT/1ROW">Please point the camera towards a face</string>
+<!--Title of a dialog where the user can select between an option to take a picture with the camera or use an existing picture to create a new face. Here "face" means an object that the user can put on the someone's face in the image, like a mask.-->
+<string name="cam_strings_facefusion_add_face_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">Add face</string>
+<!--Guide text to ask the user to tap the square guide area where a face is detected. Here "face" means a face which is a part of the body.-->
+<string name="cam_strings_facefusion_select_face_txt" xliff:restype="x-CAMERA/GUIDANCE/TEXT/1ROW">Tap the square(s) to select face(s)</string>
+<!--Warning for deleting a face. This text appears after touching and holding a face icon. Here "face" means an object that the user can attach to the someone's face in the image, like a mask.-->
+<string name="cam_strings_facefusion_delete_mask_txt" xliff:restype="x-UNLIMITED">Delete this face? This action cannot be reversed.</string>
+<!--This option opens the camera and returns when a photo is taken-->
+<string name="cam_strings_take_photo_txt" xliff:restype="x-GENERIC/DIALOG/LIST/TITLE">Take photo</string>
+<!--Title prompted for user to choose a photo item [CHAR LIMIT=20]-->
+<string name="cam_strings_select_picture_txt" xliff:restype="x-GENERIC/MENU/OVERFLOW">Select photo</string>
+<!--Text indicating that no faces have been found while scanning all the users photos.-->
+<string name="cam_strings_facefusion_no_face_detected_txt" xliff:restype="x-GENERIC/LIST/TITLE">No faces detected</string>
+<!--Be sure to refer to Sony terminology excel sheet first. Only if your language is not listed, translate it. This is one of the scene types appears on the viewfinder. Ideal for food photography.These terms(different types of scene)have been used in Sony's cameras Cyber-shot, so you can check more details online. -->
+<string name="cam_strings_scenes_auto_recog_gourmet_txt" xliff:restype="x-CAMERA/SETTING/LIST/2ROWS/H">Gourmet</string>
+<!--List item, provide notice to user that this app or function will retrieve location info. List title is: [application] tries to-->
+<string name="cam_strings_dialog_cta_location_info_txt" xliff:restype="x-CAMERA/SETTING/LIST/1ROW/LARGE/V">Retrieve location info</string>
+<!--List title. It will be concatenated with some of these 20 different possibilities in infinite verb form.-->
+<string name="cam_strings_dialog_cta_access_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">%1$s tries to</string>
+<!--Located on a dialog footer button. User can tap it to allow current application's request.-->
+<string name="cam_strings_dialog_cta_allow_txt" xliff:restype="x-GENERIC/DIALOG/BUTTON/2BUTTONS">Allow</string>
+<!--Located on a dialog footer button. User can tap it to deny and then block current application's request.-->
+<string name="cam_strings_dialog_cta_deny_txt" xliff:restype="x-GENERIC/DIALOG/BUTTON/2BUTTONS">Deny</string>
+<!--Popup text for confirming access request.-->
+<string name="cam_strings_cta_description_txt" xliff:restype="x-UNLIMITED">Allow below access request?</string>
+<!--List item, provide notice to user that this app or function will use data by Wi-Fi or mobile data. List title is: [application] tries to-->
+<string name="cam_strings_dialog_cta_wifi_mobile_data_txt" xliff:restype="x-GENERIC/DIALOG/LIST/CONTROL/TITLE">Use Wi-Fi &amp; mobile data</string>
+<!--List item, provide notice to user that this app or function will turn on Wi-Fi. List title is: [application] tries to-->
+<string name="cam_strings_dialog_cta_turn_on_wifi_txt" xliff:restype="x-GENERIC/DIALOG/LIST/CONTROL/TITLE">Turn on Wi-Fi</string>
+<!--List item, provide notice to user that this app or function will turn on NFC. List title is: [application] tries to-->
+<string name="cam_strings_dialog_cta_turn_on_nfc_txt" xliff:restype="x-GENERIC/DIALOG/LIST/CONTROL/TITLE">Turn on NFC</string>
+<!--Title of popup dialog that warns user about what permissions (Location, Mobile data etc) Album uses-->
+<string name="cam_strings_cta_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">Note</string>
+<!--Text on the dialog that appears when trying to add more than maximum allowed faces. Here "face" means an object that the user can attach to the someone's face in the image, like a mask.-->
+<string name="cam_strings_error_max_faces_exceeded_txt" xliff:restype="x-UNLIMITED">Maximum number of faces has been selected. Please deselect one or more faces and try again.</string>
+<!--One of the options menu that appears when the user tapped a menu button on Timeshift burst viewer. By tapping this, the user can save the selected photo besides 61 photos taken with Timeshift burst mode. This mode lets users take a bunch of photos at once (=burst) and to shift back and forth in time so that users can pick the perfect shot.-->
+<string name="cam_strings_timeshift_save_selection_txt" xliff:restype="x-GENERIC/MENU/OVERFLOW">Save separately</string>
+<!--One of the options menu that appears when the user tapped a menu button on Timeshift burst viewer. By tapping this, the user can select several photos among 61 photos taken with Timeshift burst mode.-->
+<string name="cam_strings_timeshift_select_images_txt" xliff:restype="x-GENERIC/MENU/OVERFLOW">Select photos</string>
+<!--One of the options menu that appears when the user tapped a menu button on Timeshift burst viewer. By tapping this, the user can deselect photos which were selected previously.-->
+<string name="cam_strings_timeshift_cancel_selection_txt" xliff:restype="x-GENERIC/MENU/OVERFLOW">Deselect photos</string>
+<!--Error text that appears when there is an error while saving the selected image, and the image could not be saved.-->
+<string name="cam_strings_timeshift_operation_failed_txt" xliff:restype="x-UNLIMITED">Could not save</string>
+<!--One of the menu items in the settings. Tapping this will show the video recording file type options, "H264" and "H265".-->
+<string name="cam_strings_video_codec_for_4k_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/NOICON">Recording file type</string>
+<!--The text in sencondline of notification tray to show that the files have been downloaded and installed in the phone-->
+<string name="cam_strings_modeselector_addon_installed_txt" xliff:restype="x-CAMERA/MODE/SELECTOR/LIST/1ROW">Installed</string>
+<!--An option to share items from Mark mode, under the menu key in Camera tab.-->
+<string name="cam_strings_timeshift_share_txt" xliff:restype="x-GENERIC/TAB/3TABS">Share</string>
+<!--Informative text in a toast shown on screen when saving image from other application such as messaging or email.-->
+<string name="cam_strings_timeshift_save_complete_txt" xliff:restype="x-GENERIC/TOAST/TEXT">Saved</string>
+<!--Option value for self-timer to set the timer for 0.5 seconds.-->
+<string name="cam_strings_self_timer_05_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">0.5 sec.</string>
+<!--Button text for the user to strat mirroring.-->
+<string name="cam_strings_remote_touch_to_start_txt" xliff:restype="x-UNLIMITED">Tap to start</string>
+<!--One of the options under capturing mode setting. AR =augmented reality. Only for "AR", it should not be translated unless necessary.-->
+<string name="cam_strings_capturing_mode_facefusion_txt" xliff:restype="x-CAMERA/APPSLIST/APPNAMES/2ROWS">AR mask</string>
+<!--Explanatory text under the app name, "AR mask" (cam_strings_capturing_mode_facefusion_txt).-->
+<string name="cam_strings_description_facefusion_txt" xliff:restype="x-CAMERA/APPSLIST/DOWNLOADABLE/DESCRIPTIONS/2ROWS">Mask your face with the face of your friend to take an impressive selfie</string>
+<!--Title of the dialog "cam_strings_remember_geotag_txt". To be copied from "remember_location_title" in Android platform.-->
+<string name="cam_strings_remember_geotag_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">Save location?</string>
+<!--Text in the setting dialog where the user can select to enable/disable geotagging. Yes and No buttons are provided in the dialog. The word "Geotagging" is the name of a setting in the camera app. To differentiate this setting from other geotagging settings in other apps, the exact setting name should be used here.-->
+<string name="cam_strings_remember_geotag_txt" xliff:restype="x-UNLIMITED">Tag your photos and videos with the locations where they are taken. You can change this setting later from Save location in the Camera settings.</string>
+<!-- Application name under Apps list. This app includes Timeshift video and 4k video functions (camera capturing modes). -->
+<string name="cam_strings_application_name_video_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/TITLE/1ROW/NOICON">Video</string>
+<!--Title of the setting dialog. Make this consistent with "cam_strings_shortcut_timeshift_txt". Timeshift burst is NOT trademarked and can be translated. However, please keep this name in English where possible (request from Global marketing group). -->
+<string name="cam_strings_application_name_timeshift_txt" xliff:restype="x-GENERIC/LIST/TITLE/ICON">Timeshift burst</string>
+<!--One of the capturing modes. Select this mode to apply effects to photos and videos. English and Japanese are specified by Global marketing group.-->
+<string name="cam_strings_application_name_creative_effect_txt" xliff:restype="x-GENERIC/LIST/TITLE/ICON">Creative effect</string>
+<!--Option value for capturing mode. Please see terminology sheet from SONY for approved translations.-->
+<string name="cam_strings_application_name_sweep_panorama_txt" xliff:restype="x-GENERIC/LIST/TITLE/ICON">Sweep Panorama</string>
+<!--One of the capturing modes. This mode allows users to take photos with background sound. (English for most languages as specified by Marketing at Sony/SoMC, see DMS05915595)-->
+<string name="cam_strings_application_name_soundphoto_txt" xliff:restype="x-GENERIC/LIST/TITLE/ICON">Sound Photo</string>
+<!--One of the capturing modes. NOTE to translators: Face in picture is the mode where you can insert (a) face(s) into your photo and lets you take a photo using the front and main cameras at the same time. (So, you can take a photo of yourself with the subject.)-->
+<string name="cam_strings_application_name_dualrec_txt" xliff:restype="x-GENERIC/LIST/TITLE/ICON">Face in picture</string>
+<!--One of the capturing modes. This mode lets users take a photo from multiple angles by connecting with other cameras or Xperia™ phones. When connected to other devices, the image through the viewfinder of each device will appear on the same screen.-->
+<string name="cam_strings_application_name_multicam_txt" xliff:restype="x-GENERIC/LIST/TITLE/ICON">Multi camera</string>
+<!--One of the options under capturing mode setting. AR =augmented reality. Only for "AR", it should not be translated unless necessary.-->
+<string name="cam_strings_application_name_facefusion_txt" xliff:restype="x-GENERIC/LIST/TITLE/ICON">AR mask</string>
+<!--Option for Grid lines to be displayed in settings menu. Grid lines will appear through the viewfinder.-->
+<string name="cam_strings_gridline_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/MIDDLE/1ROW/NOICON">Grid lines</string>
+<!--Instructive text that prompts the user to touch the screen of Xperia™ to connect with other devices using NFC.-->
+<string name="cam_strings_multicam_nfc_touch_to_beam_title_txt" xliff:restype="x-CAMERA/MULTICAM/NFC/TITLE">Touch the screen</string>
+<!--Toast that appears when the user tried to start camera with certain screens pinned.-->
+<string name="cam_strings_screen_pinned_txt" xliff:restype="x-GENERIC/TOAST/TEXT">Screen is pinned</string>
+<!--This message is displayed when the user panned the camera too quickly to take a panoramic photo.-->
+<string name="cam_3d_strings_shooting_guide_pan_too_fast_txt" xliff:restype="x-CAMERA/3D/SHOOTING/GUIDE/H">Pan more slowly</string>
+<!--The help menu.-->
+<string name="cam_strings_help_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/NOICON">Help</string>
+<!--Text that displayed above the slider that the user can adjust the hue.-->
+<string name="cam_strings_superior_auto_color_txt" xliff:restype="x-CAMERA/COLOR/BRIGHTNESS/CONTROLS/V">Color</string>
+<!--Text that displayed above the slider that the user can adjust the brightness.-->
+<string name="cam_strings_superior_auto_brightness_txt" xliff:restype="x-CAMERA/COLOR/BRIGHTNESS/CONTROLS/V">Brightness</string>
+<!--Text to speech for the blind. The phone reads this text when the user touches the icon that opens a color adjustment slider and a brightness adjustment slider. Please refer to cam_strings_superior_auto_color_txt for the translation of "color" and cam_strings_superior_auto_brightness_txt for "Brightness".-->
+<string name="cam_strings_accessibility_superior_auto_color_brightness_txt" xliff:restype="x-UNLIMITED">Color and brightness adjustment</string>
+<!--Option to be displayed in settings menu. Setting menu where the user can turn on/off Self-timer.-->
+<string name="cam_strings_self_timer_photo_txt" xliff:restype="x-CAMERA/SETTING/LIST/1ROW/SMALL/V">Self-timer (still images)</string>
+<!--Explanatory text about the capturing mode "Camera". In Camera mode, the user can take photos and videos by auto or manual settings.-->
+<string name="cam_strings_description_camera_txt" xliff:restype="x-CAMERA/CAPTURING/DIALOG/TEXT/3ROWS">Take photos and videos</string>
+<!--Title for the list of the camera apps.-->
+<string name="cam_strings_apps_list_txt" xliff:restype="x-CAMERA/APPLICATION/NAVIGATOR/TEXT/1ROW">Camera apps</string>
+<!--Positive button label for a dialog when you need to add a custom location-->
+<string name="cam_strings_apps_list_add_txt" xliff:restype="x-CAMERA/APPSLIST/APPNAMES/2ROWS">Add</string>
+<!--One of the capturing modes listed on the shortcut list. Make this translation consistent with "cam_strings_capturing_mode_superior_auto_cy_txt".-->
+<string name="cam_strings_capturing_mode_superior_auto_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/TITLE/1ROW/NOICON">Superior auto</string>
+<!--The text in sencondline of notification tray to show that the files have been downloaded and installed in the phone-->
+<string name="cam_strings_apps_list_installed_txt" xliff:restype="x-GENERIC/SUBHEADER">Installed</string>
+<!--Title for the start tutorial done button-->
+<string name="cam_strings_tutorial_button_txt" xliff:restype="x-CAMERA/CORE/TUTORIAL/BUTTON">Got it</string>
+<!--Option to be displayed as the title of the camera application icon in Application Tray.-->
+<string name="cam_strings_capturing_mode_camera_txt" xliff:restype="x-CAMERA/CAPTURING/DIALOG/RHINE/2ROWS/SHORT">Camera</string>
+<!--Text on a divider. Downloadable apps are listed below. Please refer to the translation of cam_strings_downloadable_tab_txt but capitalize only the first letter of the text.-->
+<string name="cam_strings_apps_list_downloadable_txt" xliff:restype="x-GENERIC/SUBHEADER">Downloadable</string>
+<!--Tutorial text explaining how to change the capturing mode.-->
+<string name="cam_strings_tutorial_txt" xliff:restype="x-CAMERA/CORE/TUTORIAL">Swipe to switch to another capturing mode such as Video or Manual</string>
+<!--Used in search to indicate that there are more results-->
+<string name="cam_strings_more_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/MIDDLE/1ROW/NOICON">More</string>
+<!--Message title. This is a message title for the dialog which explains the users that in order to activate Quick launch, screen lock needs to be unlocked. Message contents in the dialog reads "Screen lock is set. To use the Quick Launch, unlock the screen to enable this feature." (string name:cam_strings_fast_capturing_screen_locked_txt)-->
+<string name="cam_strings_fast_capturing_screen_locked_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">Screen locked</string>
+<!--Text in the dialog that appears when the user opened Camera by using Quick launch from the lock screen and tapped options menu. This text informs the user that he/she cannot open the options menu because the screen is locked and asks the user to unlock the screen.-->
+<string name="cam_strings_fast_capturing_screen_locked_settings_txt" xliff:restype="x-UNLIMITED">To open the options menu, unlock the screen</string>
+<!--One of the menu items under Superior auto or Video mode. Please refer to cam_strings_superior_auto_color_txt for the translation of "Color". For "brightness", please refer to cam_strings_superior_auto_brightness_txt.-->
+<string name="cam_strings_color_brightness_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/LONG/1ROW/1ICON">Color and brightness</string>
+<!--The name of a video stabilization mode that is provided by Sony. Some languages are specified by Sony, so please refer to the file provided separately.-->
+<string name="cam_strings_core_intelligentactive_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Intelligent active</string>
+<!--Option value for a video size. This option stores videos in full HD (HD 1080p) size.-->
+<string name="cam_strings_video_resolution_full_hd_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Full HD</string>
+<!--One of the options under Resolution setting.-->
+<string name="cam_strings_video_resolution_full_hd_60fps_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Full HD (60 fps)</string>
+<!--One of the options under Resolution setting.-->
+<string name="cam_strings_video_resolution_full_hd_30fps_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Full HD (30 fps)</string>
+<!--Option value for Video size. This option stores videos for sharing via MMS.-->
+<string name="cam_strings_video_resolution_mms_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">MMS</string>
+<!--Please refer to cam_strings_video_size_pixel_hd_txt and make the translation of "HD" consistent with the lable.-->
+<string name="cam_strings_video_resolution_hd_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">HD</string>
+<!--Please refer to cam_strings_video_size_pixel_vga_4x3_txt and make the translation of "VGA" consistent with the lable.-->
+<string name="cam_strings_video_resolution_vga_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">VGA</string>
+<!--Please refer to cam_strings_video_size_pixel_qvga_4x3_txt and make the translation of "QVGA" consistent with the label.-->
+<string name="cam_strings_video_resolution_qvga_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">QVGA</string>
+<!--Text to speech for the blind. The device reads this text when the user tapped an icon to close Color and brightness adjustment. Please refer to cam_strings_color_brightness_txt and make the translation of "color and brightness" consistent with the label. Also, refer to cam_strings_accessibility_superior_auto_color_brightness_txt and make the translation of "adjustment" consistent with the label.-->
+<string name="cam_strings_accessibility_color_brightness_button_txt" xliff:restype="x-UNLIMITED">Close color and brightness adjustment</string>
+<!--Option for flash to be displayed in settings menu.-->
+<string name="cam_strings_accessibility_flash_txt" xliff:restype="x-UNLIMITED">Flash</string>
+<!--One of the options in the Flash setting dialog. Selecting this will keep the camera LED light (used for flash) on like a torch. Ideal for people shoot a video in dark places or people who don't like the flash reflection or wants to take photos by increasing ambient light. Please localize this word that suits your market.-->
+<string name="cam_strings_accessibility_flash_torch_txt" xliff:restype="x-UNLIMITED">Flashlight</string>
+<!--This string is used as a title of information screen. The screen shows the usage of remote control.-->
+<string name="cam_strings_accessibility_information_txt" xliff:restype="x-UNLIMITED">Information</string>
+<!--One of the menu items, where the user can do common settings.-->
+<string name="cam_strings_more_common_setting_title_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/TITLE/1ROW/NOICON">Common settings</string>
+<!--One of the menu item under the camera settings. Turning on this menu allows the user to review the photo shortly after it was taken.-->
+<string name="cam_strings_photo_autoreview_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/MIDDLE/1ROW/NOICON">Auto photo preview</string>
+<!--Button label prompting the user to unlock the drawing pad (gesture pad).-->
+<string name="cam_strings_unlock_button_txt" xliff:restype="x-GENERIC/BUTTON/2BUTTONS">Unlock</string>
+<!--This text informs the user that he/she cannot change the capturing mode because the screen is locked and asks the user to unlock the screen. "Unlock" and "Cancel" buttons are provided under this text.-->
+<string name="cam_strings_fast_capturing_screen_locked_apps_list_txt" xliff:restype="x-UNLIMITED">To change the capturing mode, unlock the screen. Unlock?</string>
+<!--Permission explanation - Camera-->
+<string name="cam_strings_runtime_permission_rationale_camera_txt" xliff:restype="x-UNLIMITED">To take photos and videos</string>
+<!--Permission explanation - Microphone-->
+<string name="cam_strings_runtime_permission_rationale_microphone_txt" xliff:restype="x-UNLIMITED">To record sound</string>
+<!--Permission explanation - Storage-->
+<string name="cam_strings_runtime_permission_rationale_storage_txt" xliff:restype="x-UNLIMITED">To save photos and videos</string>
+<!--Permission explanation - Location-->
+<string name="cam_strings_runtime_permission_rationale_location_txt" xliff:restype="x-UNLIMITED">To retrieve location</string>
+<!--Dialog title for the application permission. %1$s will be replaced with the application name.-->
+<string name="cam_strings_runtime_permission_dialog1_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">%1$s permission</string>
+<!--Dialog text for the application permission. %1$s will be replaced with the application name.-->
+<string name="cam_strings_runtime_permission_dialog1_message_txt" xliff:restype="x-UNLIMITED">%1$s requires the following permission(s)</string>
+<!--Dialog title that appears when the user tried to use an application that needs permission. %1$s will be replace with an app name.-->
+<string name="cam_strings_runtime_permission_dialog2_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">Could not continue</string>
+<!--Dialog text for the application permission. This informs the user that the application that the user tried to use needs permissions from applications listed under this text.-->
+<string name="cam_strings_runtime_permission_dialog2_message1_txt" xliff:restype="x-UNLIMITED">The app requires the following permission(s) to perform this action.</string>
+<!--Dialog text for the application permission. This text inform the user how to grant permissions.-->
+<string name="cam_strings_runtime_permission_dialog2_message2_txt" xliff:restype="x-UNLIMITED">To grant permissions, go to App info &gt; Permissions.</string>
+<!--Option to continue the current automatic backup progress.-->
+<string name="cam_strings_runtime_permission_continue_button_txt" xliff:restype="x-GENERIC/DIALOG/BUTTON/2BUTTONS">Go to App info</string>
+<!--Text in the error dialog that appears when the user tried to save photos but failed due to to SD card problem. Data storage is a storage location. Please make this translation consistent with cam_strings_save_destination_txt. Also, use translations for SD card as a storage location, cam_strings_save_destination_sd_txt. (SoMC-Apps vendor\semc\frameworks\base\libs\camera-common\app)-->
+<string name="cam_strings_error_fatal_sd_photo_txt" xliff:restype="x-UNLIMITED">Could not save photos. There may be a problem with the data storage. If Data storage is set to SD card, check your SD card.</string>
+<!--Text in the error dialog that appears when the user tried to record a video but failed due to the data storage problem. Data storage is a storage location. Please make this translation consistent with cam_strings_save_destination_txt. Also, use translations for SD card as a storage location, cam_strings_save_destination_sd_txt. (SoMC-Apps vendor\semc\frameworks\base\libs\camera-common\app)-->
+<string name="cam_strings_error_fatal_sd_video_txt" xliff:restype="x-UNLIMITED">Could not start recording. There may be a problem with the data storage. If Data storage is set to SD card, check your SD card.</string>
+<!--One of the options under the Auto photo preview setting.-->
+<string name="cam_strings_preview_always_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">On</string>
+<!--One of the options under the Auto photo preview setting.-->
+<string name="cam_strings_preview_only_front_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Only front camera</string>
+<!--Tutorial text explaining how to switch cameras quickly.-->
+<string name="cam_strings_fast_switch_tutorial_txt" xliff:restype="x-CAMERA/CORE/TUTORIAL">You can switch between the main and front cameras by swiping the screen</string>
+<!--Tutorial title explaining how to switch cameras quickly.-->
+<string name="cam_strings_fast_switch_tutorial_title_txt" xliff:restype="x-CAMERA/CORE/TUTORIAL/TITLE">Switch camera</string>
+<!--Tutorial text explaining how to take selfie.-->
+<string name="cam_strings_eye_position_tutorial_txt" xliff:restype="x-CAMERA/CORE/TUTORIAL">Keep your eyes on the front camera lens</string>
+<!--Tutorial title explaining how to take selfies.-->
+<string name="cam_strings_eye_position_tutorial_title_txt" xliff:restype="x-CAMERA/CORE/TUTORIAL/TITLE">Eye direction</string>
+<!--Hint text to take photos by using self-timer with a front camera.-->
+<string name="cam_strings_self_timer_hint_countdown_txt" xliff:restype="x-CAMERA/SELFTIMER/HINT">Keep your eyes on the camera</string>
+<!--Tutorial title explaining how to switch capturing modes quickly.-->
+<string name="cam_strings_tutorial_title_txt" xliff:restype="x-CAMERA/CORE/TUTORIAL/TITLE">Switch mode</string>
+<!--One of the menu item under the camera settings. Turning on this menu allows the user to review the photo shortly after it was taken.-->
+<string name="cam_strings_accessibility_auto_review_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/MIDDLE/1ROW/NOICON">Auto photo preview</string>
+<!--Text to speech for the blind. The device reads this text when the user tapped stop button of Self-Timer.-->
+<string name="cam_strings_accessibility_self_timer_stop_button_txt" xliff:restype="x-UNLIMITED">Stop counting down</string>
+<!--Text to speech for the blind. The device reads this text when the camera was switched to the front camera.-->
+<string name="cam_strings_accessibility_switch_to_front_by_swiping_txt" xliff:restype="x-UNLIMITED">Switched to front camera</string>
+<!--Text to speech for the blind. The device reads this text when the camera was switched to the main camera.-->
+<string name="cam_strings_accessibility_switch_to_main_by_swiping_txt" xliff:restype="x-UNLIMITED">Switched to main camera</string>
+<!--Message shown when the device temperature is rising.-->
+<string name="cam_strings_cooling_mode_txt" xliff:restype="x-CAMERA/COOLMODE">Some functions disabled by temperature rise</string>
+<!--Button text to show more details about the heated device.-->
+<string name="cam_strings_cooling_mode_learn_more_txt" xliff:restype="x-CAMERA/COOLMODE/BUTTON">Read more</string>
+<!--Title in the dialog that appears when the user tapped the button "Read more" (cam_strings_cooling_mode_learn_more_txt).-->
+<string name="cam_strings_cooling_mode_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">Some functions disabled</string>
+<!--Explanatory text under the title "Some functions disabled". Disabled functions such as Face Detection or Smile Shutter will be shown below.-->
+<string name="cam_strings_cooling_mode_message1_txt" xliff:restype="x-UNLIMITED">The following functions are currently disabled.</string>
+<!--Explanatory text under the title "Some functions disabled".-->
+<string name="cam_strings_cooling_mode_message2_txt" xliff:restype="x-UNLIMITED">Please wait for your device to cool down and then restart the camera to use the above functions.</string>
+<!--Name of camera mode, auto scene recognition, such as Party, Landscape, Sports-->
+<string name="cam_strings_auto_scene_recognition_txt" xliff:restype="x-UNLIMITED">Auto scene recognition</string>
+<!--One of the menu items under the camera settings. Self-timer starts automatically by detecting the user's hand. English specified by EP. The capital S is intentional. Translatable text.-->
+<string name="cam_strings_hand_shutter_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Hand Shutter</string>
+<!--One of the menu items in the settings. Tapping this will show the options, "Smile Shutter" and "Hand Shutter" (cam_strings_hand_shutter_txt).-->
+<string name="cam_strings_shutter_trigger_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/NOICON">Auto capturing</string>
+<!--One of the menu items under Video settings. With this option, the video camera automatically takes a photo during recording a video.-->
+<string name="cam_strings_video_shutter_trigger_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/NOICON">Auto capturing (video)</string>
+<!--Message that prompts the user to try to turn your palm toward the camera to enable Hand Shutter (cam_strings_hand_shutter_txt).-->
+<string name="cam_strings_hand_shutter_hint_txt" xliff:restype="x-CAMERA/COOLMODE">Turn your palm toward the camera</string>
+<!--Text in the dialog that explains "Hand Shutter" (cam_strings_hand_shutter_txt).-->
+<string name="cam_strings_hand_shutter_hint_detail_txt" xliff:restype="x-CAMERA/HANDSHUTTER/DIALOG/TEXT">Turn your palm toward the camera. Self-timer will be turned on when your palm is recognized. To make it easy to be recognized, extend your fingers upward.</string>
+<!--Option value for flash to turn the flash when the user takes a night portrait.-->
+<string name="cam_strings_flash_night_portrait_txt" xliff:restype="x-CAMERA/CORE/LIST/2ND/1ROW/1ICON">Night portrait flash</string>
+<!--Message that tell the user that he/she needs to hold his/her phone still when he/she takes a photo with Night portrait flash.-->
+<string name="cam_strings_flash_night_portrait_hint_txt" xliff:restype="x-CAMERA/COOLMODE">Make sure to hold your device still</string>
+<!--Explanatory text about Soft skin effect.-->
+<string name="cam_strings_global_setting_softskin_detail_txt" xliff:restype="x-UNLIMITED">Make your skin look bright and smooth. The effect works in the applications that use the front camera. This can be applied on photos and videos. You can also adjust the level.</string>
+<!--One of the menu items in the settings. The user can adjust Soft skin effect level by moving a slider.-->
+<string name="cam_strings_global_setting_softskin_level_adjustment_txt" xliff:restype="x-CAMERA/GLOBAL/SETTINGS/LIST">Level adjustment</string>
+<!--Header for the list of all available applications that can use Soft skin effect.-->
+<string name="cam_strings_global_setting_softskin_available_applications_txt" xliff:restype="x-CAMERA/GLOBAL/SETTINGS/LIST/DIVIDER">Available applications</string>
+<!--One of the settings that the user can add smooth skin effect to the photo.-->
+<string name="cam_strings_global_setting_softskin_smoothen_skin_txt" xliff:restype="x-CAMERA/GLOBAL/SETTINGS/TAB/2TABS">Smooth skin</string>
+<!--One of the settings that the user can add bright skin effect to the photo.-->
+<string name="cam_strings_global_setting_softskin_brighten_skin_txt" xliff:restype="x-CAMERA/GLOBAL/SETTINGS/TAB/2TABS">Bright skin</string>
+<!--Message that tell the user that some camera functions have been disabled due to high temperature.-->
+<string name="cam_strings_cooling_mode_cooled_down_txt" xliff:restype="x-CAMERA/COOLMODE">Some functions have been disabled</string>
+<!--Message that tells the user how to go to Timeshift burst. Please refer to the label, cam_strings_apps_list_txt for the translation of Camera apps, cam_strings_application_name_timeshift_txt for Timeshift burst.-->
+<string name="cam_strings_dialog_burst_information_txt" xliff:restype="x-UNLIMITED">To take continuous shots, select Timeshift burst in Camera apps</string>
+<!--Option value for self-timer to set the timer for 3 seconds. Please refer to the following label and translate in the same way; SoMC-Apps: cam_strings_self_timer_2_txt.-->
+<string name="cam_strings_self_timer_3_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">3 sec.</string>
+<!--Option value for Photometry in Advanced settings. Selecting this will measure the amount of the light on the touched area and determine the exposure.-->
+<string name="cam_strings_photometry_touch_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Touch</string>
+<!--Title for the focus tab. The user is able to switch between AF (Auto Focus) and MF (Manual Focus) in the tab.-->
+<string name="cam_strings_image_quality_control_tab_focus_txt" xliff:restype="x-CAMERA/CORE/IMAGE/QUALITY/CONTROL/TAB">Focus</string>
+<!--Title in the dialog that appears when the user tapped a setting that is disabled.-->
+<string name="cam_strings_restricted_setting_dialog_title_txt" xliff:restype="x-GENERIC/DIALOG/TITLE">Cannot change</string>
+<!--Text in the dialog that appears when the user tapped a setting that is disabled because of the current resolution setting. Reference in SoMC Apps: cam_strings_resolution_txt - Resolution.-->
+<string name="cam_strings_restricted_setting_photo_resolution_txt" xliff:restype="x-UNLIMITED">This setting is not supported for the current resolution. To configure this setting, change resolution.</string>
+<!--Text in the dialog that appears when the user tapped a setting that is disabled because of the current video resolution setting. Reference in SoMC Apps: cam_strings_video_resolution_txt - Video resolution.-->
+<string name="cam_strings_restricted_setting_video_resolution_txt" xliff:restype="x-UNLIMITED">This setting is not supported for the current video resolution. To configure this setting, change video resolution.</string>
+<!--Text in the dialog that appears when the user tapped a setting that is disabled because of the current scene setting. Reference in SoMC Apps: cam_strings_scene_selection_title_cy_txt - Scene selection.-->
+<string name="cam_strings_restricted_setting_scene_txt" xliff:restype="x-UNLIMITED">This setting is not supported for the current scene. To configure this setting, change scene selection.</string>
+<!--Text in the dialog that appears when the user tapped a setting that is disabled because of the current resolution or scene setting. Reference in SoMC Apps: cam_strings_resolution_txt - Resolution, cam_strings_scene_selection_title_cy_txt - Scene selection.-->
+<string name="cam_strings_restricted_setting_photo_resolution_or_scene_txt" xliff:restype="x-UNLIMITED">This setting is not supported for the current resolution or scene. To configure this setting, change resolution or scene selection.</string>
+<!--Text in the dialog that appears when the user tapped a setting that is disabled because of the current video resolution or scene setting. Reference in SoMC Apps: cam_strings_video_resolution_txt - Video resolution, cam_strings_scene_selection_title_cy_txt - Scene selection.-->
+<string name="cam_strings_restricted_setting_video_resolution_or_scene_txt" xliff:restype="x-UNLIMITED">This setting is not supported for the current  video resolution or scene. To configure this setting, change video resolution or scene selection.</string>
+<!--Message shown when the self-timer is set to Off. Reference in SoMC Apps: cam_strings_self_timer_txt - Self-timer.-->
+<string name="cam_strings_self_timer_front_hint_off_txt" xliff:restype="x-CAMERA/COOLMODE">Self-timer: Off</string>
+<!--Message shown when the self-timer is set to 3 seconds. Reference in SoMC Apps: cam_strings_self_timer_txt - Self-timer.-->
+<string name="cam_strings_self_timer_front_hint_3_txt" xliff:restype="x-CAMERA/COOLMODE">Self-timer: 3 sec.</string>
+<!--Message shown when the self-timer is set to 10 seconds. Reference in SoMC Apps: cam_strings_self_timer_txt - Self-timer.-->
+<string name="cam_strings_self_timer_front_hint_10_txt" xliff:restype="x-CAMERA/COOLMODE">Self-timer: 10 sec.</string>
+<!--One of the options under the Auto photo preview setting.-->
+<string name="cam_strings_touch_capturing_always_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">On</string>
+<!--One of the options under the Auto photo preview setting.-->
+<string name="cam_strings_touch_capturing_only_front_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Only front camera</string>
+<!--Text to speech for the blind. The phone reads this text when the user touched the exposure value icon in camera settings.-->
+<string name="cam_strings_accessibility_image_quality_control_exposure_value_txt" xliff:restype="x-UNLIMITED">Exposure value</string>
+<!--Text to speech for the blind. The phone reads this text when the user touched the white balance icon in camera settings.-->
+<string name="cam_strings_accessibility_image_quality_control_white_balance_txt" xliff:restype="x-UNLIMITED">White balance</string>
+<!--Text to speech for the blind. The phone reads this text when the user touched the shutter speed icon in camera settings.-->
+<string name="cam_strings_accessibility_image_quality_control_shutter_speed_txt" xliff:restype="x-UNLIMITED">Shutter speed</string>
+<!--Text to speech for the blind. The phone reads this text when the user touched the focus icon in camera settings.-->
+<string name="cam_strings_accessibility_image_quality_control_focus_txt" xliff:restype="x-UNLIMITED">Focus</string>
+<!--Text to speech for the blind. The phone reads this text when the user selected the Auto button in the shutter speed settings.-->
+<string name="cam_strings_accessibility_image_quality_control_shutter_speed_auto_selected_txt" xliff:restype="x-UNLIMITED">Auto selected</string>
+<!--Text to speech for the blind. The phone reads this text when the user deselected the Auto button in the manual settings.-->
+<string name="cam_strings_accessibility_image_quality_control_shutter_speed_auto_deselected_txt" xliff:restype="x-UNLIMITED">Auto deselected</string>
+<!--Text to speech for the blind. The phone reads this text when the user touched the Focus tab in the manual settings and the tab name was set to AF.-->
+<string name="cam_strings_accessibility_image_quality_control_focus_auto_txt" xliff:restype="x-UNLIMITED">Autofocus</string>
+<!--Text to speech for the blind. The phone reads this text when the user touched the Focus tab in the manual settings and the tab name was set to MF.-->
+<string name="cam_strings_accessibility_image_quality_control_focus_manual_txt" xliff:restype="x-UNLIMITED">Manual focus</string>
+<!--Text to speech for the blind. The phone reads this text when the user changed focal length in camera settings.-->
+<string name="cam_strings_accessibility_image_quality_control_focus_manual_adjusted_txt" xliff:restype="x-UNLIMITED">Focal length changed</string>
+<!--Text to speech for the blind. The phone reads this text when the user selected the Auto button in the focus settings.-->
+<string name="cam_strings_accessibility_image_quality_control_focus_auto_selected_txt" xliff:restype="x-UNLIMITED">Auto selected</string>
+<!--Text to speech for the blind. The phone reads this text when the user deselected the Auto button in the focus settings.-->
+<string name="cam_strings_accessibility_image_quality_control_focus_auto_deselected_txt" xliff:restype="x-UNLIMITED">Auto deselected</string>
+<!--One of the menu items in the Superior auto settings.-->
+<string name="cam_strings_touch_to_focus_adjust_exposure_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/ITEM/SHORT/1ROW/NOICON">Touch to adjust</string>
+<!--Option value for Touch to adjust focus/brightness-->
+<string name="cam_strings_touch_to_focus_adjust_exposure_only_focus_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Focus only</string>
+<!--Option value for Touch to adjust focus/brightness-->
+<string name="cam_strings_touch_to_focus_adjust_exposure_focus_and_exposure_txt" xliff:restype="x-CAMERA/CORE/LIST/1ST/LIST/PARAMETER/2ROWS">Focus and brightness</string>
+<!--Toast that appears when the user tried any restricted action during saving image or video.-->
+<string name="cam_strings_error_save_file_in_progress_txt" xliff:restype="x-GENERIC/TOAST/TEXT">Saving. This action unavailable.</string>
+</resources>

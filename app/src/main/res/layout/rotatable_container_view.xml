@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+* Copyright (C) 2014 Sony Mobile Communications AB.
+* All rights, including trade secret rights, reserved.
+*
+* @file rotatable_container_view.xml
+*
+-->
+<!-- Rotatable view container -->
+<com.sonyericsson.cameracommon.rotatableview.RotatableContainerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- container -->
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center" >
+
+        <!-- rotatable overlay view -->
+        <FrameLayout
+            android:id="@+id/overlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:gravity="top" >
+
+        </FrameLayout>
+    </FrameLayout>
+
+</com.sonyericsson.cameracommon.rotatableview.RotatableContainerView>

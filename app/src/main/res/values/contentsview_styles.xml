@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2013 Sony Mobile Communications AB.                 *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<resources>
+    <dimen name="thumbnail_image_size">54dp</dimen>
+    <dimen name="thumbnail_size_actual">60dp</dimen>
+    <dimen name="thumbnail_image_side_length">40dp</dimen>
+    <dimen name="thumbnail_container_side_length">56dp</dimen>
+</resources>

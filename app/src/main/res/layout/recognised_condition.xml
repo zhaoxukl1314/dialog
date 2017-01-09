@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright (C) 2012 Sony Mobile Communications AB.
+   All rights, including trade secret rights, reserved.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recognised_condition"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layoutDirection="ltr">
+
+    <TextView
+        android:id="@+id/condition_text"
+        style="@style/OnScreenTextDropShadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/condition_icon"
+        android:layout_width="@dimen/viewfinder_dialog_scene_icon_size"
+        android:layout_height="@dimen/viewfinder_dialog_scene_icon_size" />
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ *********************************************************************
+ * Copyright 2011 Sony Ericsson Mobile Communications Japan, Inc.    *
+ * Copyright (C) 2012 Sony Mobile Communications AB.                 *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+
+<!-- Rotatable Text View -->
+<!-- Ignore Lint warning "UselessParent" -->
+<com.sonyericsson.cameracommon.rotatableview.RotatableToast
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rotatable_toast"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:focusable="false"
+    android:focusableInTouchMode="false">
+    <!-- Base(this view is used for fade out animation and changing text position)-->
+    <FrameLayout
+        android:id="@+id/rotatable_toast_base"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+        <!-- Background of text box-->
+        <FrameLayout
+            android:id="@+id/rotatable_toast_text_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/cam_dialog_background_icn_for_toast"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
+            <!-- Text -->
+            <TextView
+                android:id="@+id/rotatable_toast_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/rotatable_toast_text_padding"
+                android:gravity="center"
+                android:textSize="@dimen/rotatable_toast_text_size"
+                style="@style/OnScreenTextDropShadow"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+        </FrameLayout>
+    </FrameLayout>
+</com.sonyericsson.cameracommon.rotatableview.RotatableToast>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zhaoxukl1314.settingdialog.MainActivity">
+
+    <Button
+        android:onClick="openMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="click" />
+
+    <RelativeLayout
+        android:id="@+id/viewer_interaction_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:layoutDirection="ltr">
+
+        <FrameLayout
+            android:id="@+id/viewer_left_and_center_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/viewer_right_container"
+            android:layout_width="300dp"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    </LinearLayout>
+</RelativeLayout>

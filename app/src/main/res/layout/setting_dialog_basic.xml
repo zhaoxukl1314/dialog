@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2012 Sony Mobile Communications Inc.                *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<com.sonyericsson.cameracommon.setting.dialog.SettingDialogBasic xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/setting_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cam_shortcut_dialog_title_bg_icn"
+            android:orientation="vertical"
+            android:padding="0dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/setting_title"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/title_text_height"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:maxWidth="224dp"
+                android:paddingLeft="@dimen/setting_dialog_title_left_padding"
+                android:paddingStart="@dimen/setting_dialog_title_left_padding"
+                android:textSize="14dp"
+                style="@style/TextAppearance.SomcCamera.Medium" />
+
+            <View
+                android:id="@+id/setting_title_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@drawable/cam_dialog_separator_icn" />
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/setting_gridview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:columnWidth="0dp"
+            android:drawSelectorOnTop="false"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:numColumns="1"
+            android:scrollbarDefaultDelayBeforeFade="@integer/setting_defaultdelaybeforefade"
+            android:scrollbarFadeDuration="@integer/setting_fadeduration"
+            android:scrollbarStyle="outsideOverlay"
+            android:stretchMode="columnWidth"
+            android:listSelector="@android:color/transparent" />
+    </LinearLayout>
+
+</com.sonyericsson.cameracommon.setting.dialog.SettingDialogBasic>

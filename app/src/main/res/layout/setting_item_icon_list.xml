@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2013 Sony Mobile Communications Inc.                *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/control_setting_dialog_height"
+        android:orientation="vertical"/>
+
+    <RelativeLayout
+        android:layout_width="@dimen/center_divider_width"
+        android:layout_height="match_parent"
+        android:background="@drawable/cam_dialog_separator_icn" />
+
+</LinearLayout>

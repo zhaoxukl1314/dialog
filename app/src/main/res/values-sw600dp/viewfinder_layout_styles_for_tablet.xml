@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2013 Sony Mobile Communications Inc.                *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+
+<resources>
+
+    <!-- This value is used by camera3D -->
+    <dimen name="left_container_padding_left">20dp</dimen>
+    <!-- Shortcut Icon -->
+    <integer name="shortcut_icon_count">7</integer>
+    <dimen name="left_container_width">80dp</dimen>
+    <dimen name="right_container_width">140dp</dimen>
+</resources>

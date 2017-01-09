@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ *********************************************************************
+ *  ____                      _____      _                           *
+ * / ___|  ___  _ __  _   _  | ____|_ __(_) ___ ___ ___  ___  _ __   *
+ * \___ \ / _ \| '_ \| | | | |  _| | '__| |/ __/ __/ __|/ _ \| '_ \  *
+ *  ___) | (_) | | | | |_| | | |___| |  | | (__\__ \__ \ (_) | | | | *
+ * |____/ \___/|_| |_|\__, | |_____|_|  |_|\___|___/___/\___/|_| |_| *
+ *                    |___/                                          *
+ *                                                                   *
+ *********************************************************************
+ * Copyright 2011 Sony Ericsson Mobile Communications Japan, Inc.    *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+
+<!-- Rotatable Text View -->
+<com.sonyericsson.cameracommon.rotatableview.RotatableTextViewInLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rotatable_text_view_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+>
+    <!--  Background -->
+    <ImageView
+        android:id="@+id/rotatable_text_view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+    />
+
+    <TextView
+        android:id="@+id/rotatable_text_view_text"
+        style="@style/OnScreenTextDropShadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+    />
+
+</com.sonyericsson.cameracommon.rotatableview.RotatableTextViewInLayout>

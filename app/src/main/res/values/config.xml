@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2014 Sony Mobile Communications Inc.
+ * All rights, including trade secret rights, reserved.
+-->
+<resources>
+    <string name="thermal_camera_action">shutdown</string>
+    <string name="default_destination_to_save">internal</string>
+
+    <!-- FPS for UnlimitedBurstShot. This may be configurated by RRO. -->
+    <integer name="acceptable_burst_shot_fps_x1000">10000</integer>
+
+    <!--
+     * Threshold value for determining whether to use the VariableStepZoomController.
+     * This may be configured by RRO.
+     -->
+    <integer name="threshold_for_variable_step_zoom">60</integer>
+</resources>

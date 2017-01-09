@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright 2011 Sony Ericsson Mobile Communications Japan, Inc.    *
+ * Copyright (C) 2012 Sony Mobile Communications AB.                 *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<resources>
+  <declare-styleable name="SmileGauge">
+    <attr name="forLandscape" format="boolean" />
+  </declare-styleable>
+</resources>

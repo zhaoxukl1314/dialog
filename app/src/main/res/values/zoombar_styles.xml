@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2012 Sony Mobile Communications Inc.                *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<resources>
+
+    <dimen name="zoom_container_width">230dp</dimen>
+    <dimen name="zoom_container_height">48dp</dimen>
+    <dimen name="max_zoom_indicator_width">108dp</dimen>
+    <color name="zoom_text">#ccffffff</color>
+
+</resources>

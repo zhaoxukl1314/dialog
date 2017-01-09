@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *********************************************************************
+ * Copyright (C) 2013 Sony Mobile Communications Inc.                *
+ * All rights, including trade secret rights, reserved.              *
+ *********************************************************************
+-->
+<resources>
+
+        <!-- This value is used by camera3D -->
+        <dimen name="left_container_padding_left">4dp</dimen>
+
+        <!-- Include horizontal padding:16dp -->
+        <dimen name="setting_dialog_shortcut_width">266dp</dimen>
+        <dimen name="setting_dialog_shortcut_2_column_width">419dp</dimen>
+        <dimen name="setting_dialog_menu_width">342dp</dimen>
+
+        <dimen name="setting_dialog_menu_max_height_margin_phone">8dp</dimen>
+        <dimen name="setting_dialog_menu_max_height_margin_tablet">369dp</dimen>
+
+        <dimen name="setting_dialog_shortcut_max_height_margin_phone">8dp</dimen>
+        <dimen name="setting_dialog_shortcut_max_height_margin_tablet">387dp</dimen>
+
+        <!-- Basic dialog dimen -->
+        <dimen name="setting_dialog_scroll_fading_edge_length">60dp</dimen>
+        <dimen name="setting_dialog_title_left_padding">12dp</dimen>
+        <dimen name="setting_dialog_column_height">60dp</dimen>
+        <integer name="setting_fadeduration">1000</integer>
+        <integer name="setting_defaultdelaybeforefade">1000</integer>
+
+        <!-- Basic item dimen -->
+        <dimen name="left_edge_padding">20dp</dimen>
+        <dimen name="right_edge_padding">14dp</dimen>
+        <dimen name="title_text_height">32dp</dimen>
+
+        <dimen name="setting_item_height">56dp</dimen>
+        <dimen name="shortcut_icon_background_height">56dp</dimen>
+        <dimen name="shortcut_icon_background_width">56dp</dimen>
+
+        <dimen name="divider_height">1dp</dimen>
+        <dimen name="divider_side_padding">8dp</dimen>
+        <dimen name="center_divider_width">0.5dp</dimen>
+
+        <dimen name="left_mid_padding">4dp</dimen>
+        <dimen name="setting_item_text_width">292dp</dimen>
+
+        <!-- Shortcut dialog dimen -->
+        <dimen name="shortcut_dialog_item_height">56dp</dimen>
+        <dimen name="shortcut_dialog_padding">8dp</dimen>
+
+        <!-- Menu dialog dimen -->
+        <dimen name="menu_dialog_item_height">56dp</dimen>
+        <dimen name="menu_dialog_padding">8dp</dimen>
+        <dimen name="left_icon_and_dialog_margin">12dp</dimen>
+        <dimen name="setting_group_tab_height">42dp</dimen>
+        <dimen name="max_dialog_vertial_margin">8dp</dimen>
+        <dimen name="dialog_available_area_height">250dp</dimen>
+
+        <!-- Second layer menu dialog dimen -->
+        <dimen name="second_layer_dialog_item_single_line_height">52dp</dimen>
+        <dimen name="second_layer_dialog_item_double_line_height">56dp</dimen>
+        <dimen name="second_layer_dialog_item_width">266dp</dimen>
+        <dimen name="second_layer_dialog_item_padding_left">10dp</dimen>
+        <!-- second_layer_dialog_item_padding_top = DoubleLineTopPadding - DoubleLineMidPadding/2 -->
+        <dimen name="second_layer_dialog_item_padding_top">7dp</dimen>
+        <!-- second_layer_dialog_item_padding_bottom = DoubleLineBottomPadding - DoubleLineMidPadding/2 -->
+        <dimen name="second_layer_dialog_item_padding_bottom">7dp</dimen>
+        <dimen name="second_layer_dialog_divider_height">1dp</dimen>
+        <dimen name="second_layer_dialog_padding">8dp</dimen>
+        <dimen name="second_layer_dialog_margin_top">-18dp</dimen>
+
+        <!--
+            This value means a transparent area size of background image for setting dialog.
+        -->
+        <dimen name="setting_dialog_transparent_padding">8dp</dimen>
+
+        <dimen name="control_setting_dialog_height">276dp</dimen>
+        <dimen name="control_dialog_left_margin">8dp</dimen>
+        <dimen name="control_dialog_left_padding">11dp</dimen>
+        <dimen name="control_dialog_right_padding">8dp</dimen>
+        <dimen name="control_dialog_top_padding">8dp</dimen>
+        <dimen name="control_dialog_bottom_padding">8dp</dimen>
+        <dimen name="ev_slider_memory_top_padding">21dp</dimen>
+        <dimen name="ev_slider_memory_bottom_padding">21dp</dimen>
+        <dimen name="control_dialog_item_height">55dp</dimen>
+        <dimen name="control_dialog_item_width">55dp</dimen>
+
+        <!--  Shortcut dimen -->
+        <dimen name="setting_shortcut_icon_width">48dp</dimen>
+        <dimen name="setting_shortcut_icon_height">48dp</dimen>
+
+</resources>
+

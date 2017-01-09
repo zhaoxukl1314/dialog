@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2012 Sony Mobile Communications AB.
+ * All rights, including trade secret rights, reserved.
+ *
+ * @file tagged_nametag_show.xml
+ *
+ * @author Akihiko Ozaki (Akihiko.XA.Ozaki@sonymobile.com)
+-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="true"
+    android:duration="150">
+    <alpha android:fromAlpha="0.0"
+           android:toAlpha="1.0"
+           android:interpolator="@android:anim/decelerate_interpolator"
+           android:fillAfter="true"
+    />
+    <scale android:fromXScale="0.6"
+           android:toXScale="1.0"
+           android:fromYScale="0.6"
+           android:toYScale="1.0"
+           android:pivotX="50%"
+           android:pivotY="50%"
+           android:interpolator="@android:anim/decelerate_interpolator"
+           android:fillAfter="true"
+    />
+    <!--translate animation set at TaggedRectangles.startNameTagAnimation() -->
+</set>
