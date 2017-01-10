@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
- *********************************************************************
- * Copyright (C) 2012 Sony Mobile Communications Inc.                *
- * Copyright (C) 2013 Sony Mobile Communications Inc.                *
- * All rights, including trade secret rights, reserved.              *
- *********************************************************************
--->
 <com.example.zhaoxukl1314.settingdialog.SettingTabDialogBasic
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/background"
@@ -20,57 +13,6 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/shortcut_dialog_padding"
         android:orientation="vertical">
-
-        <com.example.zhaoxukl1314.settingdialog.SettingTabs
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/setting_group_tab_height"
-            android:orientation="horizontal">
-            <FrameLayout
-                android:id="@+id/tab_left"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:background="@drawable/setting_tab_background_left">
-                <ImageView
-                    android:id="@+id/icon"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:duplicateParentState="true"
-                    android:scaleType="center" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/tab_middle"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:background="@drawable/setting_tab_background_middle">
-                <ImageView
-                    android:id="@+id/icon"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:duplicateParentState="true"
-                    android:scaleType="center" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/tab_right"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:background="@drawable/setting_tab_background_right">
-                <ImageView
-                    android:id="@+id/icon"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:duplicateParentState="true"
-                    android:scaleType="center" />
-            </FrameLayout>
-        </com.example.zhaoxukl1314.settingdialog.SettingTabs>
 
         <GridView
             android:id="@+id/setting_gridview"

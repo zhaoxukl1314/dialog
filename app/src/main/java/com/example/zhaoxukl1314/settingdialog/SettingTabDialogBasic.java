@@ -13,7 +13,6 @@ public class SettingTabDialogBasic extends SettingDialog {
 
     public static final String TAG = "SettingTabDialogBasic";
 
-    private SettingTabs mTabs;
     private GridView mGridView;
     private SettingAdapter mAdapter;
 
@@ -34,7 +33,6 @@ public class SettingTabDialogBasic extends SettingDialog {
         mGridView.setFadingEdgeLength(fadingEdgeLength);
         mGridView.setVerticalFadingEdgeEnabled(true);
         mGridView.setChoiceMode(GridView.CHOICE_MODE_SINGLE);
-        mTabs = (SettingTabs) findViewById(R.id.tabs);
     }
 
     @Override
