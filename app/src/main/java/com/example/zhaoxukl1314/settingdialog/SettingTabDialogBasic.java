@@ -8,9 +8,7 @@ import android.graphics.Rect;
 import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
 
@@ -22,7 +20,6 @@ public class SettingTabDialogBasic extends RelativeLayout implements SettingDial
     private SettingAdapter mAdapter;
 
     private LayoutCoordinator mLayoutCoordinator;
-    private Animation mCloseAnimation;
     private ViewGroup mParentView;
 
     @Override
@@ -33,9 +30,6 @@ public class SettingTabDialogBasic extends RelativeLayout implements SettingDial
         }
     }
 
-    /* (non-Javadoc)
-     * @see com.sonyericsson.cameracommon.setting.dialog.SettingDialogInterface
-     */
     @Override
     public void show() {
         requestLayout();
@@ -44,20 +38,9 @@ public class SettingTabDialogBasic extends RelativeLayout implements SettingDial
         }
     }
 
-    /* (non-Javadoc)
-     * @see com.sonyericsson.cameracommon.setting.dialog.SettingDialogInterface
-     */
     @Override
     public void setLayoutCoordinator(LayoutCoordinator coordinator) {
         mLayoutCoordinator = coordinator;
-    }
-
-    /* (non-Javadoc)
-     * @see com.sonyericsson.cameracommon.setting.dialog.SettingDialogInterface
-     */
-    @Override
-    public void setCloseAnimation(Animation animation) {
-        mCloseAnimation = animation;
     }
 
     @Override
@@ -73,10 +56,6 @@ public class SettingTabDialogBasic extends RelativeLayout implements SettingDial
     @Override
     public void close() {
         cancelAnimation();
-
-        if (mCloseAnimation != null) {
-            startAnimation(mCloseAnimation);
-        }
 
         Handler handler = getHandler();
         if (handler != null) {
@@ -99,9 +78,6 @@ public class SettingTabDialogBasic extends RelativeLayout implements SettingDial
 
         if (mParentView.getAnimation() != null) {
             mParentView.setAnimation(null);
-            if (mCloseAnimation != null) {
-                mCloseAnimation.setAnimationListener(null);
-            }
         }
     }
 
@@ -122,11 +98,6 @@ public class SettingTabDialogBasic extends RelativeLayout implements SettingDial
         } else {
             return true;
         }
-    }
-
-    @Override
-    public LayoutCoordinator getLayoutCoordinator() {
-        return mLayoutCoordinator;
     }
 
     public SettingTabDialogBasic(Context context, AttributeSet attrs) {
@@ -191,25 +162,6 @@ public class SettingTabDialogBasic extends RelativeLayout implements SettingDial
      */
     public void setNumColumns(int numColumns) {
         mGridView.setNumColumns(numColumns);
-    }
-
-    @Override
-    public boolean getSelectedItemRect(Rect rect) {
-
-        // find a selected item.
-        for (int i = 0; i < mGridView.getChildCount(); i++) {
-            View v = mGridView.getChildAt(i);
-            if (v.getTag() instanceof SettingDialogItem) {
-                SettingDialogItem item = (SettingDialogItem)v.getTag();
-                if (item.getItem().isSelected()) {
-                    rect.set(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
-                    rect.offset(mGridView.getLeft(), mGridView.getTop());
-                    return true;
-                }
-            }
-        }
-
-        return false;
     }
 
     private OnItemSelectedListener mItemSelectedListener = new OnItemSelectedListener() {

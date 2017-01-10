@@ -46,14 +46,6 @@ public class SettingChangeExecutor {
         }
     }
 
-    private class CancelSelectionSettingExecutor implements
-            SettingExecutorInterface<TimeShiftViewerMenuItem> {
-        @Override
-        public void onExecute(TypedSettingItem<TimeShiftViewerMenuItem> item) {
-            mSettingDialogStack.closeDialogs(false);
-        }
-    }
-
     public SettingExecutorInterface<TimeShiftViewerMenuItem> getExecutor(
             final TimeShiftViewerMenuItem key) {
         switch (key) {
@@ -65,9 +57,6 @@ public class SettingChangeExecutor {
 
             case SELECT_PHOTOS:
                 return new SelectPhotoSettingExecutor();
-
-            case CANCLE_SELECTION:
-                return new CancelSelectionSettingExecutor();
 
             default:
                 return new SettingExecutorInterface<TimeShiftViewerMenuItem>() {

@@ -9,6 +9,4 @@ public interface LayoutCoordinator {
     void coordinatePosition();
 
     void coordinateSize();
-
-    Rect getDialogRect();
 }

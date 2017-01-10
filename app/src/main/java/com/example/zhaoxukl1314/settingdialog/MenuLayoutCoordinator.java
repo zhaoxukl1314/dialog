@@ -49,9 +49,4 @@ public class MenuLayoutCoordinator implements LayoutCoordinator {
         mView.getLayoutParams().width = mMenuDialogRectCalculator.computeWidth();
         mView.getLayoutParams().height = mMenuDialogRectCalculator.computeHeight();
     }
-
-    @Override
-    public Rect getDialogRect() {
-        return mDialogRect;
-    }
 }

@@ -35,21 +35,5 @@ public interface SettingDialogInterface{
      */
     void setLayoutCoordinator(LayoutCoordinator coordinator);
 
-    /**
-     * Set the animation when the setting dialog is closed.
-     *
-     * @param animation Animation when the setting dialog is closed
-     */
-    void setCloseAnimation(Animation animation);
-
-    boolean getSelectedItemRect(Rect rect);
-
     boolean hitTest(int x, int y);
-
-    void setEnabled(boolean enable);
-
-    /**
-     * Get layout coordinator.
-     */
-    LayoutCoordinator getLayoutCoordinator();
 }

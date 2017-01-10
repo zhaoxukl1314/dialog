@@ -2,17 +2,13 @@
 
 package com.example.zhaoxukl1314.settingdialog;
 
-import android.content.Context;
-
-public enum TimeShiftViewerMenuItem implements SettingItemData {
+public enum TimeShiftViewerMenuItem{
     SAVE_SEPERATELY(
             R.string.cam_strings_timeshift_save_selection_txt),
     SHARE(
             R.string.cam_strings_timeshift_share_txt),
     SELECT_PHOTOS(
             R.string.cam_strings_timeshift_select_images_txt),
-    CANCLE_SELECTION(
-            R.string.cam_strings_timeshift_cancel_selection_txt),
     ;
 
     /** Other applications may refer to the title id. */
@@ -34,7 +30,6 @@ public enum TimeShiftViewerMenuItem implements SettingItemData {
     /**
      * Get Icon Id for the value.
      */
-    @Override
     public int getIconId() {
         // This function is never used.
         return 0;
@@ -43,7 +38,6 @@ public enum TimeShiftViewerMenuItem implements SettingItemData {
     /**
      * Get Text Id for the value.
      */
-    @Override
     public int getTextId() {
         // This function is never used.
         return 0;
