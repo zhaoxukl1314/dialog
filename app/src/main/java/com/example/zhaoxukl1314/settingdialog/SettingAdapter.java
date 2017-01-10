@@ -42,10 +42,6 @@ public class SettingAdapter extends ArrayAdapter<SettingItem> {
         this(context, new ArrayList<SettingItem>(), new SettingDialogItemFactory());
     }
 
-    /**
-     * Specify height of item in Setting dialog. This value is applied to all item views
-     * in SettingDialog.
-     */
     public void setItemHeight(int height) {
         if (mItemHeight != height) {
             mItemHeight = height;

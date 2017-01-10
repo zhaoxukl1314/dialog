@@ -6,10 +6,6 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.view.View;
 
-
-/**
- * This is utility class to coordinate SettingDialog.
- */
 class LayoutCoordinateUtil {
 
     /**
