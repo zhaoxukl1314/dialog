@@ -5,13 +5,14 @@ import java.util.List;
 
 public class SettingItemBuilder<T> {
     public static final String TAG = "SettingItemBuilder";
+    private static final int INVALID_RESOURCE_ID = -1;
 
     private final T mData;
 
-    private int mIconId = ResourceUtil.INVALID_RESOURCE_ID;
-    private int mTextId = ResourceUtil.INVALID_RESOURCE_ID;
+    private int mIconId = INVALID_RESOURCE_ID;
+    private int mTextId = INVALID_RESOURCE_ID;
     private String mText = "";
-    private int mDialogItemType = ResourceUtil.INVALID_RESOURCE_ID;
+    private int mDialogItemType = INVALID_RESOURCE_ID;
     private SettingExecutorInterface<T> mExecutor = null;
     private List<SettingItem> mItems = null;
 
@@ -29,7 +30,7 @@ public class SettingItemBuilder<T> {
     public SettingItem commit() {
         final SettingItem item;
 
-        if (mTextId == ResourceUtil.INVALID_RESOURCE_ID) {
+        if (mTextId == INVALID_RESOURCE_ID) {
             item = new TypedSettingItem<T>(
                     mData,
                     mIconId,

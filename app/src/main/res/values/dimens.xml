@@ -19,6 +19,12 @@
   <dimen name="viewfinder_dialog_scene_icon_size">20dp</dimen>
   <dimen name="viewfinder_dialog_scene_text_margin">3dp</dimen>
   <dimen name="viewfinder_dialog_scene_text_max_width">240dp</dimen>
+  <dimen name="center_divider_width">0.5dp</dimen>
+  <dimen name="divider_height">1dp</dimen>
+  <dimen name="divider_side_padding">8dp</dimen>
+  <dimen name="second_layer_dialog_item_padding_left">10dp</dimen>
+  <integer name="focus_indicator_animation_fadeout_duration">70</integer>
+  <integer name="focus_indicator_animation_focusin_duration">70</integer>
 
   <!-- Notification Indicators -->
   <dimen name="indicators_on_viewfinder_margin">36dp</dimen>
@@ -56,4 +62,18 @@
   <dimen name="alert_dialog_padding">24dp</dimen>
   <dimen name="alert_dialog_body_padding_bottom">8dp</dimen>
   <dimen name="alert_dialog_title_margin_bottom">20dp</dimen>
+  <dimen name="menu_dialog_item_height">56dp</dimen>
+  <dimen name="menu_dialog_padding">8dp</dimen>
+  <dimen name="navigationbar_width">42dp</dimen>
+  <dimen name="setting_dialog_menu_max_height_margin_phone">8dp</dimen>
+  <dimen name="setting_dialog_menu_max_height_margin_tablet">369dp</dimen>
+  <dimen name="setting_dialog_menu_width">342dp</dimen>
+  <dimen name="second_layer_dialog_divider_height">1dp</dimen>
+  <dimen name="second_layer_dialog_item_double_line_height">56dp</dimen>
+  <dimen name="second_layer_dialog_item_padding_bottom">7dp</dimen>
+  <dimen name="second_layer_dialog_item_padding_top">7dp</dimen>
+  <dimen name="left_container_width">60dp</dimen>
+  <dimen name="right_container_width">100dp</dimen>
+  <dimen name="setting_dialog_scroll_fading_edge_length">60dp</dimen>
+  <dimen name="setting_dialog_column_height">60dp</dimen>
 </resources>

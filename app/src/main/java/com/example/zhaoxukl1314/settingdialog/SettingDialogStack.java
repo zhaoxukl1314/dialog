@@ -32,11 +32,6 @@ public class SettingDialogStack {
 
     private OnKeyListener mOnInterceptKeyListener;
 
-    /**
-     * settingShortcutItems Sometimes SettingShortcut constructor in this function
-     * takes 100ms. This is bad for the performance. If prevent this, create ListView object
-     * in advance and set it as this parameter "settingShortcutItems".
-     */
     public SettingDialogStack(
             Context context,
             ViewGroup dialogContainer) {

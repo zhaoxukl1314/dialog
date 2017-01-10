@@ -29,26 +29,8 @@ public class SettingDialogItemFactory {
         if (item.getDialogItemType() == BUTTON) {
             return new SettingButton(context, item);
 
-        } else if (item.getDialogItemType() == ICON) {
-            return new SettingIcon(context, item);
-
         } else if (item.getDialogItemType() == VALUE_BUTTON) {
             return new SettingValueButton(context, item);
-
-        } else if (item.getDialogItemType() == CATEGORY_SWITCH) {
-            return new SettingCategorySwitch(context, item);
-
-        } else if (item.getDialogItemType() == EV) {
-            return new SettingEvSlider(context, item);
-
-        } else if (item.getDialogItemType() == VERTICAL_ICON_LIST) {
-            return new SettingIconList(context, item);
-
-        } else if (item.getDialogItemType() == MENU) {
-            return new SettingIcon(context, item);
-
-        } else if (item.getDialogItemType() == CONTROL_SWITCH) {
-            return new SettingControlSwitch(context, item);
 
         } else {
             throw new IllegalArgumentException(

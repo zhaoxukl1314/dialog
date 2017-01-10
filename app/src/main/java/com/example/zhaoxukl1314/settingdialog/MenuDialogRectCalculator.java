@@ -21,7 +21,6 @@ class MenuDialogRectCalculator {
 
     private final int mMaxHeightMargin;
 
-    private final boolean mIsTablet;
     private final Rect mBounds;
     private int mMenuDialogRowCount;
 
@@ -33,11 +32,8 @@ class MenuDialogRectCalculator {
         mWidth = res.getDimensionPixelSize(R.dimen.setting_dialog_menu_width);
         mItemHeight = res.getDimensionPixelSize(R.dimen.menu_dialog_item_height);
         mBounds = containerBounds;
-        mIsTablet = LayoutDependencyResolver.isTablet(mContext);
 
-        mMaxHeightMargin = mIsTablet
-                ? res.getDimensionPixelSize(R.dimen.setting_dialog_menu_max_height_margin_tablet)
-                : res.getDimensionPixelSize(R.dimen.setting_dialog_menu_max_height_margin_phone);
+        mMaxHeightMargin = res.getDimensionPixelSize(R.dimen.setting_dialog_menu_max_height_margin_phone);
         mMenuDialogRowCount = menuDialogRowCount;
     }
 

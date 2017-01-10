@@ -7,6 +7,7 @@ import java.util.List;
 
 public class TypedSettingItem<T> implements SettingItem {
     public static final String TAG = "TypedSettingItem";
+    private static final int INVALID_RESOURCE_ID = -1;
 
     private final T mData;
 
@@ -54,7 +55,7 @@ public class TypedSettingItem<T> implements SettingItem {
             int dialogItemType,
             SettingExecutorInterface<T> executor) {
         mData = data;
-        mTextId = ResourceUtil.INVALID_RESOURCE_ID;
+        mTextId = INVALID_RESOURCE_ID;
         mText = text;
         mIconId = iconId;
         mDialogItemType = dialogItemType;
@@ -70,7 +71,7 @@ public class TypedSettingItem<T> implements SettingItem {
 
     @Override
     public String getText(Resources resources) {
-        if (mTextId == ResourceUtil.INVALID_RESOURCE_ID) {
+        if (mTextId == INVALID_RESOURCE_ID) {
             return mText;
         } else {
             return resources.getString(mTextId);

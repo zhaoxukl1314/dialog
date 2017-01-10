@@ -11,7 +11,7 @@
         android:id="@+id/container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/shortcut_dialog_padding"
+        android:padding="8dp"
         android:orientation="vertical">
 
         <GridView
@@ -25,8 +25,8 @@
             android:drawSelectorOnTop="false"
             android:focusableInTouchMode="true"
             android:scrollbarStyle="outsideOverlay"
-            android:scrollbarFadeDuration="@integer/setting_fadeduration"
-            android:scrollbarDefaultDelayBeforeFade="@integer/setting_defaultdelaybeforefade"
+            android:scrollbarFadeDuration="1000"
+            android:scrollbarDefaultDelayBeforeFade="1000"
             android:listSelector="@android:color/transparent">
         </GridView>
 

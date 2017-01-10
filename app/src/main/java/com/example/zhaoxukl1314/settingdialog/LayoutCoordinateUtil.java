@@ -7,58 +7,6 @@ import android.graphics.Rect;
 import android.view.View;
 
 class LayoutCoordinateUtil {
-
-    /**
-     * This method sets left, top, right and bottom of target view.
-     * The position are set value based on 'rotationSourceArea'.
-     *
-     * <pre>
-     * Landscape, Portrait before rotation
-     * -------------------------------------
-     * |    (a)                            |
-     * |     *-----------                  |
-     * |     |(b)       |                  |
-     * |     | *####### |                  |
-     * |     | ######## |                  |
-     * |     |          |                  |
-     * |     |          |                  |
-     * |     |          |                  |
-     * |     ------------                  |
-     * -------------------------------------
-     * Portrait after rotation
-     * -------------------------------------
-     * |                                   |
-     * |    (c)                            |
-     * |     *----------------             |
-     * |     |   ####        |             |
-     * |     |   ####        |             |
-     * |     |   ####        |             |
-     * |     |   ####        |             |
-     * |     -----------------             |
-     * |                                   |
-     * -------------------------------------
-     * ### target view
-     * (a) rotationSourceArea
-     * (b) targetRect
-     * (c) rotationDestPosition
-     * </pre>
-     *
-     * @param orientation
-     *       Specify Configuration.ORIENTATION_PORTRAIT or Configuration.ORIENTATION_LANDSCAPE.
-     *
-     * @param target
-     *
-     * @param targetRect
-     *       Specify area of target view based on container view of target.
-     *
-     * @param rotationSourceArea
-     *       Specify area based on container view of target.
-     *
-     * @param rotationDestPosition
-     *       Specify position after view is rotated.
-     * @return
-     *       Area of target view based on container view of target.
-     */
     public static Rect coodinatePosition(
             View target,
             Rect targetRect,
