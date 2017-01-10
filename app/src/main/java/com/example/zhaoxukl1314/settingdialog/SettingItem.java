@@ -16,9 +16,6 @@ public interface SettingItem {
      */
     int getIconId();
     String getText(Resources resources);
-    String getSubText(Resources resources);
-    String getLongText(Resources resources);
-    String getContentDescription(Resources resources);
 
     /**
      * Select this setting item and run the specified SettingExecutor.
@@ -48,7 +45,5 @@ public interface SettingItem {
     boolean compareData(SettingItem item);
 
     boolean compareData(Object data);
-
-    boolean isSoundEnabled();
 }
 

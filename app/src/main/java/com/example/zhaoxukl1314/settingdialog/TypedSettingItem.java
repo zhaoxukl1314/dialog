@@ -14,13 +14,8 @@ public class TypedSettingItem<T> implements SettingItem {
     private final int mTextId;
     private final String mText;
 
-    private final int mSubTextId;
-    private final int mLongTextId;
-
-
     private final int mIconId;
     private final int mDialogItemType;
-    private final String mAdditionalTextForAccessibility;
 
     private final SettingExecutorInterface<T> mExecutor;
     private final List<SettingItem> mChildren;
@@ -28,7 +23,6 @@ public class TypedSettingItem<T> implements SettingItem {
 
     private boolean mIsSelected;
     private boolean mIsSelectable;
-    private final boolean mIsSoundEnabled;
 
     private OnItemSelectedListener mOnSettingItemSelectedListener;
 
@@ -37,25 +31,16 @@ public class TypedSettingItem<T> implements SettingItem {
             T data,
             int iconId,
             int labelId,
-            int subTextId,
-            int longTextId,
-            String additionalTextForAccessibility,
             int dialogItemType,
-            SettingExecutorInterface<T> executor,
-            boolean isSoundEnable) {
+            SettingExecutorInterface<T> executor) {
         mData = data;
         mTextId = labelId;
         mText = "";
         mIconId = iconId;
         mDialogItemType = dialogItemType;
         mExecutor = executor;
-        mIsSoundEnabled = isSoundEnable;
 
         mChildren = new ArrayList<SettingItem>();
-
-        mSubTextId = subTextId;
-        mLongTextId = longTextId;
-        mAdditionalTextForAccessibility = additionalTextForAccessibility;
         mIsSelected = false;
         mIsSelectable = false;
 
@@ -66,22 +51,14 @@ public class TypedSettingItem<T> implements SettingItem {
             T data,
             int iconId,
             String text,
-            int subTextId,
-            int longTextId,
-            String additionalTextForAccessibility,
             int dialogItemType,
-            SettingExecutorInterface<T> executor,
-            boolean isSoundEnable) {
+            SettingExecutorInterface<T> executor) {
         mData = data;
         mTextId = ResourceUtil.INVALID_RESOURCE_ID;
         mText = text;
-        mSubTextId = subTextId;
-        mLongTextId = longTextId;
         mIconId = iconId;
         mDialogItemType = dialogItemType;
-        mAdditionalTextForAccessibility = additionalTextForAccessibility;
         mExecutor = executor;
-        mIsSoundEnabled = isSoundEnable;
 
         mChildren = new ArrayList<SettingItem>();
 
@@ -98,50 +75,6 @@ public class TypedSettingItem<T> implements SettingItem {
         } else {
             return resources.getString(mTextId);
         }
-    }
-
-    /**
-     * Return null if the sub text is not set.
-     */
-    @Override
-    public String getSubText(Resources resources) {
-        if (mSubTextId == ResourceUtil.INVALID_RESOURCE_ID) {
-            return null;
-        } else {
-            return resources.getString(mSubTextId);
-        }
-    }
-
-    /**
-     * Return null if the long text is not set.
-     */
-    @Override
-    public String getLongText(Resources resources) {
-        if (mLongTextId == ResourceUtil.INVALID_RESOURCE_ID) {
-            return null;
-        } else {
-            return resources.getString(mLongTextId);
-        }
-    }
-
-    @Override
-    public String getContentDescription(Resources resources) {
-
-        StringBuilder description = new StringBuilder();
-
-        if (mTextId != ResourceUtil.INVALID_RESOURCE_ID) {
-            description.append(resources.getString(mTextId));
-        } else {
-            description.append(mText);
-        }
-
-        if ((mAdditionalTextForAccessibility != null) &&
-                (!mAdditionalTextForAccessibility.isEmpty())) {
-            description.append(' ');
-            description.append(mAdditionalTextForAccessibility);
-        }
-
-        return description.toString();
     }
 
     @Override
@@ -220,14 +153,5 @@ public class TypedSettingItem<T> implements SettingItem {
     @Override
     public boolean compareData(Object data) {
         return (mData == data);
-    }
-
-    public String getValueText() {
-        return mAdditionalTextForAccessibility;
-    }
-
-    @Override
-    public boolean isSoundEnabled() {
-        return mIsSoundEnabled;
     }
 }

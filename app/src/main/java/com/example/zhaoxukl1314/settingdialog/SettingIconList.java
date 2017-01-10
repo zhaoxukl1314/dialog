@@ -56,14 +56,6 @@ public class SettingIconList extends SettingDialogItem {
         return mHolder.mContainer;
     }
 
-    @Override
-    public void setUiOrientation(int orientation) {
-        float angle = 0;
-        for (int i = 0; i < mHolder.mList.getChildCount(); i++) {
-            mHolder.mList.getChildAt(i).setRotation(angle);
-        }
-    }
-
     private void updateSelected(SettingItem selectedItem) {
         // clear all item selection
         for (SettingItem item : getItem().getChildren()) {
@@ -92,7 +84,6 @@ public class SettingIconList extends SettingDialogItem {
         image.setSelected(item.isSelected());
         image.setImageResource(item.getIconId());
         image.setBackgroundResource(R.drawable.setting_item_icon_selector);
-        image.setContentDescription(item.getContentDescription(context.getResources()));
         image.setClickable(true);
 
         image.setOnClickListener(new OnClickListener() {

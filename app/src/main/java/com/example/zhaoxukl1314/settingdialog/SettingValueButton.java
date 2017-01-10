@@ -74,9 +74,6 @@ public class SettingValueButton extends SettingDialogItem {
         mHolder.mBackground.setOnClickListener(mOnClickListener);
         mHolder.mBackground.setSelected(getItem().isSelected());
 
-        // Set content description.
-        mHolder.mBackground.setContentDescription(getItem().getContentDescription(res));
-
         mHolder.mBackground.getLayoutParams().width = LayoutParams.MATCH_PARENT;
         mHolder.mBackground.getLayoutParams().height = params.height;
 

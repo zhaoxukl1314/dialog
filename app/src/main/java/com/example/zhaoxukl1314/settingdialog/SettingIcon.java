@@ -82,19 +82,10 @@ public class SettingIcon extends SettingDialogItem {
 
             mHolder.mIcon.setClickable(true);
             mHolder.mIcon.setOnClickListener(mOnClickListener);
-            mHolder.mIcon.setSoundEffectsEnabled(getItem().isSoundEnabled());
-
-            // Set content description.
-            mHolder.mIcon.setContentDescription(getItem().getContentDescription(
-                    context.getResources()));
-
 
             if (mHolder.mIconRes != getItem().getIconId() &&
                     mHolder.mIconRes != ResourceUtil.INVALID_RESOURCE_ID &&
                     !getItem().isSelected()) {
-                // start a fade animation if a icon is changed. But this animation is not enable
-                // if this item is selected. For example, this animation is not enable
-                // during changing Ev value with Slider.
                 mHolder.mIcon.startAnimation(createIconAnimation(mHolder.mContainer.getContext()));
             }
             mHolder.mIconRes = getItem().getIconId();
@@ -115,10 +106,6 @@ public class SettingIcon extends SettingDialogItem {
 
             mHolder.mIcon.setClickable(false);
             mHolder.mIcon.setOnClickListener(null);
-
-            // Set content description.
-            mHolder.mIcon.setContentDescription(getItem().getContentDescription(
-                    context.getResources()));
 
             mHolder.mIconRes = ResourceUtil.INVALID_RESOURCE_ID;
             mHolder.mIcon.setImageDrawable(null);

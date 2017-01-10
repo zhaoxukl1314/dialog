@@ -144,23 +144,4 @@ public class SettingEvSlider extends SettingDialogItem {
         // Update current selected
         mSelectedPosition = position;
     }
-
-    @Override
-    public void setUiOrientation(int orientation) {
-        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            mHolder.mBackground.setBackgroundResource(
-                    R.drawable.cam_ev_level_dialog_scale_land_icn);
-            mHolder.mScaleNumber.setImageResource(
-                    R.drawable.cam_ev_level_dialog_scale_number_land_icn);
-            mHolder.mIndicator.setImageResource(
-                    R.drawable.setting_ev_indicator_selector_land);
-        } else {
-            mHolder.mBackground.setBackgroundResource(
-                    R.drawable.cam_ev_level_dialog_scale_port_icn);
-            mHolder.mScaleNumber.setImageResource(
-                    R.drawable.cam_ev_level_dialog_scale_number_port_icn);
-            mHolder.mIndicator.setImageResource(
-                    R.drawable.setting_ev_indicator_selector_port);
-        }
-    }
 }

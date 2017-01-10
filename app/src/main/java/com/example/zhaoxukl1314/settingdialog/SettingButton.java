@@ -68,9 +68,6 @@ public class SettingButton extends SettingDialogItem {
         mHolder.mBackground.getLayoutParams().width = LayoutParams.MATCH_PARENT;
         mHolder.mBackground.getLayoutParams().height = params.height;
 
-        // Set content description.
-        mHolder.mBackground.setContentDescription(getItem().getContentDescription(res));
-
         changeDrawableState(params)
                 .background(mHolder.mBackground)
                 .dividerHorizontal(mHolder.mDivider)

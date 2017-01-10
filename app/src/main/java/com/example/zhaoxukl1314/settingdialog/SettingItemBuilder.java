@@ -10,9 +10,6 @@ public class SettingItemBuilder<T> {
 
     private int mIconId = ResourceUtil.INVALID_RESOURCE_ID;
     private int mTextId = ResourceUtil.INVALID_RESOURCE_ID;
-    private int mSubTextId = ResourceUtil.INVALID_RESOURCE_ID;
-    private int mLongTextId = ResourceUtil.INVALID_RESOURCE_ID;
-    private String mAdditionalTextForAccessibility = "";
     private String mText = "";
     private int mDialogItemType = ResourceUtil.INVALID_RESOURCE_ID;
     private SettingExecutorInterface<T> mExecutor = null;
@@ -20,7 +17,6 @@ public class SettingItemBuilder<T> {
 
     private boolean mIsSelectable = true;
     private boolean mSelected = false;
-    private boolean mIsSoundEnabled = true;
 
     private SettingItemBuilder(T data) {
         mData = data;
@@ -38,24 +34,16 @@ public class SettingItemBuilder<T> {
                     mData,
                     mIconId,
                     mText,
-                    mSubTextId,
-                    mLongTextId,
-                    mAdditionalTextForAccessibility,
                     mDialogItemType,
-                    mExecutor,
-                    mIsSoundEnabled);
+                    mExecutor);
 
         } else {
             item = new TypedSettingItem<T>(
                     mData,
                     mIconId,
                     mTextId,
-                    mSubTextId,
-                    mLongTextId,
-                    mAdditionalTextForAccessibility,
                     mDialogItemType,
-                    mExecutor,
-                    mIsSoundEnabled);
+                    mExecutor);
         }
 
         if (mItems != null) {
@@ -80,23 +68,8 @@ public class SettingItemBuilder<T> {
         return this;
     }
 
-    public SettingItemBuilder<T> subTextId(int id) {
-        mSubTextId = id;
-        return this;
-    }
-
-    public SettingItemBuilder<T> longTextId(int id) {
-        mLongTextId = id;
-        return this;
-    }
-
     public SettingItemBuilder<T> text(String text) {
         mText = text;
-        return this;
-    }
-
-    public SettingItemBuilder<T> additionalTextForAccessibility(String text) {
-        mAdditionalTextForAccessibility = text;
         return this;
     }
 
@@ -125,11 +98,6 @@ public class SettingItemBuilder<T> {
 
     public SettingItemBuilder<T> selectable(boolean value) {
         mIsSelectable = value;
-        return this;
-    }
-
-    public SettingItemBuilder<T> enableSound(boolean value) {
-        mIsSoundEnabled = value;
         return this;
     }
 }

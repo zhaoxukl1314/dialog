@@ -71,9 +71,6 @@ public class SettingCategorySwitch extends SettingDialogItem {
         mHolder.mContainer.setClickable(true);
         mHolder.mSwitch.setEnabled(getItem().isSelectable());
 
-        // Set Content Description.
-        mHolder.mContainer.setContentDescription(getItem().getContentDescription(res));
-
         // Should not notify a setting changed event unless user activities.
         // So release onCheckedChangeListener temporary.
         mHolder.mSwitch.setOnCheckedChangeListener(null);

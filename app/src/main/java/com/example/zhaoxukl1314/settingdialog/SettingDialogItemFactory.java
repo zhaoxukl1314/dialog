@@ -35,9 +35,6 @@ public class SettingDialogItemFactory {
         } else if (item.getDialogItemType() == VALUE_BUTTON) {
             return new SettingValueButton(context, item);
 
-        } else if (item.getDialogItemType() == CATEGORY_BUTTON) {
-            return new SettingCategoryButton(context, item);
-
         } else if (item.getDialogItemType() == CATEGORY_SWITCH) {
             return new SettingCategorySwitch(context, item);
 

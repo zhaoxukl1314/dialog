@@ -22,8 +22,7 @@ public class SettingDialogAnimation {
 
     public SettingDialogAnimation(Context context) {
         mContext = context;
-        mTranslateDistance = ViewUtility.getPixel(mContext,
-                R.dimen.setting_dialog_column_height) / 3f;
+        mTranslateDistance = context.getResources().getDimensionPixelSize(R.dimen.setting_dialog_column_height) / 3f;
     }
 
     private TranslateAnimation getTranslateForDecelerate(

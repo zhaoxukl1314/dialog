@@ -29,7 +29,6 @@ public class SettingControlSwitch extends SettingDialogItem {
                 } else {
                     select(getOffItem());
                 }
-                updateContentDescription(isChecked);
             }
         }
     }
@@ -39,18 +38,6 @@ public class SettingControlSwitch extends SettingDialogItem {
         ControlSwitch mSwitch;
     }
 
-    /**
-     * Constructor
-     *
-     * @param context
-     *      current running context
-     * @param item
-     *      setting item
-     * @param on
-     *      switch of on
-     * @param off
-     *      switch of off
-     */
     public SettingControlSwitch(Context context, SettingItem item) {
         super(item);
 
@@ -74,19 +61,11 @@ public class SettingControlSwitch extends SettingDialogItem {
         mHolder.mContainer.setClickable(true);
         mHolder.mSwitch.setEnabled(getItem().isSelectable());
 
-        // Set Content Description.
-        updateContentDescription(getOnItem().isSelected());
-
         // Should not notify a setting changed event unless user activities.
         // So release onCheckedChangeListener temporary.
         mHolder.mSwitch.setOnCheckedChangeListener(null);
         mHolder.mSwitch.setChecked(getOnItem().isSelected());
         mHolder.mSwitch.setOnCheckedChangeListener(mOnCheckedChangeListener);
-    }
-
-    @Override
-    public void setUiOrientation(int orientation) {
-        mHolder.mSwitch.setUiOrientation(orientation);
     }
 
     /**
@@ -103,23 +82,5 @@ public class SettingControlSwitch extends SettingDialogItem {
 
     private SettingItem getOffItem() {
         return getItem().getChildren().get(1);
-    }
-
-    /**
-     * Update content description of switch view.
-     */
-    private void updateContentDescription(boolean isChecked) {
-        // Get Content Description from parameter value of the switch.
-        String contentDescription = getItem().getText(mResources);
-
-        // Add Content Description from state of the switch.
-        if (isChecked) {
-            contentDescription += " " + getOnItem().getContentDescription(mResources);
-        } else {
-            contentDescription += " " + getOffItem().getContentDescription(mResources);
-        }
-
-        // Set Content Description to the switch view.
-        mHolder.mContainer.setContentDescription(contentDescription);
     }
 }

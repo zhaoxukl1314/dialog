@@ -32,10 +32,6 @@ public abstract class SettingDialogItem {
         item.select();
     }
 
-    public void setUiOrientation(int orientation) {
-        //NOP in default implements
-    }
-
     /**
      * Start changing a drawable state according to the specified ItemLayoutParams.
      * The changes are applied after {@link DrawableStateChanger#apply()} is called.
