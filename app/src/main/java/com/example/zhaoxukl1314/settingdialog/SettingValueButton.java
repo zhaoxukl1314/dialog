@@ -80,14 +80,7 @@ public class SettingValueButton extends SettingDialogItem {
         mHolder.mBackground.getLayoutParams().width = LayoutParams.MATCH_PARENT;
         mHolder.mBackground.getLayoutParams().height = params.height;
 
-        // for BiDi.
-        boolean isMirrored =
-                CommonUtility.isMirroringRequired(mHolder.mContainer.getContext());
-        if (isMirrored) {
-            mHolder.mText.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
-        } else {
-            mHolder.mText.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
-        }
+        mHolder.mText.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
 
         changeDrawableState(params)
             .background(mHolder.mBackground)
