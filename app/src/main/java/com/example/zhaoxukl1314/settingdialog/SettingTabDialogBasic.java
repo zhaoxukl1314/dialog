@@ -16,7 +16,6 @@ public class SettingTabDialogBasic extends SettingDialog {
     private SettingTabs mTabs;
     private GridView mGridView;
     private SettingAdapter mAdapter;
-    private int mNumberOfTabs = 0;
 
     public SettingTabDialogBasic(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -36,10 +35,6 @@ public class SettingTabDialogBasic extends SettingDialog {
         mGridView.setVerticalFadingEdgeEnabled(true);
         mGridView.setChoiceMode(GridView.CHOICE_MODE_SINGLE);
         mTabs = (SettingTabs) findViewById(R.id.tabs);
-    }
-
-    public void setTabs(SettingTabs.Tab ... tabs) {
-        mTabs.setTabs(tabs);
     }
 
     @Override
@@ -123,12 +118,4 @@ public class SettingTabDialogBasic extends SettingDialog {
             }
         }
     };
-
-    public int numberOfTabs() {
-        return mNumberOfTabs;
-    }
-
-    public void setNumberOfTabs(int numberOfTabs) {
-        mNumberOfTabs = numberOfTabs;
-    }
 }

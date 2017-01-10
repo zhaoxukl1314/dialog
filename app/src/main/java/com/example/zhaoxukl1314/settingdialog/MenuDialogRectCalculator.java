@@ -25,10 +25,8 @@ class MenuDialogRectCalculator {
     private final boolean mIsTablet;
     private final Rect mBounds;
     private int mMenuDialogRowCount;
-    // Number of Tabs in MenuDialog
-    private int mNumberOfTabs;
-    public MenuDialogRectCalculator(Context context, Rect containerBounds, int menuDialogRowCount,
-            int numberOfTabs) {
+
+    public MenuDialogRectCalculator(Context context, Rect containerBounds, int menuDialogRowCount) {
         mContext = context;
         Resources res = context.getResources();
         mPadding = res.getDimensionPixelSize(R.dimen.menu_dialog_padding);
@@ -43,7 +41,6 @@ class MenuDialogRectCalculator {
                 ? res.getDimensionPixelSize(R.dimen.setting_dialog_menu_max_height_margin_tablet)
                 : res.getDimensionPixelSize(R.dimen.setting_dialog_menu_max_height_margin_phone);
         mMenuDialogRowCount = menuDialogRowCount;
-        mNumberOfTabs = numberOfTabs;
     }
 
     public Point computePosition() {
@@ -51,9 +48,9 @@ class MenuDialogRectCalculator {
     }
 
     private Point computePositionForPhone() {
-            return new Point(
-                    mBounds.left,
-                    mBounds.top + (mBounds.height() - computeHeight()) / 2);
+        return new Point(
+                mBounds.left,
+                mBounds.top + (mBounds.height() - computeHeight()) / 2);
     }
 
     private Point computePositionForTablet(int orientation) {
@@ -79,17 +76,10 @@ class MenuDialogRectCalculator {
 //        int height = isPortrait(orientation) ? mBounds.width() : mBounds.height();
         int height = mBounds.height();
         int numRows = getNumRows(height);
+        return numRows * mItemHeight
+                + mPadding * 2
+                + numRows * mDividerHeight;
 
-        if (mNumberOfTabs < 2) {
-            return numRows * mItemHeight
-                    + mPadding * 2
-                    + numRows  * mDividerHeight;
-        } else {
-            return numRows * mItemHeight
-                    + mPadding * 2
-                    + mTabHeight
-                    + numRows  * mDividerHeight;
-        }
     }
 
     public int computeWidth() {
@@ -100,33 +90,22 @@ class MenuDialogRectCalculator {
      * Get number of rows for items in setting tab dialog.
      * The screen height is derived as below.
      * [screen height] = 2 * [dialog edge padding]
-     *                   + [setting group tab height]
-     *                   + [number of rows] * [setting item height]
-     *                   + [max dialog vertical margin]
-     *
+     * + [setting group tab height]
+     * + [number of rows] * [setting item height]
+     * + [max dialog vertical margin]
+     * <p>
      * The number of rows is derived from This formula.
      *
-     * @param screenHeight
-     *          screen height size.
-     * @return
-     *      number of rows.
+     * @param screenHeight screen height size.
+     * @return number of rows.
      */
     private int getNumRows(int screenHeight) {
         int numRows;
-        if (mNumberOfTabs < 2) {
-            numRows =
-                    (int) ((screenHeight
-                           - mMaxHeightMargin
-                           - mPadding * 2
-                           + mDividerHeight) / (mItemHeight + mDividerHeight));
-        } else {
-            numRows =
-                    (int) ((screenHeight
-                           - mMaxHeightMargin
-                           - mPadding * 2
-                           - mTabHeight
-                           + mDividerHeight) / (mItemHeight + mDividerHeight));
-        }
+        numRows =
+                (int) ((screenHeight
+                        - mMaxHeightMargin
+                        - mPadding * 2
+                        + mDividerHeight) / (mItemHeight + mDividerHeight));
         if ((0 < mMenuDialogRowCount) && (mMenuDialogRowCount < numRows)) {
             numRows = mMenuDialogRowCount;
         }

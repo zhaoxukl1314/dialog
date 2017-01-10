@@ -20,10 +20,6 @@ public class MainActivity extends Activity {
             TimeShiftViewerMenuItem.SELECT_PHOTOS,
     };
 
-    private static final SettingTabs.Tab[] TABS = {
-            SettingTabs.Tab.Common
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +39,6 @@ public class MainActivity extends Activity {
     public void openMenu(View v) {
         mSettingDialogStack.openMenuDialog(
                 generateItemAdapter(),
-                TABS,
                 3);
     }
 

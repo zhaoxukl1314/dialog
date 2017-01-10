@@ -20,8 +20,7 @@ public class MenuLayoutCoordinator implements LayoutCoordinator {
             int menuDialogRowCount) {
         mView = view;
         mMenuDialogRectCalculator =
-                new MenuDialogRectCalculator(view.getContext(), containerRect, menuDialogRowCount,
-                        view.numberOfTabs());
+                new MenuDialogRectCalculator(view.getContext(), containerRect, menuDialogRowCount);
     }
 
     /**

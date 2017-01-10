@@ -10,13 +10,11 @@ class SettingDialogFactory {
     public static SettingTabDialogBasic createMenu(
             Context context,
             SettingLayoutCoordinatorFactory.LayoutCoordinateData coordinateData,
-            int menuDialogRowCount,
-            int numberOfTabs) {
+            int menuDialogRowCount) {
 
         SettingTabDialogBasic dialog = (SettingTabDialogBasic) inflate(
                 context,
                 R.layout.setting_dialog_menu);
-        dialog.setNumberOfTabs(numberOfTabs);
         LayoutCoordinator coordinator
             = SettingLayoutCoordinatorFactory.createMenuLayoutCoordinator(
                     dialog,

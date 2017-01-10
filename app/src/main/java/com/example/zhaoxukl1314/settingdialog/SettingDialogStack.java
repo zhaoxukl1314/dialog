@@ -75,7 +75,6 @@ public class SettingDialogStack {
 
     public boolean openMenuDialog(
             SettingAdapter adapter,
-            SettingTabs.Tab[] tabs,
             int menuDialogRowCount) {
 
         if (mMenuDialog != null) {
@@ -96,9 +95,7 @@ public class SettingDialogStack {
             mMenuDialog = SettingDialogFactory.createMenu(
                     mContext,
                     mMenuDialogCoordinateData,
-                    menuDialogRowCount,
-                    tabs.length);
-            mMenuDialog.setTabs(tabs);
+                    menuDialogRowCount);
             mMenuDialog.setAdapter(adapter);
 
             // set animation
