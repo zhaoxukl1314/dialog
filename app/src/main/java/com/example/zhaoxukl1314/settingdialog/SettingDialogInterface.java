@@ -16,24 +16,9 @@ public interface SettingDialogInterface{
     void open(ViewGroup parentView);
 
     /**
-     * Open dialog
-     *
-     * @param parentView ViewGroup to add setting dialog view
-     * @param isNested A flag to indicate the dialog is nested
-     */
-    void open(ViewGroup parentView, boolean isNested);
-
-    /**
      * Close dialog
      */
     void close();
-
-    /**
-     * Returns true if the dialog is nested
-     *
-     * @return true if the dialog is nested
-     */
-    boolean isNested();
 
     /**
      * Set the adapter that provides the data and the views to represent the data in this widget.

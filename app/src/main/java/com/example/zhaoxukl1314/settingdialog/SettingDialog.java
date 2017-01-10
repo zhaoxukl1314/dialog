@@ -16,9 +16,7 @@ public abstract class SettingDialog extends RelativeLayout implements SettingDia
 
     private LayoutCoordinator mLayoutCoordinator;
     private Animation mCloseAnimation;
-    private SettingDialogStateListener mStateListener;
     private ViewGroup mParentView;
-    private boolean mIsNested = false;
 
     public SettingDialog(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -58,44 +56,16 @@ public abstract class SettingDialog extends RelativeLayout implements SettingDia
         mCloseAnimation = animation;
     }
 
-    /* (non-Javadoc)
-     * @see com.sonyericsson.cameracommon.setting.dialog.
-     * SettingDialogInterface#open(android.view.ViewGroup)
-     */
     @Override
     public void open(ViewGroup parentView) {
-        open(parentView, false);
-    }
-
-    /* (non-Javadoc)
-     * @see com.sonyericsson.cameracommon.setting.dialog.SettingDialogInterface
-     */
-    @Override
-    public void open(ViewGroup parentView, boolean isNested) {
         if (parentView == null) {
             throw new IllegalArgumentException("Parent view shouldn't be null");
         }
 
-        mIsNested = isNested;
         mParentView = parentView;
         mParentView.addView(this);
-
-        if (mStateListener != null) {
-            mStateListener.onOpened();
-        }
     }
 
-    /* (non-Javadoc)
-     * @see com.sonyericsson.cameracommon.setting.dialog.SettingDialogInterface
-     */
-    @Override
-    public boolean isNested() {
-        return mIsNested ;
-    }
-
-    /* (non-Javadoc)
-     * @see com.sonyericsson.cameracommon.setting.dialog.SettingDialogInterface
-     */
     @Override
     public void close() {
         cancelAnimation();
@@ -116,9 +86,6 @@ public abstract class SettingDialog extends RelativeLayout implements SettingDia
             });
         }
 
-        if (mStateListener != null) {
-            mStateListener.onClosed();
-        }
     }
 
     protected void cancelAnimation() {

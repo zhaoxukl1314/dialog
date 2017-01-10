@@ -54,55 +54,6 @@ public class SettingAdapter extends ArrayAdapter<SettingItem> {
     }
 
     /**
-     * Set false unless dialog has title or tabs at top.
-     */
-    public void setRoundTopItemBackground(boolean value) {
-        if (mSetRoundBackgroundTop != value) {
-            mSetRoundBackgroundTop = value;
-            notifyDataSetChanged();
-        }
-    }
-
-    public <T> void selectByData(T itemData) {
-        SettingItem target = SettingItemBuilder.build(itemData).commit();
-
-        for (int i = 0; i < getCount(); i++) {
-            SettingItem item = getItem(i);
-            if (item.isSelectable()) {
-                if (target.compareData(item)) {
-                    item.setSelected(true);
-                } else {
-                    item.setSelected(false);
-                }
-            }
-        }
-    }
-
-    public void selectByItem(SettingItem target) {
-        if (target == null) {
-            return;
-        }
-        for (int i = 0; i < getCount(); i++) {
-            SettingItem item = getItem(i);
-            if (target.compareData(item)) {
-                item.setSelected(true);
-            } else {
-                item.setSelected(false);
-            }
-        }
-    }
-
-    public SettingItem getSelected() {
-        for (int i = 0; i < getCount(); i++) {
-            SettingItem item = getItem(i);
-            if (item.isSelected()) {
-                return item;
-            }
-        }
-        return null;
-    }
-
-    /**
      * Return 0 if this object has selected item.
      */
     public int getSelectedPosition() {

@@ -16,7 +16,6 @@ class MenuDialogRectCalculator {
 
     private final int mPadding;
     private final int mDividerHeight;
-    private final int mTabHeight;
     private final int mWidth;
     private final int mItemHeight;
 
@@ -31,7 +30,6 @@ class MenuDialogRectCalculator {
         Resources res = context.getResources();
         mPadding = res.getDimensionPixelSize(R.dimen.menu_dialog_padding);
         mDividerHeight = res.getDimensionPixelSize(R.dimen.divider_height);
-        mTabHeight = res.getDimensionPixelSize(R.dimen.setting_group_tab_height);
         mWidth = res.getDimensionPixelSize(R.dimen.setting_dialog_menu_width);
         mItemHeight = res.getDimensionPixelSize(R.dimen.menu_dialog_item_height);
         mBounds = containerBounds;
@@ -51,25 +49,6 @@ class MenuDialogRectCalculator {
         return new Point(
                 mBounds.left,
                 mBounds.top + (mBounds.height() - computeHeight()) / 2);
-    }
-
-    private Point computePositionForTablet(int orientation) {
-
-        // Menu dialog is arranged according to icon of Setting shortcut on Tablet.
-        int shortcutCount = LayoutDependencyResolver.getLeftItemCount(mContext);
-        int shortcutSize = mContext.getResources().getDimensionPixelSize(
-                R.dimen.shortcut_dialog_item_height);
-        int marginBottom = (mBounds.height() / shortcutCount - shortcutSize) / 2;
-
-        if (isPortrait(orientation)) {
-            return new Point(
-                    mBounds.left,
-                    mBounds.bottom - marginBottom - computeWidth());
-        } else {
-            return new Point(
-                    mBounds.left,
-                    mBounds.bottom - marginBottom - computeHeight());
-        }
     }
 
     public int computeHeight() {
@@ -101,8 +80,7 @@ class MenuDialogRectCalculator {
      */
     private int getNumRows(int screenHeight) {
         int numRows;
-        numRows =
-                (int) ((screenHeight
+        numRows = (int) ((screenHeight
                         - mMaxHeightMargin
                         - mPadding * 2
                         + mDividerHeight) / (mItemHeight + mDividerHeight));
@@ -111,9 +89,5 @@ class MenuDialogRectCalculator {
         }
 
         return numRows;
-    }
-
-    private boolean isPortrait(int orientation) {
-        return orientation == Configuration.ORIENTATION_PORTRAIT;
     }
 }
