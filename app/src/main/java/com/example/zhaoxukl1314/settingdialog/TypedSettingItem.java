@@ -11,7 +11,6 @@ public class TypedSettingItem<T> implements SettingItem {
 
     private final T mData;
 
-    //Only one of mTxtId or mTxtStr is set in constructor.
     private final int mTextId;
     private final String mText;
 
@@ -140,19 +139,5 @@ public class TypedSettingItem<T> implements SettingItem {
     @Override
     public void setOnSelectedListener(OnItemSelectedListener listener) {
         mOnSettingItemSelectedListener = listener;
-    }
-
-    @Override
-    public boolean compareData(SettingItem item) {
-        if (item instanceof TypedSettingItem) {
-            TypedSettingItem<?> other = (TypedSettingItem<?>)item;
-            return (mData == other.mData);
-        }
-        return false;
-    }
-
-    @Override
-    public boolean compareData(Object data) {
-        return (mData == data);
     }
 }

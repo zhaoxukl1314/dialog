@@ -4,7 +4,7 @@ package com.example.zhaoxukl1314.settingdialog;
 
 import android.content.Context;
 
-public enum TimeShiftViewerMenuItem implements SettingKey {
+public enum TimeShiftViewerMenuItem implements SettingItemData {
     SAVE_SEPERATELY(
             R.string.cam_strings_timeshift_save_selection_txt),
     SHARE(

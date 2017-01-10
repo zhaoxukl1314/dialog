@@ -41,9 +41,5 @@ public interface SettingItem {
     List<SettingItem> getChildren();
 
     void setOnSelectedListener(OnItemSelectedListener listener);
-
-    boolean compareData(SettingItem item);
-
-    boolean compareData(Object data);
 }
 

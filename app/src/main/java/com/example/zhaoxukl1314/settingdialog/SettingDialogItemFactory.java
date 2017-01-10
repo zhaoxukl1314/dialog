@@ -8,20 +8,8 @@ import android.view.ViewGroup;
  */
 public class SettingDialogItemFactory {
 
-    public int getDialogItemTypeCount() {
-        return END_OF_TYPE_LIST;
-    }
-
-    public static final int ICON = 0;
     public static final int BUTTON = 1;
     public static final int VALUE_BUTTON = 2;
-    public static final int CATEGORY_BUTTON = 3;
-    public static final int CATEGORY_SWITCH = 4;
-    public static final int EV = 5;
-    public static final int MENU = 6;
-    public static final int VERTICAL_ICON_LIST = 7;
-    public static final int CONTROL_SWITCH = 8;
-    public static final int END_OF_TYPE_LIST = 9;
 
     public SettingDialogItem create(SettingItem item, ViewGroup parent) {
         Context context = parent.getContext();

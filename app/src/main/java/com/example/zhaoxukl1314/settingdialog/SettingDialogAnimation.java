@@ -41,13 +41,6 @@ public class SettingDialogAnimation {
         return translate;
     }
 
-    /**
-     * Set animation of opening dialog.
-     *
-     * @param view
-     * @param orientation
-     * @return animation
-     */
     public Animation setOpenDialogAnimation(View view) {
 
         AnimationSet animation = new AnimationSet(false);
@@ -67,13 +60,6 @@ public class SettingDialogAnimation {
         return animation;
     }
 
-    /**
-     * Set animation of closing dialog.
-     *
-     * @param view
-     * @param orientation
-     * @return animation
-     */
     public Animation setCloseDialogAnimation(View view) {
 
         AnimationSet animation = new AnimationSet(false);

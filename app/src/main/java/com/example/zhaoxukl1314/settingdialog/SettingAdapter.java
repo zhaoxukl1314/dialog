@@ -124,11 +124,6 @@ public class SettingAdapter extends ArrayAdapter<SettingItem> {
         }
     }
 
-    @Override
-    public int getViewTypeCount() {
-        return mDialogItemFactory.getDialogItemTypeCount();
-    }
-
     private ItemLayoutParams generateItemLayoutParams(ViewGroup parent, int itemPosition) {
         int columnCount = 1;
         if (parent instanceof GridView) {
