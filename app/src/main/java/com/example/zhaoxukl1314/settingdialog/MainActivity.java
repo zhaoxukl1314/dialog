@@ -60,9 +60,7 @@ public class MainActivity extends Activity {
 
             adapter.add(builder.commit());
         }
-        adapter.setItemHeight(SettingDialogBasicParams
-                .SECOND_LAYER_DIALOG_SINGLE_ITEM_PARAMS
-                .getItemHeight(this));
+        adapter.setItemHeight(getResources().getDimensionPixelSize(R.dimen.second_layer_dialog_item_double_line_height));
         return adapter;
     }
 }
